@@ -12,6 +12,10 @@ export function SeoPageShell({
   children,
   compact = false,
   secondaryHref,
+  primaryLabel,
+  primaryHref,
+
+  secondaryLabel,
   breadcrumbPath,
   locale = "es",
 }: {
