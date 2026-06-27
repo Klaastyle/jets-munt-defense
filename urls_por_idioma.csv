@@ -1,0 +1,88 @@
+Idioma,Padre,Ruta Hijo,Descripción
+ES,Principal,/,Página de inicio (Home)
+ES,Motores,/motores,Listado de motores XM
+ES,Motores,/products/xm98ng,Motor XM98NG
+ES,Motores,/products/xm122ng,Motor XM122NG
+ES,Motores,/products/xm166ng,Motor XM166NG
+ES,Motores,/products/xm182ng,Motor XM182NG
+ES,Motores,/products/xm210ng,Motor XM210NG
+ES,Motores,/products/xm222ng,Motor XM222NG
+ES,Motores,/products/xm250ng,Motor XM250NG
+ES,Motores,/products/xm255ng,Motor XM255NG
+ES,Pro-Series,/pro-series,Motores serie Pro
+ES,Pro-Series,/pro-series/xm215-pro,Motor XM215 PRO
+ES,Pro-Series,/pro-series/xm255-pro,Motor XM255 PRO
+ES,Accesorios,/accesorios,Listado de accesorios
+ES,Distribuidores,/distribuidores,Directorio de distribuidores
+ES,Servicio Técnico,/servicio-tecnico,Formulario de solicitud
+ES,Contacto,/contacto,Contacto general
+ES,Soluciones,/propulsion-uav,Sistemas de Propulsión UAV
+ES,Soluciones,/integracion-uav,Integración UAV
+ES,Soluciones,/propulsion-target-drone,Propulsión Target Drone
+ES,Soluciones,/propulsion-misiones-especiales,Propulsión para Misiones Especiales
+ES,Soluciones,/motores-turbojet-compactos,Motores Turbojet Compactos
+ES,Soluciones,/arquitectura-propulsion,Arquitectura de Propulsión
+ES,Soluciones,/electronica-telemetria,Electrónica y Telemetría
+ES,Soluciones,/sistemas-control-ecu,Sistemas de Control ECU
+ES,Soluciones,/desarrollo-ingenieria,Desarrollo de Ingeniería
+ES,Soluciones,/desarrollo-medida,Desarrollo a Medida
+ES,Soluciones,/ensayos-validacion,Ensayos y Validación
+ES,Soluciones,/fabricacion-espana,Fabricación en España
+ES,Soporte,/support,Portal de soporte
+ES,Soporte,/support/downloads,Descargas
+ES,Soporte,/support/manuals,Manuales
+ES,Soporte,/support/service-request,Solicitud de servicio
+ES,Soporte,/support/faq,FAQ
+ES,Soporte,/support/maintenance,Mantenimiento
+EN,Principal,/en,Home
+EN,Motores,/en/engines,Engines list
+EN,Motores,/en/products/xm98ng,Engine XM98NG
+EN,Motores,/en/products/xm122ng,Engine XM122NG
+EN,Motores,/en/products/xm166ng,Engine XM166NG
+EN,Motores,/en/products/xm182ng,Engine XM182NG
+EN,Motores,/en/products/xm210ng,Engine XM210NG
+EN,Motores,/en/products/xm222ng,Engine XM222NG
+EN,Motores,/en/products/xm250ng,Engine XM250NG
+EN,Motores,/en/products/xm255ng,Engine XM255NG
+EN,Accesorios,/en/accessories,Accessories list
+EN,Distribuidores,/en/distributors,Distributors directory
+EN,Servicio Técnico,/en/technical-service,Technical service request
+EN,Contacto,/en/contact,Contact
+EN,Soluciones,/en/uav-propulsion,UAV Propulsion Systems
+EN,Soluciones,/en/uav-integration,UAV Integration
+EN,Soluciones,/en/target-drone-propulsion,Target Drone Propulsion
+EN,Soluciones,/en/loitering-munition-propulsion,Loitering Munition Propulsion
+EN,Soluciones,/en/compact-turbojet-engines,Compact Turbojet Engines
+EN,Soluciones,/en/propulsion-architecture,Propulsion Architecture
+EN,Soluciones,/en/electronics-telemetry,Electronics and Telemetry
+EN,Soluciones,/en/ecu-control-systems,ECU Control Systems
+EN,Soluciones,/en/engineering-development,Engineering Development
+EN,Soluciones,/en/engineering-custom-development,Engineering Custom Development
+EN,Soluciones,/en/testing-validation,Testing and Validation
+EN,Soluciones,/en/manufacturing-in-spain,Manufacturing in Spain
+FR,Principal,/fr,Accueil
+FR,Motores,/fr/moteurs,Liste des moteurs
+FR,Motores,/fr/produits/xm98ng,Moteur XM98NG
+FR,Motores,/fr/produits/xm122ng,Moteur XM122NG
+FR,Motores,/fr/produits/xm166ng,Moteur XM166NG
+FR,Motores,/fr/produits/xm182ng,Moteur XM182NG
+FR,Motores,/fr/produits/xm210ng,Moteur XM210NG
+FR,Motores,/fr/produits/xm222ng,Moteur XM222NG
+FR,Motores,/fr/produits/xm250ng,Moteur XM250NG
+FR,Motores,/fr/produits/xm255ng,Moteur XM255NG
+FR,Accesorios,/fr/accessoires,Liste des accessoires
+FR,Distribuidores,/fr/distributeurs,Annuaire des distributeurs
+FR,Servicio Técnico,/fr/service-technique,Demande de service
+FR,Contacto,/fr/contact,Contact
+FR,Soluciones,/fr/propulsion-uav,Propulsion UAV
+FR,Soluciones,/fr/integration-uav,Integration UAV
+FR,Soluciones,/fr/propulsion-drone-cible,Propulsion Drone Cible
+FR,Soluciones,/fr/propulsion-uav-mission-speciale,Propulsion UAV Mission Speciale
+FR,Soluciones,/fr/moteurs-turbojet-compactos,Moteurs Turbojet Compacts
+FR,Soluciones,/fr/architecture-propulsion,Architecture Propulsion
+FR,Soluciones,/fr/electronique-telemetrie,Electronique et Telemetrie
+FR,Soluciones,/fr/systemes-controle-ecu,Systemes de Controle ECU
+FR,Soluciones,/fr/developpement-ingenierie,Developpement Ingenierie
+FR,Soluciones,/fr/developpement-sur-mesure,Developpement Sur Mesure
+FR,Soluciones,/fr/essais-validation,Essais et Validation
+FR,Soluciones,/fr/fabricacion-espagne,Fabrication en Espagne
