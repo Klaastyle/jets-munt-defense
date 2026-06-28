@@ -1,15 +1,15 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { SeoPageShell } from "../components/SeoPage";
 import { buildMetadata } from "../lib/metadata";
 import { primaryAlternates } from "../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Servicio TÃ©cnico JetsMunt | Solicitud de Servicio y Mantenimiento",
+  title: "Servicio Técnico JetsMunt | Solicitud de Servicio y Mantenimiento",
   description:
-    "Servicio TÃ©cnico JetsMunt para motores turbojet, accesorios, ECU, telemetria, mantenimiento y soporte de validacion.",
+    "Servicio Técnico JetsMunt para motores turbojet, accesorios, ECU, telemetria, mantenimiento y soporte de validacion.",
   path: "/servicio-tecnico",
   image: "/media/capabilities/testing-validation.png",
-  keywords: ["Servicio TÃ©cnico JetsMunt", "mantenimiento JetsMunt", "servicio turbojet"],
+  keywords: ["Servicio Técnico JetsMunt", "mantenimiento JetsMunt", "servicio turbojet"],
   locale: "es_ES",
   languages: primaryAlternates("service"),
 });
@@ -17,8 +17,8 @@ export const metadata: Metadata = buildMetadata({
 export default function ServicioTecnicoPage() {
   return (
     <SeoPageShell
-      kicker="Servicio TÃ©cnico"
-      title="Soporte tÃ©cnico para sistemas de propulsion JetsMunt."
+      kicker="Servicio Técnico"
+      title="Soporte técnico para sistemas de propulsion JetsMunt."
       description="Comparte el modelo de motor, historial de uso, configuracion de accesorios y comportamiento actual para que el equipo tecnico pueda dirigir la solicitud correctamente."
       image="/media/capabilities/testing-validation.png"
       breadcrumbPath="/servicio-tecnico"
@@ -28,9 +28,9 @@ export default function ServicioTecnicoPage() {
         <div className="seo-copy-block">
           <h2>Antes de enviar la solicitud</h2>
           <ul>
-            <li>Modelo de motor, referencia de serie y horas de uso si estÃ¡n disponibles.</li>
+            <li>Modelo de motor, referencia de serie y horas de uso si están disponibles.</li>
             <li>ECU, registros de telemetria, sistema de combustible y contexto de instalacion.</li>
-            <li>Necesidad de mantenimiento, inspecciÃ³n, reparaciÃ³n o validaciÃ³n.</li>
+            <li>Necesidad de mantenimiento, inspección, reparación o validación.</li>
             <li>Distribuidor o centro de servicio preferido si ya se conoce.</li>
           </ul>
         </div>

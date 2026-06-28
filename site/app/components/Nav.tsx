@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -9,7 +9,7 @@ const navByLocale = {
       { label: "Motores", href: "/motores" },
       { label: "Accesorios", href: "/accesorios" },
       { label: "Distribuidores", href: "/distribuidores" },
-      { label: "Servicio tÃ©cnico", href: "/servicio-tecnico" },
+      { label: "Servicio técnico", href: "/servicio-tecnico" },
     ],
     contact: "Contacto",
     languageLabel: "Seleccionar idioma",
@@ -94,7 +94,7 @@ export default function Nav() {
         <button
           className="nav-burger"
           onClick={() => setOpen(!open)}
-          aria-label="Abrir menÃº de navegaciÃ³n"
+          aria-label="Abrir menú de navegación"
           id="nav-toggle"
         >
           <span />

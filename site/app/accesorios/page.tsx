@@ -1,16 +1,16 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../components/SeoPage";
 import { accessories, primaryAlternates } from "../lib/seo-data";
 import { buildMetadata } from "../lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Accesorios JetsMunt | Combustible, Telemetría y Packs de Vuelo",
+  title: "Accesorios JetsMunt | Combustible, Telemetr�a y Packs de Vuelo",
   description:
     "Accesorios JetsMunt para sistemas turbojet: deposito UAT, FOD Guard, Fuel Station, packs de vuelo, Smart Data Terminal y telemetria V-Speak.",
   path: "/accesorios",
   image: "/media/capabilities/electronics-telemetry.png",
-  keywords: ["JetsMunt accesorios", "accesorios turbojet", "FOD Guard", "telemetría V-Speak", "pack de vuelo JetsMunt"],
+  keywords: ["JetsMunt accesorios", "accesorios turbojet", "FOD Guard", "telemetr�a V-Speak", "pack de vuelo JetsMunt"],
   locale: "es_ES",
   languages: primaryAlternates("accessories"),
 });
@@ -42,7 +42,7 @@ export default function AccessoriesPage() {
       <SeoPageShell
         kicker="Accesorios"
         title="Sistemas de accesorios para propulsion JetsMunt."
-        description="Accesorios de combustible, telemetrÃ­a, proteccion y packs de vuelo del catalogo JetsMunt, presentados para una selecciÃ³n tÃ©cnica rÃ¡pida."
+        description="Accesorios de combustible, telemetría, proteccion y packs de vuelo del catalogo JetsMunt, presentados para una selección técnica rápida."
         image="/media/capabilities/electronics-telemetry.png"
         breadcrumbPath="/accesorios"
         compact

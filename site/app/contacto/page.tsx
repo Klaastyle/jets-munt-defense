@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import ContactEnquiryForm from "../components/ContactEnquiryForm";
 import GlobePulse from "../components/GlobePulse";
 import { SeoPageShell } from "../components/SeoPage";
@@ -6,12 +6,12 @@ import { buildMetadata } from "../lib/metadata";
 import { distributors, primaryAlternates } from "../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contacto JetsMunt | Consulta tÃ©cnica de Propulsion",
+  title: "Contacto JetsMunt | Consulta técnica de Propulsion",
   description:
     "Contacta con JetsMunt para seleccion de motor turbojet, accesorios, distribuidores, servicio tecnico e integracion de propulsion.",
   path: "/contacto",
   image: "/media/capabilities/uav-integration.png",
-  keywords: ["JetsMunt contacto", "Consulta tÃ©cnica JetsMunt", "servicio tecnico JetsMunt"],
+  keywords: ["JetsMunt contacto", "Consulta técnica JetsMunt", "servicio tecnico JetsMunt"],
   locale: "es_ES",
   languages: primaryAlternates("contact"),
 });
@@ -23,19 +23,19 @@ export default function ContactoPage() {
   return (
     <SeoPageShell
       kicker="Contacto"
-      title="CuÃ©ntanos quÃ© necesita tu plataforma."
-      description="Comparte clase de motor, accesorios, necesidades de servicio o requisitos de distribuciÃ³n con el equipo de JetsMunt."
+      title="Cuéntanos qué necesita tu plataforma."
+      description="Comparte clase de motor, accesorios, necesidades de servicio o requisitos de distribución con el equipo de JetsMunt."
       image="/media/capabilities/uav-integration.png"
       breadcrumbPath="/contacto"
       compact
     >
       <section className="section container contact-enquiry">
         <div className="contact-intro">
-          <p className="kicker">Consulta tÃ©cnica</p>
+          <p className="kicker">Consulta técnica</p>
           <h2>Empieza por las restricciones que importan.</h2>
           <p>
             Envia el contexto de propulsion, clase de motor, necesidad de servicio o accesorio.
-            Cuanto mas preciso sea el briefing, mÃ¡s rÃ¡pido podrÃ¡ JetsMunt dirigirlo a ingenieria, ventas o servicio.
+            Cuanto mas preciso sea el briefing, más rápido podrá JetsMunt dirigirlo a ingenieria, ventas o servicio.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function ContactoPage() {
               info@jets-munt.com
             </a>
             <a href="tel:+34937950113">
-              <span>TelÃ©fono</span>
+              <span>Teléfono</span>
               +34 937 950 113
             </a>
             <a href="https://wa.me/34722819250" target="_blank" rel="noreferrer">
@@ -65,8 +65,8 @@ export default function ContactoPage() {
               +34 722 819 250
             </a>
             <a href="https://www.google.com/maps/search/?api=1&query=Arenys%20de%20Munt%2008358%20Barcelona%20Spain" target="_blank" rel="noreferrer">
-              <span>UbicaciÃ³n</span>
-              08358 Arenys de Munt, Barcelona, EspaÃ±a
+              <span>Ubicación</span>
+              08358 Arenys de Munt, Barcelona, España
             </a>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function ContactoPage() {
           <div className="network-stats">
             <div>
               <strong>{countries.length}</strong>
-              <span>paÃ­ses</span>
+              <span>países</span>
             </div>
             <div>
               <strong>{distributors.length}</strong>

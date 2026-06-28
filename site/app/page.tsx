@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import Nav from "./components/Nav";
 import ScrollReveal from "./components/ScrollReveal";
@@ -10,25 +10,25 @@ import Footer from "./components/Footer";
 import { engines, siteUrl } from "./lib/seo-data";
 
 const capabilities = [
-  { title: "IntegraciÃ³n UAV", desc: "Arquitectura de combustible, interfaces de control, revisiÃ³n de instalaciÃ³n y soporte de plataforma.", img: "/media/capabilities/uav-integration.png" },
-  { title: "ECU y telemetrÃ­a", desc: "ElectrÃ³nica de control, CAN Bus, interfaces serie, sensores y registro de datos.", img: "/media/capabilities/electronics-telemetry.png" },
-  { title: "Desarrollo a medida", desc: "AnÃ¡lisis de misiÃ³n, adaptaciÃ³n dimensional, prototipos e ingenierÃ­a de programa.", img: "/media/capabilities/custom-development.png" },
-  { title: "Ensayo y validaciÃ³n", desc: "Banco de pruebas, anÃ¡lisis de rendimiento y preparaciÃ³n para vuelo.", img: "/media/capabilities/testing-validation.png" },
-  { title: "FabricaciÃ³n en EspaÃ±a", desc: "DiseÃ±o europeo, fabricaciÃ³n, montaje y soporte tÃ©cnico.", img: "/media/capabilities/manufacturing-spain.png" },
-  { title: "PropulsiÃ³n target drone", desc: "Empuje compacto y soporte de integraciÃ³n para plataformas exigentes.", img: "/media/capabilities/target-drones.png" },
+  { title: "Integración UAV", desc: "Arquitectura de combustible, interfaces de control, revisión de instalación y soporte de plataforma.", img: "/media/capabilities/uav-integration.png" },
+  { title: "ECU y telemetría", desc: "Electrónica de control, CAN Bus, interfaces serie, sensores y registro de datos.", img: "/media/capabilities/electronics-telemetry.png" },
+  { title: "Desarrollo a medida", desc: "Análisis de misión, adaptación dimensional, prototipos e ingeniería de programa.", img: "/media/capabilities/custom-development.png" },
+  { title: "Ensayo y validación", desc: "Banco de pruebas, análisis de rendimiento y preparación para vuelo.", img: "/media/capabilities/testing-validation.png" },
+  { title: "Fabricación en España", desc: "Diseño europeo, fabricación, montaje y soporte técnico.", img: "/media/capabilities/manufacturing-spain.png" },
+  { title: "Propulsión target drone", desc: "Empuje compacto y soporte de integración para plataformas exigentes.", img: "/media/capabilities/target-drones.png" },
 ];
 
 const proofStrip = [
-  ["25+ aÃ±os", "Experiencia en turbinas"],
-  ["Made in Spain", "FabricaciÃ³n europea"],
-  ["25+ aÃ±os", "IngenierÃ­a de turbinas compactas"],
-  ["Hecho en EspaÃ±a", "DiseÃ±ado y fabricado"],
+  ["25+ años", "Experiencia en turbinas"],
+  ["Made in Spain", "Fabricación europea"],
+  ["25+ años", "Ingeniería de turbinas compactas"],
+  ["Hecho en España", "Diseñado y fabricado"],
 ];
 
 const heroProofCards = [
   ["98-255 N", "Clases de empuje XM"],
-  ["ECU + telemetrÃ­a", "Control integrado"],
-  ["Soporte tÃ©cnico", "SelecciÃ³n e integraciÃ³n"],
+  ["ECU + telemetría", "Control integrado"],
+  ["Soporte técnico", "Selección e integración"],
   ["Red global", "Distribuidores autorizados"],
 ];
 
@@ -39,18 +39,18 @@ export default function Home() {
     name: "JetsMunt",
     url: siteUrl,
     description:
-      "Fabricante europeo de sistemas de propulsiÃ³n turbojet compactos, ECU, telemetrÃ­a y soporte de integraciÃ³n para plataformas UAV.",
+      "Fabricante europeo de sistemas de propulsión turbojet compactos, ECU, telemetría y soporte de integración para plataformas UAV.",
     address: {
       "@type": "PostalAddress",
       addressCountry: "ES",
     },
     knowsAbout: [
       "Motores turbojet compactos",
-      "25 aÃ±os de experiencia en ingenierÃ­a de turbinas compactas",
-      "Sistemas de propulsiÃ³n UAV",
-      "PropulsiÃ³n para target drones",
-      "ECU y telemetrÃ­a turbojet",
-      "Ensayo y validaciÃ³n de propulsiÃ³n",
+      "25 años de experiencia en ingeniería de turbinas compactas",
+      "Sistemas de propulsión UAV",
+      "Propulsión para target drones",
+      "ECU y telemetría turbojet",
+      "Ensayo y validación de propulsión",
     ],
   };
 
@@ -97,10 +97,10 @@ export default function Home() {
 
             <div className="container hero-grid">
               <ScrollReveal className="hero-copy">
-                <div className="hero-kicker">DiseÃ±ado y fabricado en EspaÃ±a</div>
-                <h1 className="heading-xl">IngenierÃ­a europea en turbojets compactos.</h1>
+                <div className="hero-kicker">Diseñado y fabricado en España</div>
+                <h1 className="heading-xl">Ingeniería europea en turbojets compactos.</h1>
                 <p className="hero-desc">
-                  DiseÃ±ado y fabricado en EspaÃ±a para UAV, target drones y plataformas aeroespaciales avanzadas.
+                  Diseñado y fabricado en España para UAV, target drones y plataformas aeroespaciales avanzadas.
                 </p>
                 <div className="hero-proof-grid" aria-label="JetsMunt technical proof points">
                   {heroProofCards.map(([label, detail]) => (
@@ -133,7 +133,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="section-heading">
               <p className="section-label">Portfolio de motores XM</p>
-              <h2 className="heading-lg">Selecciona propulsiÃ³n por empuje, masa y envolvente de instalaciÃ³n.</h2>
+              <h2 className="heading-lg">Selecciona propulsión por empuje, masa y envolvente de instalación.</h2>
             </div>
           </ScrollReveal>
 
@@ -165,11 +165,11 @@ export default function Home() {
           <ScrollReveal>
             <div className="section-heading split">
               <div>
-                <p className="section-label">Capacidades de ingenierÃ­a</p>
-                <h2 className="heading-lg">Profundidad tÃ©cnica mÃ¡s allÃ¡ del catÃ¡logo.</h2>
+                <p className="section-label">Capacidades de ingeniería</p>
+                <h2 className="heading-lg">Profundidad técnica más allá del catálogo.</h2>
               </div>
               <p className="body-md">
-                Un programa necesita mÃ¡s que una cifra de empuje. JetsMunt ayuda a seleccionar, integrar, validar y soportar el paquete de propulsiÃ³n completo.
+                Un programa necesita más que una cifra de empuje. JetsMunt ayuda a seleccionar, integrar, validar y soportar el paquete de propulsión completo.
               </p>
             </div>
           </ScrollReveal>
@@ -195,14 +195,14 @@ export default function Home() {
           <div className="container">
             <ScrollReveal>
               <p className="section-label">Flujo de programa</p>
-              <h2 className="heading-lg">Una ruta clara desde la necesidad de plataforma hasta la propulsiÃ³n validada.</h2>
+              <h2 className="heading-lg">Una ruta clara desde la necesidad de plataforma hasta la propulsión validada.</h2>
             </ScrollReveal>
 
             <div className="workflow-grid">
               {[
-                ["Perfil de misiÃ³n", "Definir empuje objetivo, altitud, ciclo de uso, combustible y restricciones de instalaciÃ³n."],
-                ["SelecciÃ³n del sistema", "Alinear clase de motor, ECU, telemetrÃ­a y soporte con la envolvente de la plataforma."],
-                ["Ensayo y soporte", "Preparar validaciÃ³n en banco, datos de vuelo y feedback tÃ©cnico antes del despliegue."],
+                ["Perfil de misión", "Definir empuje objetivo, altitud, ciclo de uso, combustible y restricciones de instalación."],
+                ["Selección del sistema", "Alinear clase de motor, ECU, telemetría y soporte con la envolvente de la plataforma."],
+                ["Ensayo y soporte", "Preparar validación en banco, datos de vuelo y feedback técnico antes del despliegue."],
               ].map(([title, detail], index) => (
                 <ScrollReveal key={title} delay={(index + 1) as 1 | 2 | 3}>
                   <article className="workflow-step">
@@ -219,10 +219,10 @@ export default function Home() {
         <section className="cta-section section" id="contact">
           <div className="container cta-inner">
             <div>
-              <p className="section-label">Consulta tÃ©cnica de propulsiÃ³n</p>
-              <h2 className="heading-md">Define la ruta de propulsiÃ³n adecuada para tu plataforma.</h2>
+              <p className="section-label">Consulta técnica de propulsión</p>
+              <h2 className="heading-md">Define la ruta de propulsión adecuada para tu plataforma.</h2>
               <p className="body-md">
-                Comparte el tipo de plataforma, empuje objetivo, envolvente operativa y requisitos de integraciÃ³n con el equipo de ingenierÃ­a de JetsMunt.
+                Comparte el tipo de plataforma, empuje objetivo, envolvente operativa y requisitos de integración con el equipo de ingeniería de JetsMunt.
               </p>
             </div>
             <ContactEnquiryForm compact />

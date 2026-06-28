@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const footerGroups = [
   {
-    title: "CatÃ¡logo",
+    title: "Catálogo",
     links: [
       ["Motores", "/motores"],
       ["Accesorios", "/accesorios"],
@@ -23,12 +23,12 @@ const footerGroups = [
     ],
   },
   {
-    title: "IngenierÃ­a",
+    title: "Ingeniería",
     links: [
-      ["PropulsiÃ³n UAV", "/uav-propulsion"],
-      ["ECU y telemetrÃ­a", "/electronics-telemetry"],
-      ["Ensayo y validaciÃ³n", "/testing-validation"],
-      ["FabricaciÃ³n en EspaÃ±a", "/manufacturing-in-spain"],
+      ["Propulsión UAV", "/uav-propulsion"],
+      ["ECU y telemetría", "/electronics-telemetry"],
+      ["Ensayo y validación", "/testing-validation"],
+      ["Fabricación en España", "/manufacturing-in-spain"],
     ],
   },
   {
@@ -52,7 +52,7 @@ const socialLinks = [
 const footerByLocale = {
   es: {
     statement: "Sistemas turbojet compactos europeos.",
-    sub: "Motores, accesorios, distribuidores y servicio tÃ©cnico para programas de propulsion JetsMunt.",
+    sub: "Motores, accesorios, distribuidores y servicio técnico para programas de propulsion JetsMunt.",
     rights: "Todos los derechos reservados.",
     legal: [["Contacto", "/contacto"], ["Soporte", "/support"], ["Distribuidores", "/distribuidores"]],
     groups: footerGroups,
@@ -77,7 +77,7 @@ const footerByLocale = {
     groups: [
       { title: "Catalogue", links: [["Moteurs", "/fr/moteurs"], ["Accessoires", "/fr/accessoires"], ["Serie PRO", "/pro-series"], ["Turbojets compacts", "/fr/moteurs-turbojet-compacts"]] },
       { title: "Support", links: [["Service technique", "/fr/service-technique"], ["Distributeurs", "/fr/distributeurs"], ["Telechargements", "/support/downloads"], ["FAQ", "/support/faq"]] },
-      { title: "Ingenierie", links: [["PropulsiÃ³n UAV", "/fr/propulsion-uav"], ["ECU telemetrie", "/fr/electronique-telemetrie"], ["Tests validation", "/fr/essais-validation"], ["Fabrication Espagne", "/fr/fabrication-espagne"]] },
+      { title: "Ingenierie", links: [["Propulsión UAV", "/fr/propulsion-uav"], ["ECU telemetrie", "/fr/electronique-telemetrie"], ["Tests validation", "/fr/essais-validation"], ["Fabrication Espagne", "/fr/fabrication-espagne"]] },
       { title: "Entreprise", links: [["Contact", "/fr/contact"], ["Architecture", "/fr/architecture-propulsion"], ["Developpement sur mesure", "/fr/developpement-sur-mesure"], ["Maintenance", "/support/maintenance"]] },
     ],
   },

@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../components/SeoPage";
@@ -20,7 +20,7 @@ export default function EnginesPage() {
     <SeoPageShell
       kicker="Portfolio de motores XM"
       title="Motores turbojet compactos para UAV y plataformas target."
-      description="Los motores JetsMunt XM se seleccionan por empuje, masa, diÃ¡metro, integraciÃ³n ECU y requisitos de validacion para plataformas aeroespaciales compactas."
+      description="Los motores JetsMunt XM se seleccionan por empuje, masa, diámetro, integración ECU y requisitos de validacion para plataformas aeroespaciales compactas."
       image="/media/turbina/m166ts-2.jpg"
       breadcrumbPath="/motores"
       compact
@@ -38,7 +38,7 @@ export default function EnginesPage() {
                 <div className="product-specs">
                   <span><small>Empuje</small><strong>{engine.thrust}</strong></span>
                   <span><small>Peso</small><strong>{engine.weight}</strong></span>
-                  <span><small>DiÃ¡metro</small><strong>{engine.diameter}</strong></span>
+                  <span><small>Diámetro</small><strong>{engine.diameter}</strong></span>
                 </div>
                 <Link href={`/products/${engine.slug}`} className="text-link">
                   Ver detalles
