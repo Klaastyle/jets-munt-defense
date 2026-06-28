@@ -10,7 +10,7 @@ const footerGroups = [
       ["Motores", "/motores"],
       ["Accesorios", "/accesorios"],
       ["Serie PRO", "/pro-series"],
-      ["Turbojets compactos", "/compact-turbojet-engines"],
+      ["Turbojets compactos", "/motores-turbojet-compactos"],
     ],
   },
   {
@@ -25,18 +25,18 @@ const footerGroups = [
   {
     title: "Ingeniería",
     links: [
-      ["Propulsión UAV", "/uav-propulsion"],
-      ["ECU y telemetría", "/electronics-telemetry"],
-      ["Ensayo y validación", "/testing-validation"],
-      ["Fabricación en España", "/manufacturing-in-spain"],
+      ["Propulsión UAV", "/propulsion-uav"],
+      ["ECU y telemetría", "/electronica-telemetria"],
+      ["Ensayo y validación", "/ensayos-validacion"],
+      ["Fabricación en España", "/fabricacion-espana"],
     ],
   },
   {
     title: "Empresa",
     links: [
       ["Contacto", "/contacto"],
-      ["Arquitectura", "/propulsion-architecture"],
-      ["Desarrollo a medida", "/engineering-custom-development"],
+      ["Arquitectura", "/arquitectura-propulsion"],
+      ["Desarrollo a medida", "/desarrollo-medida"],
       ["Mantenimiento", "/support/maintenance"],
     ],
   },

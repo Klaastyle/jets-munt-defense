@@ -1,4 +1,4 @@
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jets-munt.com";
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jetsmuntdefense.com";
 
 export const engines = [
   {
@@ -666,8 +666,8 @@ export function solutionAlternates(baseSlug: string) {
   const localized = localizedSolutionPages.find((page) => page.baseSlug === baseSlug);
 
   return {
-    "x-default": `/${baseSlug}`,
-    es: `/${baseSlug}`,
+    "x-default": localized ? `/${localized.es.slug}` : `/${baseSlug}`,
+    es: localized ? `/${localized.es.slug}` : `/${baseSlug}`,
     en: localized ? `/en/${localized.en.slug}` : `/${baseSlug}`,
     fr: localized ? `/fr/${localized.fr.slug}` : `/${baseSlug}`,
   };
@@ -870,6 +870,6 @@ export const allSeoRoutes = [
   ...localizedSolutionPages.map((page) => `fr/${page.fr.slug}`),
   "pro-series",
   ...proEngines.map((engine) => `pro-series/${engine.slug}`),
-  ...solutionPages.map((page) => page.slug),
+  ...localizedSolutionPages.map((page) => page.es.slug),
   ...supportPages.map((page) => page.slug),
 ];

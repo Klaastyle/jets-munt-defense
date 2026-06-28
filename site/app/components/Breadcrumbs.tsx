@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteUrl } from "../lib/seo-data";
 
 const labels: Record<string, Record<string, string>> = {
   es: {
@@ -74,7 +75,7 @@ export default function Breadcrumbs({ pathname }: { pathname: string }) {
       "@type": "ListItem",
       position: index + 1,
       name: crumb.label,
-      item: `https://jets-munt.com${crumb.href === "/" ? "" : crumb.href}`,
+      item: `${siteUrl}${crumb.href === "/" ? "" : crumb.href}`,
     })),
   };
 

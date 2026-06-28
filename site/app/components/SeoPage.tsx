@@ -78,11 +78,11 @@ export function SeoPageShell({
 export function SeoInternalLinks({ locale = "es" }: { locale?: "es" | "en" | "fr" }) {
   const linkSets = {
     es: [
-      ["Propulsion UAV", "/uav-propulsion"],
-      ["Propulsion para target drones", "/target-drone-propulsion"],
-      ["Arquitectura de propulsion", "/propulsion-architecture"],
-      ["Electronica y telemetria", "/electronics-telemetry"],
-      ["Ensayos y validacion", "/testing-validation"],
+      ["Propulsion UAV", "/propulsion-uav"],
+      ["Propulsion para target drones", "/propulsion-target-drone"],
+      ["Arquitectura de propulsion", "/arquitectura-propulsion"],
+      ["Electronica y telemetria", "/electronica-telemetria"],
+      ["Ensayos y validacion", "/ensayos-validacion"],
       ["Soporte", "/support"],
     ],
     en: [
