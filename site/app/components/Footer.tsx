@@ -16,7 +16,7 @@ const footerGroups = [
   {
     title: "Soporte",
     links: [
-      ["Servicio tecnico", "/servicio-tecnico"],
+      ["Servicio técnico", "/servicio-tecnico"],
       ["Distribuidores", "/distribuidores"],
       ["Descargas", "/support/downloads"],
       ["FAQ", "/support/faq"],
@@ -77,7 +77,7 @@ const footerByLocale = {
     groups: [
       { title: "Catalogue", links: [["Moteurs", "/fr/moteurs"], ["Accessoires", "/fr/accessoires"], ["Serie PRO", "/pro-series"], ["Turbojets compacts", "/fr/moteurs-turbojet-compacts"]] },
       { title: "Support", links: [["Service technique", "/fr/service-technique"], ["Distributeurs", "/fr/distributeurs"], ["Telechargements", "/support/downloads"], ["FAQ", "/support/faq"]] },
-      { title: "Ingenierie", links: [["Propulsión UAV", "/fr/propulsion-uav"], ["ECU telemetrie", "/fr/electronique-telemetrie"], ["Tests validation", "/fr/essais-validation"], ["Fabrication Espagne", "/fr/fabrication-espagne"]] },
+      { title: "Ingenierie", links: [["Propulsion UAV", "/fr/propulsion-uav"], ["ECU telemetrie", "/fr/electronique-telemetrie"], ["Tests validation", "/fr/essais-validation"], ["Fabrication Espagne", "/fr/fabrication-espagne"]] },
       { title: "Entreprise", links: [["Contact", "/fr/contact"], ["Architecture", "/fr/architecture-propulsion"], ["Developpement sur mesure", "/fr/developpement-sur-mesure"], ["Maintenance", "/support/maintenance"]] },
     ],
   },

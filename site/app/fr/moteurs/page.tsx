@@ -39,8 +39,8 @@ export default function FrMoteursPage() {
                 <p>{engine.summaryFr || engine.summary}</p>
                 <div className="product-specs">
                   <span><small>Poussee</small><strong>{engine.thrust}</strong></span>
-                  <span><small>Poids</small><strong>{engine.weight}</strong></span>
-                  <span><small>Diametre</small><strong>{engine.diameter}</strong></span>
+                  <span><small>Poids</small><strong>{engine.weightFr || engine.weight}</strong></span>
+                  <span><small>Diametre</small><strong>{engine.diameterFr || engine.diameter}</strong></span>
                 </div>
                 <Link href={`/fr/produits/${engine.slug}`} className="text-link">Details du moteur</Link>
               </div>

@@ -20,7 +20,7 @@ const capabilities = [
 
 const proofStrip = [
   ["25+ años", "Experiencia en turbinas"],
-  ["Made in Spain", "Fabricación europea"],
+  ["Fabricado en España", "Fabricación europea"],
   ["25+ años", "Ingeniería de turbinas compactas"],
   ["Hecho en España", "Diseñado y fabricado"],
 ];
@@ -73,8 +73,8 @@ export default function Home() {
         },
         additionalProperty: [
           { "@type": "PropertyValue", name: "Thrust", value: engine.thrust },
-          { "@type": "PropertyValue", name: "Weight", value: engine.weight },
-          { "@type": "PropertyValue", name: "Diameter", value: engine.diameter },
+          { "@type": "PropertyValue", name: "Weight", value: engine.weightEs || engine.weight },
+          { "@type": "PropertyValue", name: "Diameter", value: engine.diameterEs || engine.diameter },
         ],
       },
     })),
@@ -142,7 +142,7 @@ export default function Home() {
               <ScrollReveal key={engine.name} delay={(index % 4 + 1) as 1 | 2 | 3 | 4}>
                 <Link className="product-card product-card-link" href={`/products/${engine.slug}`}>
                   <div className="product-card-img">
-                    <Image src={engine.img} alt={`${engine.name} compact turbojet engine`} width={640} height={480} sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 25vw" />
+                    <Image src={engine.img} alt={`${engine.name} motor turbojet compacto`} width={640} height={480} sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 25vw" />
                   </div>
                   <div className="product-card-body">
                     <div>
@@ -151,8 +151,8 @@ export default function Home() {
                     </div>
                     <div className="product-specs">
                       <span><small>Empuje</small><strong>{engine.thrust}</strong></span>
-                      <span><small>Peso</small><strong>{engine.weight}</strong></span>
-                      <span><small>Di\u00e1metro</small><strong>{engine.diameter}</strong></span>
+                      <span><small>Peso</small><strong>{engine.weightEs || engine.weight}</strong></span>
+                      <span><small>Diámetro</small><strong>{engine.diameterEs || engine.diameter}</strong></span>
                     </div>
                   </div>
                 </Link>

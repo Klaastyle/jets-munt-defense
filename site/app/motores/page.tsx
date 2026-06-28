@@ -37,8 +37,8 @@ export default function EnginesPage() {
                 <p>{engine.summaryEs || engine.summary}</p>
                 <div className="product-specs">
                   <span><small>Empuje</small><strong>{engine.thrust}</strong></span>
-                  <span><small>Peso</small><strong>{engine.weight}</strong></span>
-                  <span><small>Diámetro</small><strong>{engine.diameter}</strong></span>
+                  <span><small>Peso</small><strong>{engine.weightEs || engine.weight}</strong></span>
+                  <span><small>Diámetro</small><strong>{engine.diameterEs || engine.diameter}</strong></span>
                 </div>
                 <Link href={`/products/${engine.slug}`} className="text-link">
                   Ver detalles

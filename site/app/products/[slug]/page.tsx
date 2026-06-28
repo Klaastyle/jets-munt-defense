@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: EnginePageProps): Promise<Met
 
   return buildMetadata({
     title: `${engine.name} Motor Turbojet Compacto | JetsMunt`,
-    description: `${engine.name} compact turbojet engine with ${engine.thrust} thrust for UAV, target drone and advanced aerospace propulsion programs.`,
+    description: `Motor turbojet compacto ${engine.name} con ${engine.thrust} de empuje para programas de propulsión de UAV, target drones y plataformas aeroespaciales avanzadas.`,
     path: `/products/${engine.slug}`,
     image: engine.img,
     keywords: [engine.name, `${engine.name} turbojet`, "motor turbojet compacto UAV", "motor para target drone"],
@@ -51,11 +51,11 @@ export default async function EnginePage({ params }: EnginePageProps) {
       "@type": "Brand",
       name: "JetsMunt",
     },
-    category: "Compact turbojet engine",
+    category: "Motor turbojet compacto",
     additionalProperty: [
       { "@type": "PropertyValue", name: "Thrust", value: engine.thrust },
-      { "@type": "PropertyValue", name: "Weight", value: engine.weight },
-      { "@type": "PropertyValue", name: "Diameter", value: engine.diameter },
+      { "@type": "PropertyValue", name: "Weight", value: engine.weightEs || engine.weight },
+      { "@type": "PropertyValue", name: "Diameter", value: engine.diameterEs || engine.diameter },
     ],
   };
 
@@ -77,8 +77,8 @@ export default async function EnginePage({ params }: EnginePageProps) {
             <p className="section-label">Especificaciones principales</p>
             <dl>
               <div><dt>Empuje</dt><dd>{engine.thrust}</dd></div>
-              <div><dt>Peso</dt><dd>{engine.weight}</dd></div>
-              <div><dt>Diámetro</dt><dd>{engine.diameter}</dd></div>
+              <div><dt>Peso</dt><dd>{engine.weightEs || engine.weight}</dd></div>
+              <div><dt>Diámetro</dt><dd>{engine.diameterEs || engine.diameter}</dd></div>
               <div><dt>Sistema</dt><dd>Motor, ECU y soporte de telemetría</dd></div>
             </dl>
           </div>
@@ -100,7 +100,7 @@ export default async function EnginePage({ params }: EnginePageProps) {
             </Link>
           </div>
           <div className="seo-inline-media">
-            <Image src={engine.img} alt={`${engine.name} engine hardware`} fill sizes="(max-width: 980px) 100vw, 45vw" />
+            <Image src={engine.img} alt={`${engine.name} hardware de motor`} fill sizes="(max-width: 980px) 100vw, 45vw" />
           </div>
         </section>
         <SeoInternalLinks />

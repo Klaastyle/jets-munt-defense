@@ -50,8 +50,8 @@ export default async function FrProductPage({ params }: EnginePageProps) {
           <p className="section-label">Specifications principales</p>
           <dl>
             <div><dt>Poussee</dt><dd>{engine.thrust}</dd></div>
-            <div><dt>Poids</dt><dd>{engine.weight}</dd></div>
-            <div><dt>Diametre</dt><dd>{engine.diameter}</dd></div>
+            <div><dt>Poids</dt><dd>{engine.weightFr || engine.weight}</dd></div>
+            <div><dt>Diametre</dt><dd>{engine.diameterFr || engine.diameter}</dd></div>
             <div><dt>Systeme</dt><dd>Moteur, ECU et support telemetrie</dd></div>
           </dl>
         </div>

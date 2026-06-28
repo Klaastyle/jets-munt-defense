@@ -2,26 +2,79 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
-const architectureItems = [
-  {
-    title: "Compact turbojet core",
-    text: "A high-density turbine package for compact UAV airframes.",
-    img: "/media/photos/Gemini_Generated_Image_8bxtuz8bxtuz8bxt.png",
+const architectureData = {
+  es: {
+    label: "Arquitectura de propulsión",
+    heading: "El motor es solo una parte del sistema de misión.",
+    items: [
+      {
+        title: "Motor turbojet compacto",
+        text: "Un conjunto de turbina de alta densidad para plataformas UAV compactas.",
+        img: "/media/photos/Gemini_Generated_Image_8bxtuz8bxtuz8bxt.png",
+      },
+      {
+        title: "ECU, sensores y registro de datos",
+        text: "El control, la protección y la telemetría forman parte de la misma arquitectura de propulsión.",
+        img: "/media/capabilities/electronics-telemetry.png",
+      },
+      {
+        title: "Soporte de integración en plataforma",
+        text: "Las restricciones de instalación, los requisitos de prueba y los datos del programa definen la ruta de propulsión final.",
+        img: "/media/capabilities/uav-integration.png",
+      },
+    ],
   },
-  {
-    title: "ECU, sensors and data logging",
-    text: "Control, protection and telemetry are presented as part of the same propulsion architecture.",
-    img: "/media/capabilities/electronics-telemetry.png",
+  en: {
+    label: "Propulsion architecture",
+    heading: "The engine is only one part of the mission system.",
+    items: [
+      {
+        title: "Compact turbojet core",
+        text: "A high-density turbine package for compact UAV airframes.",
+        img: "/media/photos/Gemini_Generated_Image_8bxtuz8bxtuz8bxt.png",
+      },
+      {
+        title: "ECU, sensors and data logging",
+        text: "Control, protection and telemetry are presented as part of the same propulsion architecture.",
+        img: "/media/capabilities/electronics-telemetry.png",
+      },
+      {
+        title: "Platform integration support",
+        text: "Installation constraints, test requirements and program data shape the final propulsion route.",
+        img: "/media/capabilities/uav-integration.png",
+      },
+    ],
   },
-  {
-    title: "Platform integration support",
-    text: "Installation constraints, test requirements and program data shape the final propulsion route.",
-    img: "/media/capabilities/uav-integration.png",
+  fr: {
+    label: "Architecture de propulsion",
+    heading: "Le moteur n'est qu'une partie du système de mission.",
+    items: [
+      {
+        title: "Moteur turbojet compact",
+        text: "Un ensemble turbine haute densité pour les plateformes UAV compactes.",
+        img: "/media/photos/Gemini_Generated_Image_8bxtuz8bxtuz8bxt.png",
+      },
+      {
+        title: "ECU, capteurs et enregistrement de données",
+        text: "Le contrôle, la protection et la télémétrie font partie de la même architecture de propulsion.",
+        img: "/media/capabilities/electronics-telemetry.png",
+      },
+      {
+        title: "Support d'intégration plateforme",
+        text: "Les contraintes d'installation, les exigences de test et les données du programme définissent la route de propulsion finale.",
+        img: "/media/capabilities/uav-integration.png",
+      },
+    ],
   },
-];
+};
 
 export default function ArchitectureReveal() {
+  const pathname = usePathname();
+  const locale = pathname.startsWith("/en") ? "en" : pathname.startsWith("/fr") ? "fr" : "es";
+  const { label, heading, items } = architectureData[locale];
+
   const itemRefs = useRef<HTMLElement[]>([]);
   const [active, setActive] = useState(0);
 
@@ -46,11 +99,11 @@ export default function ArchitectureReveal() {
     <section className="section architecture-section" id="architecture">
       <div className="container architecture-reveal-grid">
         <div className="architecture-copy">
-          <p className="section-label">Propulsion architecture</p>
-          <h2 className="heading-lg">The engine is only one part of the mission system.</h2>
+          <p className="section-label">{label}</p>
+          <h2 className="heading-lg">{heading}</h2>
 
           <div className="architecture-steps">
-            {architectureItems.map((item, index) => (
+            {items.map((item, index) => (
               <article
                 className={`architecture-step ${active === index ? "active" : ""}`}
                 data-arch={index}
@@ -67,7 +120,7 @@ export default function ArchitectureReveal() {
         </div>
 
         <div className="architecture-sticky-media">
-          {architectureItems.map((item, index) => (
+          {items.map((item, index) => (
             <Image
               key={item.img}
               src={item.img}
@@ -77,7 +130,7 @@ export default function ArchitectureReveal() {
               className={active === index ? "active" : ""}
             />
           ))}
-          <div className="architecture-image-caption">{architectureItems[active].title}</div>
+          <div className="architecture-image-caption">{items[active].title}</div>
         </div>
       </div>
     </section>

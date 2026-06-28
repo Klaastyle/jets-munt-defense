@@ -1,29 +1,90 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
-const steps = [
-  {
-    index: "01",
-    title: "Turbine core",
-    text: "Compact turbojet hardware matched to thrust, mass and envelope.",
-    bullets: ["98-255 N range", "Compact XM classes"],
-  },
-  {
-    index: "02",
-    title: "Control stack",
-    text: "ECU, sensors and telemetry integrated into the propulsion package.",
-    bullets: ["12-32 V PRO supply", "CAN Bus and data logging"],
-  },
-  {
-    index: "03",
-    title: "Validation support",
-    text: "Bench checks and flight-test preparation close the loop.",
-    bullets: ["Fuel architecture review", "Flight-test preparation"],
-  },
-];
+const stepsData = {
+  es: [
+    {
+      index: "01",
+      title: "Motor turbojet",
+      text: "Hardware turbojet compacto adaptado al empuje, masa y envolvente de instalación.",
+      bullets: ["Rango 98–255 N", "Clases compactas XM"],
+    },
+    {
+      index: "02",
+      title: "Sistema de control",
+      text: "ECU, sensores y telemetría integrados como parte del paquete de propulsión.",
+      bullets: ["Alimentación PRO 12–32 V", "CAN Bus y registro de datos"],
+    },
+    {
+      index: "03",
+      title: "Soporte de validación",
+      text: "Verificación en banco y preparación para pruebas de vuelo que cierran el programa.",
+      bullets: ["Revisión de arquitectura de combustible", "Preparación para pruebas de vuelo"],
+    },
+  ],
+  en: [
+    {
+      index: "01",
+      title: "Turbine core",
+      text: "Compact turbojet hardware matched to thrust, mass and envelope.",
+      bullets: ["98–255 N range", "Compact XM classes"],
+    },
+    {
+      index: "02",
+      title: "Control stack",
+      text: "ECU, sensors and telemetry integrated into the propulsion package.",
+      bullets: ["12–32 V PRO supply", "CAN Bus and data logging"],
+    },
+    {
+      index: "03",
+      title: "Validation support",
+      text: "Bench checks and flight-test preparation close the loop.",
+      bullets: ["Fuel architecture review", "Flight-test preparation"],
+    },
+  ],
+  fr: [
+    {
+      index: "01",
+      title: "Moteur turbojet",
+      text: "Hardware turbojet compact adapté à la poussée, la masse et l'enveloppe d'installation.",
+      bullets: ["Gamme 98–255 N", "Classes compactes XM"],
+    },
+    {
+      index: "02",
+      title: "Système de contrôle",
+      text: "ECU, capteurs et télémétrie intégrés dans le package de propulsion.",
+      bullets: ["Alimentation PRO 12–32 V", "CAN Bus et enregistrement de données"],
+    },
+    {
+      index: "03",
+      title: "Support de validation",
+      text: "Vérifications sur banc et préparation aux essais en vol pour finaliser le programme.",
+      bullets: ["Revue d'architecture carburant", "Préparation aux essais en vol"],
+    },
+  ],
+};
+
+const headingData = {
+  es: { label: "Un socio de propulsión completo", title: "Un sistema de propulsión completo." },
+  en: { label: "Built as a complete propulsion partner", title: "One propulsion stack." },
+  fr: { label: "Un partenaire de propulsion complet", title: "Un système de propulsion complet." },
+};
+
+const videoLabelData = {
+  es: "Vista explosionada de la turbina",
+  en: "Turbine exploded view",
+  fr: "Vue éclatée de la turbine",
+};
 
 export default function ScrollPropulsionPartner() {
+  const pathname = usePathname();
+  const locale = pathname.startsWith("/en") ? "en" : pathname.startsWith("/fr") ? "fr" : "es";
+  const steps = stepsData[locale];
+  const heading = headingData[locale];
+  const videoLabel = videoLabelData[locale];
+
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const stepRefs = useRef<HTMLElement[]>([]);
@@ -75,7 +136,7 @@ export default function ScrollPropulsionPartner() {
       window.removeEventListener("scroll", requestVideoUpdate);
       window.removeEventListener("resize", requestVideoUpdate);
     };
-  }, []);
+  }, [steps.length]);
 
   return (
     <section ref={sectionRef} className="partner-scroll-section" id="partner">
@@ -83,13 +144,13 @@ export default function ScrollPropulsionPartner() {
         <div className="container partner-grid">
           <div className="partner-video-frame">
             <video ref={videoRef} src="/media/videos/turbine-exploded-scrub.mp4" muted playsInline preload="auto" />
-            <div className="partner-video-label">Turbine exploded view</div>
+            <div className="partner-video-label">{videoLabel}</div>
           </div>
 
           <div className="partner-steps">
             <div className="partner-heading">
-              <p className="section-label">Built as a complete propulsion partner</p>
-              <h2 className="heading-lg">One propulsion stack.</h2>
+              <p className="section-label">{heading.label}</p>
+              <h2 className="heading-lg">{heading.title}</h2>
             </div>
 
             {steps.map((step, index) => (
