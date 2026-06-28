@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: EnginePageProps): Promise<Met
   if (!engine) return {};
   return buildMetadata({
     title: `${engine.name} Moteur Turbojet Compact | JetsMunt`,
-    description: `${engine.name} moteur turbojet compact avec ${engine.thrust} de poussee pour programmes UAV et drones cibles.`,
+    description: `${engine.name} moteur turbojet compact avec ${engine.thrust} de poussée pour programmes UAV et drones cibles.`,
     path: `/fr/produits/${engine.slug}`,
     image: engine.img,
     locale: "fr_FR",
@@ -47,21 +47,21 @@ export default async function FrProductPage({ params }: EnginePageProps) {
     >
       <section className="section container seo-detail-grid">
         <div className="seo-spec-panel">
-          <p className="section-label">Specifications principales</p>
+          <p className="section-label">Spécifications principales</p>
           <dl>
-            <div><dt>Poussee</dt><dd>{engine.thrust}</dd></div>
+            <div><dt>Poussée</dt><dd>{engine.thrust}</dd></div>
             <div><dt>Poids</dt><dd>{engine.weightFr || engine.weight}</dd></div>
-            <div><dt>Diametre</dt><dd>{engine.diameterFr || engine.diameter}</dd></div>
-            <div><dt>Systeme</dt><dd>Moteur, ECU et support telemetrie</dd></div>
+            <div><dt>Diamètre</dt><dd>{engine.diameterFr || engine.diameter}</dd></div>
+            <div><dt>Système</dt><dd>Moteur, ECU et support télémétrie</dd></div>
           </dl>
         </div>
         <div className="seo-copy-block">
-          <h2>Concu pour l'integration, pas seulement pour le catalogue.</h2>
-          <p>Le {engine.name} s'adresse aux equipes qui evaluent une propulsion turbojet compacte selon l'enveloppe aeronef, l'architecture de controle, les contraintes d'installation et la route de validation.</p>
+          <h2>Conçu pour l'intégration, pas seulement pour le catalogue.</h2>
+          <p>Le {engine.name} s'adresse aux équipes qui évaluent une propulsion turbojet compacte selon l'enveloppe de l'aéronef, l'architecture de contrôle, les contraintes d'installation et la route de validation.</p>
           <ul>
-            <li>Etudes propulsion pour UAV et plateformes cibles.</li>
-            <li>Planification integration ECU, capteurs et telemetrie.</li>
-            <li>Support validation banc et preparation essais en vol.</li>
+            <li>Études de propulsion pour UAV et plateformes cibles.</li>
+            <li>Planification de l'intégration ECU, capteurs et télémétrie.</li>
+            <li>Support de validation au banc et préparation des essais en vol.</li>
           </ul>
           <Link href="/fr/contact" className="btn btn-primary">Discuter ce moteur</Link>
         </div>

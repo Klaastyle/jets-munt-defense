@@ -6,7 +6,7 @@ import { primaryAlternates } from "../../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
   title: "Distributeurs JetsMunt | Revendeurs et Centres de Service",
-  description: "Recherchez les distributeurs autorises JetsMunt et les centres de service par region ou pays.",
+  description: "Recherchez les distributeurs autorisés JetsMunt et les centres de service par région ou pays.",
   path: "/fr/distributeurs",
   locale: "fr_FR",
   languages: primaryAlternates("distributors"),
@@ -16,8 +16,8 @@ export default function FrDistributeursPage() {
   return (
     <SeoPageShell locale="fr"
       kicker="Distributeurs"
-      title="Reseau de distributeurs autorises JetsMunt."
-      description="Selectionnez une region, recherchez un partenaire ou affichez uniquement les centres de service."
+      title="Réseau de distributeurs autorisés JetsMunt."
+      description="Sélectionnez une région, recherchez un partenaire ou affichez uniquement les centres de service."
       image="/media/capabilities/manufacturing-spain.png"
       compact
       breadcrumbPath="/fr/distributeurs"

@@ -67,7 +67,7 @@ export default async function EnginePage({ params }: EnginePageProps) {
       />
       <SeoPageShell
         kicker="Motor turbojet compacto"
-        title={`Clase de propulsion ${engine.name}.`}
+        title={`Clase de propulsión ${engine.name}.`}
         description={engine.summaryEs || engine.summary}
         image={engine.img}
         breadcrumbPath={`/products/${engine.slug}`}
@@ -85,14 +85,14 @@ export default async function EnginePage({ params }: EnginePageProps) {
           <div className="seo-copy-block">
             <h2>Diseñado para integración real, no solo para catálogo.</h2>
             <p>
-              El {engine.name} está orientado a equipos que evaluan propulsion turbojet compacta
+              El {engine.name} está orientado a equipos que evalúan propulsión turbojet compacta
               en función de envolvente de aeronave, arquitectura de control, restricciones de instalación
               y ruta de validación. JetsMunt acompaña la selección más allá del empuje, incluyendo ECU,
               telemetría, combustible y necesidades de ensayo.
             </p>
             <ul>
-              <li>Estudios de propulsion para UAV y plataformas target.</li>
-              <li>Planificación de integración ECU, sensores y telemetria.</li>
+              <li>Estudios de propulsión para UAV y plataformas target.</li>
+              <li>Planificación de integración ECU, sensores y telemetría.</li>
               <li>Soporte de validación en banco y preparación de pruebas de vuelo.</li>
             </ul>
             <Link href="/contacto" className="btn btn-primary">

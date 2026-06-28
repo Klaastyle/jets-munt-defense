@@ -9,7 +9,7 @@ const labels: Record<string, Record<string, string>> = {
     engines: "Motores",
     accesorios: "Accesorios",
     distribuidores: "Distribuidores",
-    "servicio-tecnico": "Servicio tecnico",
+    "servicio-tecnico": "Servicio técnico",
     contacto: "Contacto",
     support: "Soporte",
     "pro-series": "Serie PRO",

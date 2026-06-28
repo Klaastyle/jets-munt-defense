@@ -7,7 +7,7 @@ import { engines, primaryAlternates } from "../../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
   title: "Moteurs Turbojet Compacts pour UAV | JetsMunt",
-  description: "Moteurs turbojet compacts JetsMunt XM pour UAV, drones cibles et plateformes aerospatiales avancees.",
+  description: "Moteurs turbojet compacts JetsMunt XM pour UAV, drones cibles et plateformes aérospatiales avancées.",
   path: "/fr/moteurs",
   locale: "fr_FR",
   languages: primaryAlternates("engines"),
@@ -18,7 +18,7 @@ export default function FrMoteursPage() {
     <SeoPageShell locale="fr"
       kicker="Gamme de moteurs XM"
       title="Moteurs turbojet compacts pour UAV et plateformes cibles."
-      description="Les moteurs JetsMunt XM se selectionnent selon la poussee, la masse, le diametre, l'integration ECU et les besoins de validation."
+      description="Les moteurs JetsMunt XM se sélectionnent selon la poussée, la masse, le diamètre, l'intégration ECU et les besoins de validation."
       image="/media/turbina/m166ts-2.jpg"
       compact
       breadcrumbPath="/fr/moteurs"

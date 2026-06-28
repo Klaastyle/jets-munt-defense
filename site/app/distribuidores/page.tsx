@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import DistributorDirectory from "../components/DistributorDirectory";
 import { SeoPageShell } from "../components/SeoPage";
 import { buildMetadata } from "../lib/metadata";
@@ -7,7 +7,7 @@ import { distributors, primaryAlternates } from "../lib/seo-data";
 export const metadata: Metadata = buildMetadata({
   title: "Distribuidores JetsMunt | Centros de Venta y Servicio Autorizados",
   description:
-    "Directorio seleccionable de distribuidores JetsMunt, partners autorizados y centros de venta o servicio tecnico por region.",
+    "Directorio seleccionable de distribuidores JetsMunt, partners autorizados y centros de venta o servicio técnico por región.",
   path: "/distribuidores",
   image: "/media/capabilities/manufacturing-spain.png",
   keywords: ["distribuidores JetsMunt", "vendedores JetsMunt", "centro de servicio JetsMunt", "distribuidor turbojet"],
@@ -49,7 +49,7 @@ export default function DistributorsPage() {
       <SeoPageShell
         kicker="Distribuidores"
         title="Red de distribuidores autorizados JetsMunt."
-        description="Selecciona una region, busca por partner o filtra solo centros de servicio. La lista se basa en el directorio oficial de distribuidores JetsMunt."
+        description="Selecciona una región, busca por partner o filtra solo centros de servicio. La lista se basa en el directorio oficial de distribuidores JetsMunt."
         image="/media/capabilities/manufacturing-spain.png"
         breadcrumbPath="/distribuidores"
         compact

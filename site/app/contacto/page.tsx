@@ -6,12 +6,12 @@ import { buildMetadata } from "../lib/metadata";
 import { distributors, primaryAlternates } from "../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contacto JetsMunt | Consulta técnica de Propulsion",
+  title: "Contacto JetsMunt | Consulta técnica de Propulsión",
   description:
-    "Contacta con JetsMunt para seleccion de motor turbojet, accesorios, distribuidores, servicio tecnico e integracion de propulsion.",
+    "Contacta con JetsMunt para selección de motor turbojet, accesorios, distribuidores, servicio técnico e integración de propulsión.",
   path: "/contacto",
   image: "/media/capabilities/uav-integration.png",
-  keywords: ["JetsMunt contacto", "Consulta técnica JetsMunt", "servicio tecnico JetsMunt"],
+  keywords: ["JetsMunt contacto", "Consulta técnica JetsMunt", "servicio técnico JetsMunt"],
   locale: "es_ES",
   languages: primaryAlternates("contact"),
 });
@@ -34,8 +34,8 @@ export default function ContactoPage() {
           <p className="kicker">Consulta técnica</p>
           <h2>Empieza por las restricciones que importan.</h2>
           <p>
-            Envia el contexto de propulsion, clase de motor, necesidad de servicio o accesorio.
-            Cuanto mas preciso sea el briefing, más rápido podrá JetsMunt dirigirlo a ingenieria, ventas o servicio.
+            Envía el contexto de propulsión, clase de motor, necesidad de servicio o accesorio.
+            Cuanto más preciso sea el briefing, más rápido podrá JetsMunt dirigirlo a ingeniería, ventas o servicio.
           </p>
         </div>
 

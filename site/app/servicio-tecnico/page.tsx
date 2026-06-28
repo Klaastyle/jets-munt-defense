@@ -6,7 +6,7 @@ import { primaryAlternates } from "../lib/seo-data";
 export const metadata: Metadata = buildMetadata({
   title: "Servicio Técnico JetsMunt | Solicitud de Servicio y Mantenimiento",
   description:
-    "Servicio Técnico JetsMunt para motores turbojet, accesorios, ECU, telemetria, mantenimiento y soporte de validacion.",
+    "Servicio Técnico JetsMunt para motores turbojet, accesorios, ECU, telemetría, mantenimiento y soporte de validación.",
   path: "/servicio-tecnico",
   image: "/media/capabilities/testing-validation.png",
   keywords: ["Servicio Técnico JetsMunt", "mantenimiento JetsMunt", "servicio turbojet"],
@@ -18,8 +18,8 @@ export default function ServicioTecnicoPage() {
   return (
     <SeoPageShell
       kicker="Servicio Técnico"
-      title="Soporte técnico para sistemas de propulsion JetsMunt."
-      description="Comparte el modelo de motor, historial de uso, configuracion de accesorios y comportamiento actual para que el equipo tecnico pueda dirigir la solicitud correctamente."
+      title="Soporte técnico para sistemas de propulsión JetsMunt."
+      description="Comparte el modelo de motor, historial de uso, configuración de accesorios y comportamiento actual para que el equipo técnico pueda dirigir la solicitud correctamente."
       image="/media/capabilities/testing-validation.png"
       breadcrumbPath="/servicio-tecnico"
       compact
@@ -29,7 +29,7 @@ export default function ServicioTecnicoPage() {
           <h2>Antes de enviar la solicitud</h2>
           <ul>
             <li>Modelo de motor, referencia de serie y horas de uso si están disponibles.</li>
-            <li>ECU, registros de telemetria, sistema de combustible y contexto de instalacion.</li>
+            <li>ECU, registros de telemetría, sistema de combustible y contexto de instalación.</li>
             <li>Necesidad de mantenimiento, inspección, reparación o validación.</li>
             <li>Distribuidor o centro de servicio preferido si ya se conoce.</li>
           </ul>

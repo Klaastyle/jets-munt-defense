@@ -78,11 +78,11 @@ export function SeoPageShell({
 export function SeoInternalLinks({ locale = "es" }: { locale?: "es" | "en" | "fr" }) {
   const linkSets = {
     es: [
-      ["Propulsion UAV", "/propulsion-uav"],
-      ["Propulsion para target drones", "/propulsion-target-drone"],
-      ["Arquitectura de propulsion", "/arquitectura-propulsion"],
-      ["Electronica y telemetria", "/electronica-telemetria"],
-      ["Ensayos y validacion", "/ensayos-validacion"],
+      ["Propulsión UAV", "/propulsion-uav"],
+      ["Propulsión para target drones", "/propulsion-target-drone"],
+      ["Arquitectura de propulsión", "/arquitectura-propulsion"],
+      ["Electrónica y telemetría", "/electronica-telemetria"],
+      ["Ensayos y validación", "/ensayos-validacion"],
       ["Soporte", "/support"],
     ],
     en: [
@@ -97,15 +97,15 @@ export function SeoInternalLinks({ locale = "es" }: { locale?: "es" | "en" | "fr
       ["Propulsion UAV", "/fr/propulsion-uav"],
       ["Propulsion drone cible", "/fr/propulsion-drone-cible"],
       ["Architecture propulsion", "/fr/architecture-propulsion"],
-      ["Electronique et telemetrie", "/fr/electronique-telemetrie"],
+      ["Électronique et télémétrie", "/fr/electronique-telemetrie"],
       ["Essais et validation", "/fr/essais-validation"],
       ["Support", "/support"],
     ],
   };
   const labels = {
-    es: "Explora el sistema de propulsion",
+    es: "Explora el sistema de propulsión",
     en: "Explore the propulsion stack",
-    fr: "Explorer la pile propulsion",
+    fr: "Explorer le système de propulsion",
   };
   const links = linkSets[locale];
 
