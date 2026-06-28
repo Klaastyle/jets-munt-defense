@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FormEvent, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -13,20 +13,20 @@ export default function ContactEnquiryForm({ compact = false }: { compact?: bool
   const copy = {
     es: {
       error: "No se ha podido enviar la consulta.",
-      sent: "Consulta enviada. JetsMunt respondera usando los datos de contacto indicados.",
+      sent: "Consulta enviada. JetsMunt responderÃ¡ usando los datos de contacto indicados.",
       name: "Nombre / empresa",
       email: "Email de contacto",
-      country: "Pais",
-      phone: "Telefono / WhatsApp",
+      country: "PaÃ­s",
+      phone: "TelÃ©fono / WhatsApp",
       type: "Tipo de consulta",
-      choose: "Selecciona una opcion",
-      options: ["Seleccion de motor", "Accesorios", "Servicio tecnico", "Distribuidor", "Integracion de ingenieria"],
+      choose: "Selecciona una opciÃ³n",
+      options: ["SelecciÃ³n de motor", "Accesorios", "Servicio tÃ©cnico", "Distribuidor", "IntegraciÃ³n de ingenierÃ­a"],
       engine: "Motor / accesorio",
       platform: "Tipo de plataforma",
       timeline: "Plazo",
       notes: "Notas del proyecto",
       placeholder: "Empuje objetivo, ciclo de uso, limites de instalacion, ECU/telemetria o sintomas de servicio.",
-      consent: "Acepto que JetsMunt contacte conmigo sobre esta consulta tecnica.",
+      consent: "Acepto que JetsMunt contacte conmigo sobre esta consulta tÃ©cnica.",
       sending: "Enviando consulta...",
       submit: "Enviar consulta",
     },
@@ -168,3 +168,4 @@ export default function ContactEnquiryForm({ compact = false }: { compact?: bool
     </form>
   );
 }
+

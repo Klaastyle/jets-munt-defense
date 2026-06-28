@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import DistributorDirectory from "../components/DistributorDirectory";
 import { SeoPageShell } from "../components/SeoPage";
 import { buildMetadata } from "../lib/metadata";
@@ -19,7 +19,7 @@ export default function DistributorsPage() {
   const distributorSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "JetsMunt distributor network",
+    name: "Red de distribuidores JetsMunt",
     itemListElement: distributors.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -59,3 +59,4 @@ export default function DistributorsPage() {
     </>
   );
 }
+

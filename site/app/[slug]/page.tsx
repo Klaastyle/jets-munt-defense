@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -54,18 +54,18 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
   return (
     <SeoPageShell
       kicker={page.label}
-      title={`${page.title} for compact aerospace platforms.`}
+      title={`${page.title} para plataformas aeroespaciales compactas.`}
       description={page.description}
       image={page.image}
       breadcrumbPath={`/${page.slug}`}
     >
       <section className="section container seo-detail-grid">
         <div className="seo-copy-block">
-          <h2>Built around program requirements.</h2>
+          <h2>Adaptado a los requisitos del programa.</h2>
           <p>
-            JetsMunt works with compact turbojet propulsion as an engineering system: engine hardware,
-            ECU, telemetry, installation constraints, testing route and technical support. The objective
-            is to help teams reduce propulsion risk before the platform reaches validation.
+            JetsMunt trabaja con la propulsión turbojet compacta como sistema de ingeniería: motor,
+            ECU, telemetría, restricciones de instalación, ruta de ensayo y soporte técnico. El objetivo
+            es ayudar a los equipos a reducir el riesgo de propulsión antes de que la plataforma llegue a validación.
           </p>
           <ul>
             {page.points.map((point) => (
@@ -77,7 +77,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
           </Link>
         </div>
         <div className="seo-spec-panel">
-          <p className="section-label">Relevant engine classes</p>
+          <p className="section-label">Clases de motor relevantes</p>
           <dl>
             {engines.map((engine) => (
               <div key={engine.slug}>

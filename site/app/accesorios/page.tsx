@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../components/SeoPage";
 import { accessories, primaryAlternates } from "../lib/seo-data";
@@ -19,7 +19,7 @@ export default function AccessoriesPage() {
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "JetsMunt accessories",
+    name: "JetsMunt accesorios",
     itemListElement: accessories.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -42,7 +42,7 @@ export default function AccessoriesPage() {
       <SeoPageShell
         kicker="Accesorios"
         title="Sistemas de accesorios para propulsion JetsMunt."
-        description="Accesorios de combustible, telemetria, proteccion y packs de vuelo del catalogo JetsMunt, presentados para una seleccion tecnica rapida."
+        description="Accesorios de combustible, telemetrÃ­a, proteccion y packs de vuelo del catalogo JetsMunt, presentados para una selecciÃ³n tÃ©cnica rÃ¡pida."
         image="/media/capabilities/electronics-telemetry.png"
         breadcrumbPath="/accesorios"
         compact
@@ -74,3 +74,4 @@ export default function AccessoriesPage() {
     </>
   );
 }
+

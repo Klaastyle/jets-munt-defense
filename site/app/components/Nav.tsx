@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -9,7 +9,7 @@ const navByLocale = {
       { label: "Motores", href: "/motores" },
       { label: "Accesorios", href: "/accesorios" },
       { label: "Distribuidores", href: "/distribuidores" },
-      { label: "Servicio tecnico", href: "/servicio-tecnico" },
+      { label: "Servicio tÃ©cnico", href: "/servicio-tecnico" },
     ],
     contact: "Contacto",
     languageLabel: "Seleccionar idioma",
@@ -94,7 +94,7 @@ export default function Nav() {
         <button
           className="nav-burger"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle navigation menu"
+          aria-label="Abrir menÃº de navegaciÃ³n"
           id="nav-toggle"
         >
           <span />
@@ -118,3 +118,4 @@ const mobileOpen: React.CSSProperties = {
   gap: "1.5rem",
   zIndex: 99,
 };
+

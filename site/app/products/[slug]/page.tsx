@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -23,11 +23,11 @@ export async function generateMetadata({ params }: EnginePageProps): Promise<Met
   }
 
   return buildMetadata({
-    title: `${engine.name} Compact Turbojet Engine | JetsMunt`,
+    title: `${engine.name} Motor Turbojet Compacto | JetsMunt`,
     description: `${engine.name} compact turbojet engine with ${engine.thrust} thrust for UAV, target drone and advanced aerospace propulsion programs.`,
     path: `/products/${engine.slug}`,
     image: engine.img,
-    keywords: [engine.name, `${engine.name} turbojet`, "compact UAV turbojet engine", "target drone engine"],
+    keywords: [engine.name, `${engine.name} turbojet`, "motor turbojet compacto UAV", "motor para target drone"],
     locale: "es_ES",
     languages: productAlternates(engine.slug),
   });
@@ -78,22 +78,22 @@ export default async function EnginePage({ params }: EnginePageProps) {
             <dl>
               <div><dt>Empuje</dt><dd>{engine.thrust}</dd></div>
               <div><dt>Peso</dt><dd>{engine.weight}</dd></div>
-              <div><dt>Diametro</dt><dd>{engine.diameter}</dd></div>
-              <div><dt>Sistema</dt><dd>Motor, ECU y soporte de telemetria</dd></div>
+              <div><dt>Diámetro</dt><dd>{engine.diameter}</dd></div>
+              <div><dt>Sistema</dt><dd>Motor, ECU y soporte de telemetría</dd></div>
             </dl>
           </div>
           <div className="seo-copy-block">
-            <h2>Disenado para integracion real, no solo para catalogo.</h2>
+            <h2>Diseñado para integración real, no solo para catálogo.</h2>
             <p>
-              El {engine.name} esta orientado a equipos que evaluan propulsion turbojet compacta
-              en funcion de envolvente de aeronave, arquitectura de control, restricciones de instalacion
-              y ruta de validacion. JetsMunt acompana la seleccion mas alla del empuje, incluyendo ECU,
-              telemetria, combustible y necesidades de ensayo.
+              El {engine.name} está orientado a equipos que evaluan propulsion turbojet compacta
+              en función de envolvente de aeronave, arquitectura de control, restricciones de instalación
+              y ruta de validación. JetsMunt acompaña la selección más allá del empuje, incluyendo ECU,
+              telemetría, combustible y necesidades de ensayo.
             </p>
             <ul>
               <li>Estudios de propulsion para UAV y plataformas target.</li>
-              <li>Planificacion de integracion ECU, sensores y telemetria.</li>
-              <li>Soporte de validacion en banco y preparacion de pruebas de vuelo.</li>
+              <li>Planificación de integración ECU, sensores y telemetria.</li>
+              <li>Soporte de validación en banco y preparación de pruebas de vuelo.</li>
             </ul>
             <Link href="/contacto" className="btn btn-primary">
               Consultar este motor
