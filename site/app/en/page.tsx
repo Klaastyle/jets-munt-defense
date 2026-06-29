@@ -26,17 +26,17 @@ export default function EnHomePage() {
             <div className="hero-overlay" />
             <div className="container hero-grid">
               <div className="hero-copy">
-                <div className="hero-kicker">Engineered and manufactured in Spain</div>
-                <h1 className="heading-xl">European compact turbojet engineering.</h1>
+                <div className="hero-kicker">Defense Propulsion Systems</div>
+                <h1 className="heading-xl">European Turbojet Propulsion for Advanced Unmanned Systems</h1>
                 <p className="hero-desc">
                   Designed and manufactured in Spain for UAV, target drone and advanced aerospace platforms.
                 </p>
                 <div className="hero-proof-grid" aria-label="JetsMunt technical proof points">
                   {[
-                    ["98-255 N", "XM thrust classes"],
-                    ["ECU + telemetry", "Integrated control stack"],
-                    ["25+ years", "Turbine experience"],
-                    ["Global network", "Authorized distributors"],
+                    ["Since 1998", "Research & development started"],
+                    ["6,000+ Delivered", "Worldwide operational experience"],
+                    ["Designed & Manufactured", "In Spain"],
+                    ["Defense Propulsion", "For advanced unmanned systems"],
                   ].map(([label, detail]) => (
                     <div className="hero-proof-card" key={label}>
                       <strong>{label}</strong>
@@ -52,15 +52,15 @@ export default function EnHomePage() {
         <section className="model-strip" aria-label="JetsMunt proof points">
           <div className="model-strip-inner">
             {[
-              ["25+ years", "Turbine experience"],
-              ["Made in Spain", "European manufacturing"],
-              ["Engineering support", "Selection and integration"],
-              ["XM series", "98-255 N thrust classes"],
+              ["98 N - 255 N", "Product range"],
+              ["50+ Countries", "Global reach"],
+              ["30+ Years", "Engineering experience"],
+              ["6,000+ Engines", "Delivered worldwide"],
             ].concat([
-              ["25+ years", "Turbine experience"],
-              ["Made in Spain", "European manufacturing"],
-              ["Engineering support", "Selection and integration"],
-              ["XM series", "98-255 N thrust classes"],
+              ["98 N - 255 N", "Product range"],
+              ["50+ Countries", "Global reach"],
+              ["30+ Years", "Engineering experience"],
+              ["6,000+ Engines", "Delivered worldwide"],
             ]).map(([label, detail], index) => (
               <span className="model-pill" key={`${label}-${index}`}>
                 <strong>{label}</strong> {detail}

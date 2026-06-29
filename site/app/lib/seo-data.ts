@@ -698,13 +698,18 @@ export function homeAlternates() {
   };
 }
 
-export function primaryAlternates(section: "engines" | "accessories" | "distributors" | "service" | "contact") {
+export function primaryAlternates(section: "engines" | "accessories" | "distributors" | "service" | "contact" | "about" | "services" | "services-telemetry" | "services-integration" | "services-development") {
   const routes = {
     engines: { es: "/motores", en: "/en/engines", fr: "/fr/moteurs" },
     accessories: { es: "/accesorios", en: "/en/accessories", fr: "/fr/accessoires" },
     distributors: { es: "/distribuidores", en: "/en/distributors", fr: "/fr/distributeurs" },
     service: { es: "/servicio-tecnico", en: "/en/technical-service", fr: "/fr/service-technique" },
     contact: { es: "/contacto", en: "/en/contact", fr: "/fr/contact" },
+    about: { es: "/sobre-jetsmunt", en: "/en/about-jetsmunt", fr: "/fr/a-propos-jetsmunt" },
+    services: { es: "/servicios", en: "/en/services", fr: "/fr/services" },
+    "services-telemetry": { es: "/servicios/electronica-telemetria", en: "/en/services/electronics-telemetry", fr: "/fr/services/electronique-telemetrie" },
+    "services-integration": { es: "/servicios/integracion-uav", en: "/en/services/uav-integration", fr: "/fr/services/integration-uav" },
+    "services-development": { es: "/servicios/ingenieria-desarrollo", en: "/en/services/engineering-development", fr: "/fr/services/ingenierie-developpement" },
   }[section];
 
   return {
@@ -719,6 +724,15 @@ export function productAlternates(slug: string) {
     es: `/products/${slug}`,
     en: `/en/products/${slug}`,
     fr: `/fr/produits/${slug}`,
+  };
+}
+
+export function proProductAlternates(slug: "xm215-pro" | "xm255-pro") {
+  return {
+    "x-default": `/motores/${slug}`,
+    es: `/motores/${slug}`,
+    en: `/en/engines/${slug}`,
+    fr: `/fr/moteurs/${slug}`,
   };
 }
 

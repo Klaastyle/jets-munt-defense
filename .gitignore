@@ -1,0 +1,19 @@
+# Word/Office temp files
+~$*
+*.tmp
+*.docx
+
+# IDE / System files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local env files
+.env*.local
+
+# Next.js build and dependencies (already ignored in site/.gitignore, but good to have)
+**/node_modules/
+**/.next/
+**/out/
+**/build/

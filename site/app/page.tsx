@@ -19,17 +19,17 @@ const capabilities = [
 ];
 
 const proofStrip = [
-  ["25+ años", "Experiencia en turbinas"],
-  ["Fabricado en España", "Fabricación europea"],
-  ["25+ años", "Ingeniería de turbinas compactas"],
-  ["Hecho en España", "Diseñado y fabricado"],
+  ["98 N - 255 N", "Gama de productos"],
+  ["50+ Países", "Alcance global"],
+  ["30+ Años", "Experiencia en ingeniería"],
+  ["6.000+ Motores", "Entregados en el mundo"],
 ];
 
 const heroProofCards = [
-  ["98-255 N", "Clases de empuje XM"],
-  ["ECU + telemetría", "Control integrado"],
-  ["Soporte técnico", "Selección e integración"],
-  ["Red global", "Distribuidores autorizados"],
+  ["Desde 1998", "Inicio de I+D de turbinas"],
+  ["6.000+ Entregados", "Experiencia operativa global"],
+  ["Diseñado y Fabricado", "En España"],
+  ["Propulsión de Defensa", "Sistemas no tripulados avanzados"],
 ];
 
 export default function Home() {
@@ -97,8 +97,8 @@ export default function Home() {
 
             <div className="container hero-grid">
               <ScrollReveal className="hero-copy">
-                <div className="hero-kicker">Diseñado y fabricado en España</div>
-                <h1 className="heading-xl">Ingeniería europea en turbojets compactos.</h1>
+                <div className="hero-kicker">Defense Propulsion Systems</div>
+                <h1 className="heading-xl">European Turbojet Propulsion for Advanced Unmanned Systems</h1>
                 <p className="hero-desc">
                   Diseñado y fabricado en España para UAV, target drones y plataformas aeroespaciales avanzadas.
                 </p>
@@ -129,37 +129,7 @@ export default function Home() {
 
         <ArchitectureReveal />
 
-        <section className="section container" id="products">
-          <ScrollReveal>
-            <div className="section-heading">
-              <p className="section-label">Portfolio de motores XM</p>
-              <h2 className="heading-lg">Selecciona propulsión por empuje, masa y envolvente de instalación.</h2>
-            </div>
-          </ScrollReveal>
 
-          <div className="products-grid">
-            {engines.map((engine, index) => (
-              <ScrollReveal key={engine.name} delay={(index % 4 + 1) as 1 | 2 | 3 | 4}>
-                <Link className="product-card product-card-link" href={`/products/${engine.slug}`}>
-                  <div className="product-card-img">
-                    <Image src={engine.img} alt={`${engine.name} motor turbojet compacto`} width={640} height={480} sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 25vw" />
-                  </div>
-                  <div className="product-card-body">
-                    <div>
-                      <h3>{engine.name}</h3>
-                      <p>Turbojet compacto UAV</p>
-                    </div>
-                    <div className="product-specs">
-                      <span><small>Empuje</small><strong>{engine.thrust}</strong></span>
-                      <span><small>Peso</small><strong>{engine.weightEs || engine.weight}</strong></span>
-                      <span><small>Diámetro</small><strong>{engine.diameterEs || engine.diameter}</strong></span>
-                    </div>
-                  </div>
-                </Link>
-              </ScrollReveal>
-            ))}
-          </div>
-        </section>
 
         <section className="section container" id="capabilities">
           <ScrollReveal>

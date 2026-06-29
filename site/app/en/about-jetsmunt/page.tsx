@@ -1,0 +1,125 @@
+import type { Metadata } from "next";
+import { SeoPageShell } from "../../components/SeoPage";
+import { buildMetadata } from "../../lib/metadata";
+import { primaryAlternates } from "../../lib/seo-data";
+
+export const metadata: Metadata = buildMetadata({
+  title: "About JetsMunt | Over Three Decades of Turbine Expertise",
+  description:
+    "Learn about the history, timeline, and custom design and manufacturing capabilities of compact turbojet propulsion systems at JetsMunt.",
+  path: "/en/about-jetsmunt",
+  image: "/media/capabilities/manufacturing-spain.png",
+  keywords: ["about JetsMunt", "JetsMunt history", "aerospace engineering", "turbojet manufacturer"],
+  locale: "en_US",
+  languages: primaryAlternates("about"),
+});
+
+export default function AboutJetsMuntPage() {
+  const timelineItems = [
+    { year: "1994", title: "Research Activities", desc: "Technical research and experimental activities in compact turbine technology begin." },
+    { year: "1996", title: "First Successful Flight", desc: "First flight powered by an in-house developed compact turbine engine is successfully completed." },
+    { year: "1998", title: "Company Founded", desc: "JetsMunt is formally founded for the commercialization and continuous development of turbojets." },
+    { year: "2025+", title: "UAV Propulsion Leader", desc: "Over 6,000 engines delivered worldwide with extensive operational experience on global defense platforms." },
+  ];
+
+  const stats = [
+    { value: "98 N - 255 N", label: "Thrust range" },
+    { value: "50+ Countries", label: "Global reach" },
+    { value: "30+ Years", label: "Engineering experience" },
+  ];
+
+  return (
+    <SeoPageShell
+      kicker="About Us"
+      title="Three decades of innovation in compact turbojet propulsion."
+      description="JetsMunt is a Spanish aerospace engineering company specialized in the design, development, and manufacturing of advanced turbojet systems for modern unmanned platforms."
+      image="/media/capabilities/manufacturing-spain.png"
+      breadcrumbPath="/en/about-jetsmunt"
+      locale="en"
+    >
+      <section className="section container" style={{ paddingBottom: "2rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "3rem", marginBottom: "4rem" }}>
+          <div>
+            <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.8rem", fontWeight: 800, marginBottom: "1rem", color: "#fff" }}>
+              Our Journey
+            </h2>
+            <p style={{ color: "var(--text-soft)", marginBottom: "1.2rem", fontSize: "0.98rem", lineHeight: "1.7" }}>
+              The origins of JetsMunt date back to 1994, when initial theoretical and experimental research in micro-turbine technology began. Practical flight validation was reached in 1996, laying the foundation for the official incorporation of the company in 1998.
+            </p>
+            <p style={{ color: "var(--text-soft)", fontSize: "0.98rem", lineHeight: "1.7" }}>
+              Today, JetsMunt designs complete, robust propulsion solutions, integrating aerodynamic design, thermodynamic analysis, electronic control units (ECU), and real-time embedded software under one roof at our facilities in Spain.
+            </p>
+          </div>
+          <div>
+            <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.8rem", fontWeight: 800, marginBottom: "1rem", color: "#fff" }}>
+              Operational Experience
+            </h2>
+            <p style={{ color: "var(--text-soft)", marginBottom: "1.2rem", fontSize: "0.98rem", lineHeight: "1.7" }}>
+              With more than 6,000 engines delivered worldwide, our turbines operate on various defense platforms and commercial UAVs in over 50 countries. The robustness and reliability of our systems are the result of strict testing processes in specialized in-house test benches.
+            </p>
+            <p style={{ color: "var(--text-soft)", fontSize: "0.98rem", lineHeight: "1.7" }}>
+              Featuring an entirely European supply chain that is completely ITAR-free, we provide international customers with secure, reliable propulsion packages and short lead times.
+            </p>
+          </div>
+        </div>
+
+        {/* Timeline */}
+        <div style={{ margin: "4rem 0" }}>
+          <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.8rem", fontWeight: 800, marginBottom: "2.5rem", color: "#fff", textAlign: "center" }}>
+            Key Milestones
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            {timelineItems.map((item) => (
+              <div
+                key={item.year}
+                style={{
+                  background: "linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015))",
+                  border: "1px solid var(--line-soft, rgba(255,255,255,0.08))",
+                  borderRadius: "6px",
+                  padding: "1.5rem",
+                  transition: "border-color 0.2s ease",
+                }}
+              >
+                <div style={{ fontSize: "2rem", fontWeight: 900, color: "var(--accent)", fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", marginBottom: "0.5rem" }}>
+                  {item.year}
+                </div>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#fff", marginBottom: "0.5rem" }}>
+                  {item.title}
+                </h3>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: "1.5" }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Stats Grid */}
+        <div
+          style={{
+            background: "rgba(242, 106, 33, 0.04)",
+            border: "1px solid rgba(242, 106, 33, 0.15)",
+            borderRadius: "6px",
+            padding: "2.5rem 1.5rem",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: "2rem",
+            textAlign: "center",
+            marginTop: "4rem",
+          }}
+        >
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <div style={{ fontSize: "2.2rem", fontWeight: 900, color: "#fff", fontFamily: "var(--font-archivo, 'Archivo', sans-serif)" }}>
+                {stat.value}
+              </div>
+              <div style={{ fontSize: "0.78rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--accent-2)", marginTop: "0.4rem" }}>
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </SeoPageShell>
+  );
+}

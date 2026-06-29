@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 const footerGroups = [
   {
@@ -93,8 +94,8 @@ export default function Footer() {
       <div className="container">
         <div className="footer-panel">
           <div className="footer-topline">
-            <Link href="/" className="footer-brand nav-logo">
-              Jets<span>Munt</span>
+            <Link href="/" className="footer-brand nav-logo" style={{ display: "flex", alignItems: "center" }}>
+              <Logo />
             </Link>
             <div className="footer-social" aria-label="JetsMunt social links">
               {socialLinks.map(([label, href, name]) => (

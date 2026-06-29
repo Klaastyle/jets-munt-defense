@@ -3,46 +3,74 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SeoPageShell } from "../../components/SeoPage";
 import { buildMetadata } from "../../lib/metadata";
-import { engines, primaryAlternates } from "../../lib/seo-data";
+import { primaryAlternates } from "../../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Moteurs Turbojet Compacts pour UAV | JetsMunt",
-  description: "Moteurs turbojet compacts JetsMunt XM pour UAV, drones cibles et plateformes aérospatiales avancées.",
+  title: "Moteurs Turbojet Professionnels pour UAV | JetsMunt",
+  description:
+    "Découvrez la gamme de moteurs turboréacteurs professionnels JetsMunt PRO pour UAV avancés et plateformes cibles, avec électronique intégrée et support de validation.",
   path: "/fr/moteurs",
+  keywords: ["moteurs turbojet professionnels", "turbojet UAV", "JetsMunt PRO", "XM215 PRO", "XM255 PRO"],
   locale: "fr_FR",
   languages: primaryAlternates("engines"),
 });
 
 export default function FrMoteursPage() {
+  const proEnginesList = [
+    {
+      name: "XM215 PRO",
+      slug: "xm215-pro",
+      thrust: "215 N",
+      weight: "1 820 g",
+      diameter: "73,9 mm",
+      img: "/media/turbina/m166ts-3.jpg",
+      summary: "Microturbine optimisée avec électronique de contrôle FOC brushless et télémétrie de mission en temps réel.",
+    },
+    {
+      name: "XM255 PRO",
+      slug: "xm255-pro",
+      thrust: "255 N",
+      weight: "2 080 g",
+      diameter: "122 mm",
+      img: "/media/turbina/m166ts-3.jpg",
+      summary: "Notre unité de propulsion à plus forte poussée avec des standards de construction de qualité militaire pour UAV tactiques.",
+    },
+  ];
+
   return (
-    <SeoPageShell locale="fr"
-      kicker="Gamme de moteurs XM"
-      title="Moteurs turbojet compacts pour UAV et plateformes cibles."
-      description="Les moteurs JetsMunt XM se sélectionnent selon la poussée, la masse, le diamètre, l'intégration ECU et les besoins de validation."
-      image="/media/turbina/m166ts-2.jpg"
-      compact
+    <SeoPageShell
+      locale="fr"
+      kicker="Gamme de Moteurs PRO"
+      title="Systèmes de Propulsion Turboréacteur pour UAV"
+      description="Les moteurs JetsMunt PRO intègrent l'unité de contrôle (ECU), le logiciel de diagnostic et les capteurs de vol directement dans le moteur, éliminant les câblages externes et simplifiant l'intégration."
+      image="/media/turbina/m166ts-3.jpg"
       breadcrumbPath="/fr/moteurs"
+      compact
       primaryHref="/fr/contact"
       primaryLabel="Demande technique"
-      secondaryHref="/fr/accessoires"
-      secondaryLabel="Voir les accessoires"
+      secondaryHref="/fr/moteurs"
+      secondaryLabel="Voir les moteurs"
     >
       <section className="section container">
-        <div className="seo-card-grid">
-          {engines.map((engine) => (
-            <article className="seo-product-card" key={engine.slug}>
-              <div className="seo-card-media">
-                <Image src={engine.img} alt={`${engine.name} moteur turbojet compact`} fill sizes="(max-width: 980px) 100vw, 25vw" />
+        <div className="seo-card-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem" }}>
+          {proEnginesList.map((engine) => (
+            <article className="seo-product-card" key={engine.slug} style={{ display: "flex", flexDirection: "column", height: "100%", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "6px", overflow: "hidden" }}>
+              <div className="seo-card-media" style={{ position: "relative", height: "240px", width: "100%" }}>
+                <Image src={engine.img} alt={`${engine.name} turboréacteur compact professionnel`} fill style={{ objectFit: "cover" }} sizes="(max-width: 980px) 100vw, 50vw" />
               </div>
-              <div className="seo-card-body">
-                <h2>{engine.name}</h2>
-                <p>{engine.summaryFr || engine.summary}</p>
-                <div className="product-specs">
-                  <span><small>Poussee</small><strong>{engine.thrust}</strong></span>
-                  <span><small>Poids</small><strong>{engine.weightFr || engine.weight}</strong></span>
-                  <span><small>Diametre</small><strong>{engine.diameterFr || engine.diameter}</strong></span>
+              <div className="seo-card-body" style={{ padding: "1.5rem", display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#fff", marginBottom: "0.5rem" }}>{engine.name}</h2>
+                <p style={{ color: "var(--text-soft)", fontSize: "0.88rem", lineHeight: "1.6", marginBottom: "1.5rem", flexGrow: 1 }}>{engine.summary}</p>
+                
+                <div className="product-specs" style={{ display: "flex", justifyContent: "space-between", gap: "1rem", borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: "1rem", marginBottom: "1.5rem" }}>
+                  <span style={{ display: "flex", flexDirection: "column" }}><small style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Poussée</small><strong style={{ color: "#fff", fontSize: "0.95rem" }}>{engine.thrust}</strong></span>
+                  <span style={{ display: "flex", flexDirection: "column" }}><small style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Poids</small><strong style={{ color: "#fff", fontSize: "0.95rem" }}>{engine.weight}</strong></span>
+                  <span style={{ display: "flex", flexDirection: "column" }}><small style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Diamètre</small><strong style={{ color: "#fff", fontSize: "0.95rem" }}>{engine.diameter}</strong></span>
                 </div>
-                <Link href={`/fr/produits/${engine.slug}`} className="text-link">Details du moteur</Link>
+                
+                <Link href={`/fr/moteurs/${engine.slug}`} className="btn btn-ghost" style={{ textAlign: "center", width: "100%", padding: "0.6rem" }}>
+                  Voir les détails d'intégration
+                </Link>
               </div>
             </article>
           ))}

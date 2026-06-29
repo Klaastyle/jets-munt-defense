@@ -2,13 +2,31 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Logo from "./Logo";
 
 const navByLocale = {
   es: {
     links: [
-      { label: "Motores", href: "/motores" },
-      { label: "Accesorios", href: "/accesorios" },
-      { label: "Distribuidores", href: "/distribuidores" },
+      { label: "Sobre Jets-Munt", href: "/sobre-jetsmunt" },
+      {
+        label: "Motores",
+        href: "/motores",
+        children: [
+          { label: "Ver todos", href: "/motores" },
+          { label: "XM215 PRO", href: "/motores/xm215-pro" },
+          { label: "XM255 PRO", href: "/motores/xm255-pro" },
+        ],
+      },
+      {
+        label: "Servicios",
+        href: "/servicios",
+        children: [
+          { label: "Ver todos", href: "/servicios" },
+          { label: "Electrónica y Telemetría", href: "/servicios/electronica-telemetria" },
+          { label: "Integración en UAV", href: "/servicios/integracion-uav" },
+          { label: "Ingeniería y Desarrollo", href: "/servicios/ingenieria-desarrollo" },
+        ],
+      },
       { label: "Servicio técnico", href: "/servicio-tecnico" },
     ],
     contact: "Contacto",
@@ -16,9 +34,26 @@ const navByLocale = {
   },
   en: {
     links: [
-      { label: "Engines", href: "/en/engines" },
-      { label: "Accessories", href: "/en/accessories" },
-      { label: "Distributors", href: "/en/distributors" },
+      { label: "About JetsMunt", href: "/en/about-jetsmunt" },
+      {
+        label: "Engines",
+        href: "/en/engines",
+        children: [
+          { label: "All engines", href: "/en/engines" },
+          { label: "XM215 PRO", href: "/en/engines/xm215-pro" },
+          { label: "XM255 PRO", href: "/en/engines/xm255-pro" },
+        ],
+      },
+      {
+        label: "Services",
+        href: "/en/services",
+        children: [
+          { label: "All services", href: "/en/services" },
+          { label: "Electronics & Telemetry", href: "/en/services/electronics-telemetry" },
+          { label: "UAV Integration", href: "/en/services/uav-integration" },
+          { label: "Engineering & Development", href: "/en/services/engineering-development" },
+        ],
+      },
       { label: "Technical service", href: "/en/technical-service" },
     ],
     contact: "Contact",
@@ -26,9 +61,26 @@ const navByLocale = {
   },
   fr: {
     links: [
-      { label: "Moteurs", href: "/fr/moteurs" },
-      { label: "Accessoires", href: "/fr/accessoires" },
-      { label: "Distributeurs", href: "/fr/distributeurs" },
+      { label: "À propos", href: "/fr/a-propos-jetsmunt" },
+      {
+        label: "Moteurs",
+        href: "/fr/moteurs",
+        children: [
+          { label: "Tous les moteurs", href: "/fr/moteurs" },
+          { label: "XM215 PRO", href: "/fr/moteurs/xm215-pro" },
+          { label: "XM255 PRO", href: "/fr/moteurs/xm255-pro" },
+        ],
+      },
+      {
+        label: "Services",
+        href: "/fr/services",
+        children: [
+          { label: "Tous les services", href: "/fr/services" },
+          { label: "Électronique et Télémétrie", href: "/fr/services/electronique-telemetrie" },
+          { label: "Intégration UAV", href: "/fr/services/integration-uav" },
+          { label: "Ingénierie et Développement", href: "/fr/services/ingenierie-developpement" },
+        ],
+      },
       { label: "Service technique", href: "/fr/service-technique" },
     ],
     contact: "Contact",
@@ -52,6 +104,7 @@ function getLocale(pathname: string): Locale {
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const pathname = usePathname();
   const locale = getLocale(pathname);
   const nav = navByLocale[locale];
@@ -59,17 +112,45 @@ export default function Nav() {
   return (
     <nav className="nav" id="main-nav">
       <div className="nav-inner">
-        <Link href={languageHome[locale]} className="nav-logo">
-          Jets<span>Munt</span>
+        <Link href={languageHome[locale]} className="nav-logo" style={{ display: "flex", alignItems: "center" }}>
+          <Logo />
         </Link>
 
         <div className="nav-menu" style={open ? mobileOpen : undefined}>
           <div className="nav-links">
-            {nav.links.map((l) => (
-              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
-                {l.label}
-              </Link>
-            ))}
+            {nav.links.map((l) => {
+              if (l.children) {
+                return (
+                  <div key={l.label} className={`nav-item-dropdown ${mobileDropdownOpen ? "open" : ""}`}>
+                    <button
+                      className="nav-dropdown-toggle"
+                      onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+                    >
+                      {l.label}
+                    </button>
+                    <div className={`nav-dropdown-menu ${mobileDropdownOpen ? "open" : ""}`}>
+                      {l.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => {
+                            setOpen(false);
+                            setMobileDropdownOpen(false);
+                          }}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
+                  {l.label}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="nav-actions">

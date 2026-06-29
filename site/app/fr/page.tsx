@@ -26,17 +26,17 @@ export default function FrHomePage() {
             <div className="hero-overlay" />
             <div className="container hero-grid">
               <div className="hero-copy">
-                <div className="hero-kicker">Conçu et fabriqué en Espagne</div>
-                <h1 className="heading-xl">Ingénierie européenne de turbojets compacts.</h1>
+                <div className="hero-kicker">Defense Propulsion Systems</div>
+                <h1 className="heading-xl">European Turbojet Propulsion for Advanced Unmanned Systems</h1>
                 <p className="hero-desc">
                   Conçu et fabriqué en Espagne pour UAV, drones cibles et plateformes aérospatiales avancées.
                 </p>
                 <div className="hero-proof-grid" aria-label="Points techniques JetsMunt">
                   {[
-                    ["98-255 N", "Classes de poussée XM"],
-                    ["ECU + télémétrie", "Contrôle intégré"],
-                    ["25+ ans", "Expérience turbine"],
-                    ["Réseau global", "Distributeurs autorisés"],
+                    ["Depuis 1998", "Début de la R&D"],
+                    ["6 000+ Livrés", "Expérience opérationnelle mondiale"],
+                    ["Conçu & Fabriqué", "En Espagne"],
+                    ["Propulsion de Défense", "Pour systèmes non habités"],
                   ].map(([label, detail]) => (
                     <div className="hero-proof-card" key={label}>
                       <strong>{label}</strong>
@@ -52,15 +52,15 @@ export default function FrHomePage() {
         <section className="model-strip" aria-label="Points de preuve JetsMunt">
           <div className="model-strip-inner">
             {[
-              ["25+ ans", "Expérience turbine"],
-              ["Fabriqué en Espagne", "Fabrication européenne"],
-              ["Support ingénierie", "Sélection et intégration"],
-              ["Série XM", "Classes 98-255 N"],
+              ["98 N - 255 N", "Gamme de produits"],
+              ["50+ Pays", "Portée mondiale"],
+              ["30+ Ans", "Expérience technique"],
+              ["6 000+ Moteurs", "Livrés dans le monde"],
             ].concat([
-              ["25+ ans", "Expérience turbine"],
-              ["Fabriqué en Espagne", "Fabrication européenne"],
-              ["Support ingénierie", "Sélection et intégration"],
-              ["Série XM", "Classes 98-255 N"],
+              ["98 N - 255 N", "Gamme de produits"],
+              ["50+ Pays", "Portée mondiale"],
+              ["30+ Ans", "Expérience technique"],
+              ["6 000+ Moteurs", "Livrés dans le monde"],
             ]).map(([label, detail], index) => (
               <span className="model-pill" key={`${label}-${index}`}>
                 <strong>{label}</strong> {detail}

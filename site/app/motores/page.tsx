@@ -3,53 +3,75 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../components/SeoPage";
 import { buildMetadata } from "../lib/metadata";
-import { engines, primaryAlternates } from "../lib/seo-data";
+import { primaryAlternates } from "../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Motores Turbojet Compactos para UAV | JetsMunt",
+  title: "Motores Turbojet Profesionales para UAV | JetsMunt",
   description:
-    "Explora los motores turbojet compactos JetsMunt XM para UAV, target drones y plataformas especiales, con clases de empuje de 98 N a 255 N.",
+    "Explore la serie de motores turbojet profesionales JetsMunt PRO para UAV avanzados y plataformas target, con electrónica integrada y soporte de validación.",
   path: "/motores",
-  keywords: ["motores turbojet compactos", "motores turbojet UAV", "motores turbojet XM"],
+  keywords: ["motores turbojet profesionales", "turbojet UAV", "JetsMunt PRO", "XM215 PRO", "XM255 PRO"],
   locale: "es_ES",
   languages: primaryAlternates("engines"),
 });
 
 export default function EnginesPage() {
+  const proEnginesList = [
+    {
+      name: "XM215 PRO",
+      slug: "xm215-pro",
+      thrust: "215 N",
+      weight: "1.820 g",
+      diameter: "73,9 mm",
+      img: "/media/turbina/m166ts-3.jpg",
+      summary: "Microturbina optimizada con electrónica de control brushless FOC y telemetría de misión en tiempo real.",
+    },
+    {
+      name: "XM255 PRO",
+      slug: "xm255-pro",
+      thrust: "255 N",
+      weight: "2.080 g",
+      diameter: "122 mm",
+      img: "/media/turbina/m166ts-3.jpg",
+      summary: "Nuestra unidad de propulsión de mayor empuje y rendimiento militar para plataformas target y UAVs tácticos.",
+    },
+  ];
+
   return (
     <SeoPageShell
-      kicker="Portfolio de motores XM"
-      title="Motores turbojet compactos para UAV y plataformas target."
-      description="Los motores JetsMunt XM se seleccionan por empuje, masa, diámetro, integración ECU y requisitos de validacion para plataformas aeroespaciales compactas."
-      image="/media/turbina/m166ts-2.jpg"
+      kicker="Catálogo de Motores PRO"
+      title="Sistemas de Propulsión Turbojet para UAV"
+      description="Los motores JetsMunt PRO integran la unidad de control (ECU), el software de diagnóstico y los sensores de vuelo directamente en el hardware del motor, eliminando cables y simplificando la instalación en plataformas no tripuladas."
+      image="/media/turbina/m166ts-3.jpg"
       breadcrumbPath="/motores"
       compact
     >
       <section className="section container">
-        <div className="seo-card-grid">
-          {engines.map((engine) => (
-            <article className="seo-product-card" key={engine.slug}>
-              <div className="seo-card-media">
-                <Image src={engine.img} alt={`${engine.name} motor turbojet compacto`} fill sizes="(max-width: 980px) 100vw, 25vw" />
+        <div className="seo-card-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem" }}>
+          {proEnginesList.map((engine) => (
+            <article className="seo-product-card" key={engine.slug} style={{ display: "flex", flexDirection: "column", height: "100%", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "6px", overflow: "hidden" }}>
+              <div className="seo-card-media" style={{ position: "relative", height: "240px", width: "100%" }}>
+                <Image src={engine.img} alt={`${engine.name} motor turbojet compacto profesional`} fill style={{ objectFit: "cover" }} sizes="(max-width: 980px) 100vw, 50vw" />
               </div>
-              <div className="seo-card-body">
-                <h2>{engine.name}</h2>
-                <p>{engine.summaryEs || engine.summary}</p>
-                <div className="product-specs">
-                  <span><small>Empuje</small><strong>{engine.thrust}</strong></span>
-                  <span><small>Peso</small><strong>{engine.weightEs || engine.weight}</strong></span>
-                  <span><small>Diámetro</small><strong>{engine.diameterEs || engine.diameter}</strong></span>
+              <div className="seo-card-body" style={{ padding: "1.5rem", display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#fff", marginBottom: "0.5rem" }}>{engine.name}</h2>
+                <p style={{ color: "var(--text-soft)", fontSize: "0.88rem", lineHeight: "1.6", marginBottom: "1.5rem", flexGrow: 1 }}>{engine.summary}</p>
+                
+                <div className="product-specs" style={{ display: "flex", justifyContent: "space-between", gap: "1rem", borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: "1rem", marginBottom: "1.5rem" }}>
+                  <span style={{ display: "flex", flexDirection: "column" }}><small style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Empuje</small><strong style={{ color: "#fff", fontSize: "0.95rem" }}>{engine.thrust}</strong></span>
+                  <span style={{ display: "flex", flexDirection: "column" }}><small style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Peso</small><strong style={{ color: "#fff", fontSize: "0.95rem" }}>{engine.weight}</strong></span>
+                  <span style={{ display: "flex", flexDirection: "column" }}><small style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Diámetro</small><strong style={{ color: "#fff", fontSize: "0.95rem" }}>{engine.diameter}</strong></span>
                 </div>
-                <Link href={`/products/${engine.slug}`} className="text-link">
-                  Ver detalles
+                
+                <Link href={`/motores/${engine.slug}`} className="btn btn-ghost" style={{ textAlign: "center", width: "100%", padding: "0.6rem" }}>
+                  Ver detalles de integración
                 </Link>
               </div>
             </article>
           ))}
         </div>
       </section>
-      <SeoInternalLinks />
+      <SeoInternalLinks locale="es" />
     </SeoPageShell>
   );
 }
-
