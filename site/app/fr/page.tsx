@@ -105,11 +105,11 @@ export default function FrHomePage() {
                 <div className="hero-kicker" style={{ color: 'var(--accent-2)', margin: 0, textTransform: 'uppercase' }}>Systèmes de propulsion de défense</div>
               </div>
 
-              <div style={{ position: 'absolute', top: '65%', left: '0', width: '100%', height: '0' }}>
-                <div style={{ position: 'absolute', left: '10%', transform: 'translate(-50%, -50%)' }}>
+              <div className="hero-engine-buttons">
+                <div className="hero-engine-button-left">
                   <EngineButton name="XM215 PRO" href="/fr/moteurs/xm215-pro" delay={0} />
                 </div>
-                <div style={{ position: 'absolute', left: '95%', transform: 'translate(-50%, -50%)' }}>
+                <div className="hero-engine-button-right">
                   <EngineButton name="XM255 PRO" href="/fr/moteurs/xm255-pro" delay={1.5} />
                 </div>
               </div>
