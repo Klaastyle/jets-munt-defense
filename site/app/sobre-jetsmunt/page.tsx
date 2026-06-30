@@ -69,27 +69,35 @@ export default function SobreJetsMuntPage() {
           <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.8rem", fontWeight: 800, marginBottom: "2.5rem", color: "#fff", textAlign: "center" }}>
             Hitos Clave
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
-            {timelineItems.map((item) => (
-              <div
-                key={item.year}
-                style={{
-                  background: "linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015))",
-                  border: "1px solid var(--line-soft, rgba(255,255,255,0.08))",
-                  borderRadius: "6px",
-                  padding: "1.5rem",
-                  transition: "border-color 0.2s ease",
-                }}
-              >
-                <div style={{ fontSize: "2rem", fontWeight: 900, color: "var(--accent)", fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", marginBottom: "0.5rem" }}>
-                  {item.year}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem" }}>
+            {timelineItems.map((item, index) => (
+              <div key={item.year} style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+                {/* Timeline Line & Dot */}
+                <div style={{ display: "flex", alignItems: "center", width: "100%", marginBottom: "1.5rem" }}>
+                  <div style={{ width: "16px", height: "16px", borderRadius: "50%", background: "var(--accent)", boxShadow: "0 0 0 4px rgba(242,106,33,0.15)", flexShrink: 0 }}></div>
+                  <div style={{ height: "2px", flexGrow: 1, marginLeft: "1rem", background: index === timelineItems.length - 1 ? "linear-gradient(90deg, rgba(255,255,255,0.15), transparent)" : "rgba(255,255,255,0.15)" }}></div>
                 </div>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#fff", marginBottom: "0.5rem" }}>
-                  {item.title}
-                </h3>
-                <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: "1.5" }}>
-                  {item.desc}
-                </p>
+                {/* Timeline Card */}
+                <div
+                  style={{
+                    background: "linear-gradient(180deg, rgba(255,255,255,0.03), transparent)",
+                    border: "1px solid rgba(255,255,255,0.05)",
+                    borderTop: "3px solid var(--accent)",
+                    borderRadius: "6px",
+                    padding: "1.5rem",
+                    flexGrow: 1
+                  }}
+                >
+                  <div style={{ fontSize: "2.2rem", fontWeight: 900, color: "#fff", fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", marginBottom: "0.5rem", letterSpacing: "-0.02em" }}>
+                    {item.year}
+                  </div>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--accent)", marginBottom: "0.8rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ fontSize: "0.9rem", color: "var(--text-soft)", lineHeight: "1.6" }}>
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

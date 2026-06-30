@@ -153,7 +153,7 @@ export default function Home() {
 
 
 
-        <section className="section capabilities-section" id="capabilities">
+        <section className="section capabilities-section" id="capabilities" style={{ paddingBottom: "3rem" }}>
           <AnoAI />
           <div className="container capabilities-section-inner">
             <ScrollReveal>
@@ -184,7 +184,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section workflow-section" id="workflow">
+        <section className="section workflow-section" id="workflow" style={{ paddingTop: "3rem" }}>
           <video className="workflow-bg-video" src="/media/videos/loop-seamless.mp4" autoPlay muted loop playsInline />
           <div className="workflow-bg-overlay" />
           <div className="container">
