@@ -146,7 +146,8 @@ export default function Xm255ProPage() {
       kicker="Systèmes de Propulsion PRO"
       title="XM255 PRO"
       description="Le turboréacteur à plus forte poussée de la famille JetsMunt, conçu pour les systèmes sans pilote tactiques exigeants, les drones cibles rapides et les missiles de croisière."
-      image="/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png"
+      video="/media/255/PROMPT_VIDEO_—_XM_PRO_M.mp4"
+      showSpotlight={true}
       breadcrumbPath="/fr/moteurs/xm255-pro"
       locale="fr"
     >
@@ -373,50 +374,35 @@ export default function Xm255ProPage() {
           </div>
         </div>
 
-        {/* Section Média : Vidéo & Galerie */}
-        <div style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.8rem", marginBottom: "4rem" }}>
-          <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.4rem", fontWeight: 800, marginBottom: "1.5rem", color: "#fff", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
-            MULTIMÉDIA ET GALERIE D'INTÉGRATION
-          </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem" }} className="desktop-grid-2">
-            {/* Colonne Vidéo */}
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <p style={{ color: "var(--accent)", fontSize: "0.82rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.5rem" }}>
-                Démonstration sur Banc d'Essai
-              </p>
-              <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#fff", marginBottom: "1rem" }}>
-                Vidéo de Démonstration du Turboréacteur
-              </h3>
-              <div style={{ position: "relative", width: "100%", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)", aspectRatio: "16/9" }}>
-                <video
-                  src="/media/255/PROMPT_VIDEO_—_XM_PRO_M.mp4"
-                  controls
-                  playsInline
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </div>
+        {/* Section de Galérie de Photos Bento */}
+        <div style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "3rem 1.8rem", marginBottom: "4rem" }}>
+          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <p style={{ color: "var(--accent)", fontSize: "0.82rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.5rem" }}>
+              Détails du Matériel
+            </p>
+            <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.8rem", fontWeight: 800, color: "#fff", marginBottom: "0.8rem" }}>
+              Galerie d'Images
+            </h2>
+            <p style={{ color: "var(--text-soft)", fontSize: "0.9rem", maxWidth: "600px", margin: "0 auto" }}>
+              Examinez les détails techniques, composants d'intégration et finitions du turboréacteur XM255 PRO.
+            </p>
+          </div>
+
+          <div className="premium-bento-gallery">
+            <div className="bento-item bento-large" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
+              <Image src="/media/255/Gemini_Generated_Image_onajxeonajxeonaj.png" alt="XM255 PRO vue latérale de la structure" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
-            
-            {/* Colonne Galerie */}
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <p style={{ color: "var(--accent-2)", fontSize: "0.82rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.5rem" }}>
-                Détails du Matériel
-              </p>
-              <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#fff", marginBottom: "1rem" }}>
-                Vues Détaillées du Système
-              </h3>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-                {[
-                  { src: "/media/255/Gemini_Generated_Image_onajxeonajxeonaj.png", alt: "XM255 PRO vue latérale" },
-                  { src: "/media/255/Gemini_Generated_Image_q0loh8q0loh8q0lo.png", alt: "XM255 PRO vue frontale diffuseur" },
-                  { src: "/media/255/Gemini_Generated_Image_vs8tv5vs8tv5vs8t.png", alt: "XM255 PRO intégration électronique interne" },
-                  { src: "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png", alt: "XM255 PRO système d'échappement" },
-                ].map((img, i) => (
-                  <div key={i} style={{ position: "relative", height: "120px", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
-                    <Image src={img.src} alt={img.alt} fill style={{ objectFit: "cover" }} sizes="(max-width: 980px) 50vw, 25vw" />
-                  </div>
-                ))}
-              </div>
+            <div className="bento-item" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
+              <Image src="/media/255/Gemini_Generated_Image_q0loh8q0loh8q0lo.png" alt="XM255 PRO vue frontale diffuseur" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="bento-item" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
+              <Image src="/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png" alt="XM255 PRO système d'échappement" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="bento-item" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
+              <Image src="/media/255/Gemini_Generated_Image_vs8tv5vs8tv5vs8t.png" alt="XM255 PRO intégration électronique interne" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="bento-item" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
+              <Image src="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png" alt="Plan de CAO et intégration de systèmes UAV" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
           </div>
         </div>

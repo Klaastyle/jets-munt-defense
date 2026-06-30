@@ -3,18 +3,20 @@ import Link from "next/link";
 import Breadcrumbs from "./Breadcrumbs";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import { Spotlight } from "./Spotlight";
 
 export function SeoPageShell({
   kicker,
   title,
   description,
   image,
+  video,
+  showSpotlight = false,
   children,
   compact = false,
   secondaryHref,
   primaryLabel,
   primaryHref,
-
   secondaryLabel,
   breadcrumbPath,
   locale = "es",
@@ -23,6 +25,8 @@ export function SeoPageShell({
   title: string;
   description: string;
   image?: string;
+  video?: string;
+  showSpotlight?: boolean;
   children: React.ReactNode;
   compact?: boolean;
   primaryLabel?: string;
@@ -44,10 +48,13 @@ export function SeoPageShell({
   return (
     <>
       <Nav />
-      <main className="seo-page">
+      <main className="seo-page" style={{ position: "relative", overflow: "hidden" }}>
         {breadcrumbPath ? <Breadcrumbs pathname={breadcrumbPath} /> : null}
-        <section className={compact ? "seo-hero seo-hero-compact" : "seo-hero"}>
-          <div className="container seo-hero-grid">
+        <section className={compact ? "seo-hero seo-hero-compact" : "seo-hero"} style={{ position: "relative", overflow: "hidden" }}>
+          {showSpotlight && (
+            <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
+          )}
+          <div className="container seo-hero-grid" style={{ position: "relative", zIndex: 10 }}>
             <div>
               <p className="section-label">{kicker}</p>
               <h1 className="heading-lg">{title}</h1>
@@ -61,7 +68,18 @@ export function SeoPageShell({
                 </Link>
               </div>
             </div>
-            {image ? (
+            {video ? (
+              <div className="seo-hero-media" style={{ position: "relative", borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", aspectRatio: "16/9" }}>
+                <video
+                  src={video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </div>
+            ) : image ? (
               <div className="seo-hero-media">
                 <Image src={image} alt={title} fill sizes="(max-width: 980px) 100vw, 44vw" priority />
               </div>

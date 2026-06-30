@@ -2703,3 +2703,42 @@ img, video { display: block; max-width: 100%; }
     animation: none !important;
   }
 }
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+.premium-bento-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.bento-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 768px) {
+  .premium-bento-gallery {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 480px;
+    gap: 1rem;
+  }
+  
+  .bento-item {
+    aspect-ratio: auto;
+  }
+
+  .bento-large {
+    grid-row: span 2;
+  }
+}
