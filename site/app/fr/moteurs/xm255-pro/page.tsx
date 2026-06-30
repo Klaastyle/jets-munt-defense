@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { IconCard } from "../../components/IconCard";
-import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
-import { TechnicalFeatureList, type TechnicalFeatureItem } from "../../components/TechnicalFeatureList";
-import { TechnicalIcon, type TechnicalIconName } from "../../components/TechnicalIcon";
-import { buildMetadata } from "../../lib/metadata";
-import { proProductAlternates } from "../../lib/seo-data";
+import { IconCard } from "../../../components/IconCard";
+import { SeoInternalLinks, SeoPageShell } from "../../../components/SeoPage";
+import { TechnicalFeatureList, type TechnicalFeatureItem } from "../../../components/TechnicalFeatureList";
+import { TechnicalIcon, type TechnicalIconName } from "../../../components/TechnicalIcon";
+import { buildMetadata } from "../../../lib/metadata";
+import { proProductAlternates } from "../../../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
   title: "Motor Turbojet XM255 PRO | Alto Empuje UAV",
@@ -363,3 +363,4 @@ export default function Xm255ProPage() {
     </SeoPageShell>
   );
 }
+
