@@ -12,6 +12,7 @@ export function SeoPageShell({
   image,
   video,
   showSpotlight = false,
+  bentoGallery,
   children,
   compact = false,
   secondaryHref,
@@ -27,6 +28,7 @@ export function SeoPageShell({
   image?: string;
   video?: string;
   showSpotlight?: boolean;
+  bentoGallery?: { video: string; images: string[] };
   children: React.ReactNode;
   compact?: boolean;
   primaryLabel?: string;
@@ -68,7 +70,29 @@ export function SeoPageShell({
                 </Link>
               </div>
             </div>
-            {video ? (
+            {bentoGallery ? (
+              <div className="premium-bento-gallery" style={{ width: "100%" }}>
+                <div className="bento-item bento-large" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", background: "#000" }}>
+                  <video
+                    src={bentoGallery.video}
+                    controls
+                    playsInline
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </div>
+                {bentoGallery.images.map((src, idx) => (
+                  <div key={idx} className="bento-item" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
+                    <Image
+                      src={src}
+                      alt={`${title} detail ${idx + 1}`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : video ? (
               <div className="seo-hero-media" style={{ position: "relative", borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", aspectRatio: "16/9" }}>
                 <video
                   src={video}
