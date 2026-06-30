@@ -1,151 +1,243 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { IconCard } from "../../components/IconCard";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
+import { TechnicalFeatureList, type TechnicalFeatureItem } from "../../components/TechnicalFeatureList";
+import { TechnicalIcon, type TechnicalIconName } from "../../components/TechnicalIcon";
 import { buildMetadata } from "../../lib/metadata";
 import { proProductAlternates } from "../../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
   title: "Motor Turbojet XM255 PRO | Alto Empuje UAV",
   description:
-    "Especificaciones técnicas completas, envolvente operativa y características de integración del turborreactor XM255 PRO de 255 N.",
+    "Especificaciones tecnicas completas, envolvente operativa y caracteristicas de integracion del turborreactor XM255 PRO de 255 N.",
   path: "/motores/xm255-pro",
   image: "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
-  keywords: ["XM255 PRO", "turbojet 255 N", "propulsión UAV militar", "envolvente operativa turbina"],
+  keywords: ["XM255 PRO", "turbojet 255 N", "propulsion UAV militar", "envolvente operativa turbina"],
   locale: "es_ES",
   languages: proProductAlternates("xm255-pro"),
 });
 
+const specs = [
+  { label: "Empuje maximo", value: "255 N" },
+  { label: "RPM maximas", value: "110,000 rpm" },
+  { label: "Peso motor", value: "2,080 g" },
+  { label: "Longitud", value: "272.6 mm" },
+  { label: "Diametro max.", value: "122 mm" },
+  { label: "Altura", value: "166.5 mm" },
+  { label: "Alimentacion", value: "12 - 32 V DC" },
+];
+
+const proofCards: Array<{ icon: TechnicalIconName; title: string; description: string }> = [
+  {
+    icon: "speedometer",
+    title: "High Performance",
+    description: "255 N de empuje con consumo optimizado para perfiles UAV exigentes.",
+  },
+  {
+    icon: "feather",
+    title: "Lightweight Design",
+    description: "Arquitectura compacta orientada a una relacion empuje-peso elevada.",
+  },
+  {
+    icon: "shield-check",
+    title: "Reliable & Robust",
+    description: "Sistema robusto para entornos aeroespaciales y misiones especiales.",
+  },
+  {
+    icon: "crossed-tools",
+    title: "Easy Integration",
+    description: "Formato compacto y electronica integrada para reducir complejidad.",
+  },
+];
+
+const electronicsFeatures: TechnicalFeatureItem[] = [
+  {
+    icon: "microchip",
+    title: "Electronica integrada",
+    description: "ECU, control y diagnostico alojados dentro del conjunto del motor.",
+  },
+  {
+    icon: "lightning",
+    title: "Rango 12-32V DC",
+    description: "Alimentacion flexible para plataformas con buses electricos diferentes.",
+  },
+  {
+    icon: "shield-check",
+    title: "Proteccion electrica",
+    description: "Proteccion frente a sobrecorriente y sobretension integrada.",
+  },
+  {
+    icon: "thermometer",
+    title: "Rango termico",
+    description: "Electronica preparada para operar entre -30 C y +80 C.",
+  },
+  {
+    icon: "can-bus",
+    title: "CAN Bus",
+    description: "Interfaz opcional de control y telemetria para avionica avanzada.",
+  },
+  {
+    icon: "fiber-optic",
+    title: "Fibra optica",
+    description: "Enlace opcional para instalaciones sensibles a interferencias EMI.",
+  },
+  {
+    icon: "i2c",
+    title: "Sensores I2C",
+    description: "Entrada para sensores adicionales de flujo, velocidad del aire o telemetria.",
+  },
+];
+
+const controlFeatures: TechnicalFeatureItem[] = [
+  {
+    icon: "sine-wave",
+    title: "True sine wave FOC",
+    description: "Control vectorial para starter y bomba brushless con onda senoidal real.",
+  },
+  {
+    icon: "target-crosshair",
+    title: "Control preciso",
+    description: "Regulacion estable hasta variaciones muy bajas de RPM.",
+  },
+  {
+    icon: "environment-sensor",
+    title: "Sensor ambiental",
+    description: "Lectura integrada de temperatura, presion y humedad.",
+  },
+  {
+    icon: "sd-card",
+    title: "Data logging SD",
+    description: "Registro local de datos de vuelo y banco hasta 50 Hz.",
+  },
+  {
+    icon: "kalman-filter",
+    title: "Filtro Kalman",
+    description: "Filtrado en tiempo real de sensores para un lazo de control preciso.",
+  },
+  {
+    icon: "paper-plane",
+    title: "Autopilot ready",
+    description: "Integracion con pilotos automaticos mediante protocolo serie abierto.",
+  },
+];
+
+const integrationFeatures: TechnicalFeatureItem[] = [
+  {
+    icon: "code-serial",
+    title: "Protocolo abierto",
+    description: "Interfaz serie documentada para integracion con avionica externa.",
+  },
+  {
+    icon: "database",
+    title: "Telemetria completa",
+    description: "Acceso a datos de funcionamiento y parametros de configuracion.",
+  },
+  {
+    icon: "monitor-settings",
+    title: "Software de configuracion",
+    description: "Monitorizacion y ajuste desde herramientas multiplataforma.",
+  },
+  {
+    icon: "aircraft",
+    title: "Aplicaciones UAV",
+    description: "Pensado para UAV avanzados, target drones y misiones especiales.",
+  },
+];
+
+const thrustData = [
+  { rpm: "110,000", flow: 875, thrust: 255 },
+  { rpm: "100,000", flow: 610, thrust: 196 },
+  { rpm: "90,000", flow: 439, thrust: 144 },
+  { rpm: "80,000", flow: 347, thrust: 114 },
+  { rpm: "70,000", flow: 255, thrust: 72 },
+  { rpm: "60,000", flow: 202, thrust: 51 },
+  { rpm: "50,000", flow: 132, thrust: 37 },
+  { rpm: "40,000", flow: 105, thrust: 26 },
+  { rpm: "28,000", flow: 52, thrust: 10 },
+];
+
+const startConditions = [
+  { icon: "speedometer", label: "Velocidad", value: "0 - 450 km/h" },
+  { icon: "altitude", label: "Altitud", value: "0 - 6500 m" },
+  { icon: "thermometer", label: "Temperatura", value: "-35 C a +50 C" },
+] as const;
+
+const runConditions = [
+  { icon: "speedometer", label: "Velocidad", value: "0 - 850 km/h" },
+  { icon: "altitude", label: "Altitud", value: "0 - 10,000 m" },
+  { icon: "thermometer", label: "Temperatura", value: "-45 C a +50 C" },
+] as const;
+
+const supportedSystems: Array<{ icon: TechnicalIconName; label: string; detail: string }> = [
+  { icon: "macos", label: "macOS", detail: "Field setup" },
+  { icon: "linux", label: "Linux", detail: "Lab systems" },
+  { icon: "windows", label: "Windows", detail: "Service bench" },
+];
+
+function PerformanceChart() {
+  return (
+    <div className="xm-performance-chart" aria-label="Grafica de empuje y consumo">
+      <div className="xm-chart-legend">
+        <span className="flow">Fuel flow</span>
+        <span className="thrust">Thrust</span>
+      </div>
+      <svg viewBox="0 0 420 230" role="img" aria-label="Curvas de consumo de combustible y empuje por RPM">
+        <line x1="42" y1="28" x2="354" y2="28" />
+        <line x1="42" y1="70" x2="354" y2="70" />
+        <line x1="42" y1="112" x2="354" y2="112" />
+        <line x1="42" y1="154" x2="354" y2="154" />
+        <line x1="42" y1="196" x2="354" y2="196" className="axis" />
+        <line x1="42" y1="28" x2="42" y2="196" className="axis" />
+        {[86, 130, 174, 218, 262, 306, 354].map((x) => (
+          <line key={x} x1={x} y1="28" x2={x} y2="196" />
+        ))}
+        <path
+          d="M60 187 L96 178 L132 173 L168 162 L204 153 L240 138 L276 117 L312 93 L348 49"
+          className="flow-path"
+        />
+        <path
+          d="M60 190 L96 181 L132 175 L168 166 L204 156 L240 132 L276 111 L312 86 L348 53"
+          className="thrust-path"
+        />
+        <text x="42" y="218">RPM x1000</text>
+        <text x="354" y="218" textAnchor="end">110</text>
+      </svg>
+    </div>
+  );
+}
+
+function ConditionColumn({
+  title,
+  rows,
+}: {
+  title: string;
+  rows: readonly { icon: TechnicalIconName; label: string; value: string }[];
+}) {
+  return (
+    <article className="xm-condition-column">
+      <h3>{title}</h3>
+      <dl>
+        {rows.map((row) => (
+          <div key={`${title}-${row.label}`}>
+            <dt>
+              <TechnicalIcon name={row.icon} size={24} />
+              <span>{row.label}</span>
+            </dt>
+            <dd>{row.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </article>
+  );
+}
+
 export default function Xm255ProPage() {
-  const specs = [
-    { label: "Empuje Máximo", value: "255 N" },
-    { label: "RPM Máximas", value: "110.000 rpm" },
-    { label: "Peso del Motor", value: "2.080 g" },
-    { label: "Longitud", value: "272,6 mm" },
-    { label: "Diámetro Cuerpo", value: "122 mm" },
-    { label: "Altura", value: "166,5 mm" },
-    { label: "Alimentación", value: "12 - 32 VDC" },
-  ];
-
-  const electronicsList = [
-    { text: "Toda la electrónica integrada dentro del motor" },
-    { text: "Rango de alimentación extendido: 12-32V DC" },
-    { text: "Protección contra sobrecorriente y sobretensión" },
-    { text: "Rango de temperatura extendido: -30 °C a +80 °C" },
-    { text: "Interface CAN Bus de control y telemetría (opcional)" },
-    { text: "Interface de Fibra Óptica de control y telemetría (opcional)" },
-    { text: "Interface I²C para sensores adicionales (flujo, velocidad aire, etc.)" },
-  ];
-
-  const keyFeaturesList = [
-    { text: "Electrónica de alta fiabilidad" },
-    { text: "Control FOC de onda senoidal pura para arranque y bomba brushless" },
-    { text: "Control ultra preciso hasta bajas RPM" },
-    { text: "Sensor integrado de temperatura ambiente, presión y humedad" },
-    { text: "Interface de tarjeta SD para registro de datos hasta 50 Hz" },
-    { text: "Filtro de Kalman en tiempo real para todas las lecturas de sensores" },
-    { text: "Integración fácil con pilotos automáticos vía protocolo serie abierto" },
-    { text: "Protocolo de datos y configuración adaptados al cliente" },
-    { text: "Acceso total a parámetros de configuración y telemetría" },
-  ];
-
-  const startConditions = [
-    { label: "Velocidad de Vuelo", value: "0 - 450 km/h" },
-    { label: "Altitud Máxima", value: "0 - 6.500 m" },
-    { label: "Temperatura Ambiente", value: "-35 °C a +50 °C" },
-  ];
-
-  const runConditions = [
-    { label: "Velocidad de Vuelo", value: "0 - 850 km/h" },
-    { label: "Altitud Máxima", value: "0 - 10.000 m" },
-    { label: "Temperatura Ambiente", value: "-45 °C a +50 °C" },
-  ];
-
-  // Specific thrust performance data for XM255 PRO
-  const thrustData = [
-    { rpm: "110.000", flow: 820, thrust: 255 },
-    { rpm: "100.000", flow: 610, thrust: 195 },
-    { rpm: "90.000", flow: 440, thrust: 140 },
-    { rpm: "80.000", flow: 320, thrust: 102 },
-    { rpm: "70.000", flow: 210, thrust: 72 },
-    { rpm: "60.000", flow: 150, thrust: 48 },
-    { rpm: "50.000", flow: 110, thrust: 32 },
-    { rpm: "40.000", flow: 80, thrust: 20 },
-    { rpm: "28.000", flow: 45, thrust: 10 },
-  ];
-
-  const integrationFeatures = [
-    {
-      title: "Electrónica Integrada",
-      desc: "Instalación simplificada al alojar el módulo ECU y FADEC en el propio chasis del motor.",
-      icon: (
-        <svg style={{ width: "24px", height: "24px", stroke: "var(--accent)", fill: "none", strokeWidth: 1.5 }} viewBox="0 0 24 24">
-          <rect x="4" y="4" width="16" height="16" rx="2" />
-          <path d="M9 9h6v6H9z" />
-          <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3" />
-        </svg>
-      ),
-    },
-    {
-      title: "Telemetría CAN Bus",
-      desc: "Transmisión y recepción robustas compatibles con buses de aviación estándar.",
-      icon: (
-        <svg style={{ width: "24px", height: "24px", stroke: "var(--accent)", fill: "none", strokeWidth: 1.5 }} viewBox="0 0 24 24">
-          <circle cx="18" cy="6" r="3" />
-          <circle cx="6" cy="18" r="3" />
-          <path d="M18 9l-9 9M9 6h9v3" />
-        </svg>
-      ),
-    },
-    {
-      title: "Registro de Datos SD",
-      desc: "Historial completo de vuelos registrado localmente a alta velocidad (50 Hz).",
-      icon: (
-        <svg style={{ width: "24px", height: "24px", stroke: "var(--accent)", fill: "none", strokeWidth: 1.5 }} viewBox="0 0 24 24">
-          <path d="M4 2h10l6 6v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2z" />
-          <path d="M14 2v6h6M8 13h8M8 17h8" />
-        </svg>
-      ),
-    },
-    {
-      title: "Protocolo Serie Abierto",
-      desc: "Integración plug & play rápida con pilotos automáticos comerciales y militares.",
-      icon: (
-        <svg style={{ width: "24px", height: "24px", stroke: "var(--accent)", fill: "none", strokeWidth: 1.5 }} viewBox="0 0 24 24">
-          <polyline points="16 18 22 12 16 6" />
-          <polyline points="8 6 2 12 8 18" />
-          <line x1="12" y1="4" x2="12" y2="20" />
-        </svg>
-      ),
-    },
-    {
-      title: "Interface Fibra Óptica",
-      desc: "Enlace opcional inmune a interferencias electromagnéticas extremas y pulsos RF.",
-      icon: (
-        <svg style={{ width: "24px", height: "24px", stroke: "var(--accent)", fill: "none", strokeWidth: 1.5 }} viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-          <path d="M2 12h20" />
-        </svg>
-      ),
-    },
-    {
-      title: "Software Multiplataforma",
-      desc: "Suite completa para configuración, diagnóstico y actualizaciones del firmware.",
-      icon: (
-        <svg style={{ width: "24px", height: "24px", stroke: "var(--accent)", fill: "none", strokeWidth: 1.5 }} viewBox="0 0 24 24">
-          <rect x="2" y="3" width="20" height="14" rx="2" />
-          <line x1="8" y1="21" x2="16" y2="21" />
-          <line x1="12" y1="17" x2="12" y2="21" />
-        </svg>
-      ),
-    },
-  ];
-
   return (
     <SeoPageShell
-      kicker="Sistemas de Propulsión PRO"
+      kicker="Sistemas de Propulsion PRO"
       title="XM255 PRO"
-      description="El turborreactor de mayor empuje y rendimiento de la familia JetsMunt, diseñado para plataformas aéreas no tripuladas exigentes, misiles de crucero y drones objetivo rápidos."
+      description="El turborreactor de mayor empuje y rendimiento de la familia JetsMunt, disenado para plataformas aereas no tripuladas exigentes, misiles de crucero y drones objetivo rapidos."
       bentoGallery={{
         video: "/media/255/PROMPT_VIDEO_—_XM_PRO_M.mp4",
         images: [
@@ -153,308 +245,120 @@ export default function Xm255ProPage() {
           "/media/255/Gemini_Generated_Image_q0loh8q0loh8q0lo.png",
           "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
           "/media/255/Gemini_Generated_Image_vs8tv5vs8tv5vs8t.png",
-        ]
+        ],
       }}
       showSpotlight={true}
       breadcrumbPath="/motores/xm255-pro"
       locale="es"
     >
-      <section className="section container" style={{ paddingBottom: "3rem" }}>
-        
-        {/* Main Grid: Specs + Detailed Features */}
-        <div style={{ gap: "2.5rem", marginBottom: "4rem" }} className="desktop-grid-35-65">
-          
-          {/* Engine Specs Column */}
-          <div style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.8rem" }}>
-            <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.4rem", fontWeight: 800, marginBottom: "1.5rem", color: "#fff", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
-              ENGINE SPECIFICATIONS
-            </h2>
-            <div style={{ display: "grid", gap: "0.8rem" }}>
-              {specs.map((spec) => (
-                <div key={spec.label} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.88rem", borderBottom: "1px solid rgba(255,255,255,0.03)", paddingBottom: "0.4rem" }}>
-                  <span style={{ color: "var(--text-soft)" }}>{spec.label}</span>
-                  <span style={{ color: "#fff", fontWeight: 700 }}>{spec.value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Double Column Features */}
-          <div style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.8rem" }}>
-            <div style={{ gap: "2rem" }} className="desktop-grid-2">
-              
-              {/* Electronics & Control */}
-              <div>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 800, color: "var(--accent)", marginBottom: "1.2rem", textTransform: "uppercase", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                  <span style={{ fontSize: "1.2rem" }}>⚙️</span> INTEGRATED ELECTRONICS & CONTROL
-                </h3>
-                <ul style={{ listStyleType: "none", padding: 0, margin: 0, display: "grid", gap: "0.8rem" }}>
-                  {electronicsList.map((item, i) => (
-                    <li key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", fontSize: "0.82rem", color: "var(--text-soft)" }}>
-                      <span style={{ color: "var(--accent)", fontWeight: "bold" }}>⚡</span>
-                      <span>{item.text}</span>
-                    </li>
-                  ))}
-                </ul>
+      <section className="section xm-web-tech" aria-label="Ficha tecnica web XM255 PRO">
+        <div className="container">
+          <section className="xm-web-hero">
+            <div className="xm-web-copy">
+              <span className="xm-web-label">Technical HTML/CSS module</span>
+              <h2>Ficha tecnica web para integracion UAV.</h2>
+              <p>
+                Una seccion construida con HTML semantico, SVG inline y CSS reutilizable. La referencia visual
+                informa la precision de los iconos y la densidad tecnica, pero la estructura esta pensada para web.
+              </p>
+              <div className="xm-web-actions" aria-label="XM255 PRO resumen tecnico">
+                <strong>255 N</strong>
+                <span>110,000 rpm</span>
+                <span>12 - 32 V DC</span>
               </div>
-
-              {/* Key Features */}
-              <div>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 800, color: "var(--accent)", marginBottom: "1.2rem", textTransform: "uppercase", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                  <span style={{ fontSize: "1.2rem" }}>🛡️</span> KEY FEATURES
-                </h3>
-                <ul style={{ listStyleType: "none", padding: 0, margin: 0, display: "grid", gap: "0.8rem" }}>
-                  {keyFeaturesList.map((item, i) => (
-                    <li key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", fontSize: "0.82rem", color: "var(--text-soft)" }}>
-                      <span style={{ color: "var(--accent)", fontWeight: "bold" }}>✓</span>
-                      <span>{item.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
             </div>
-          </div>
 
-        </div>
+            <div className="xm-web-media">
+              <Image
+                src="/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png"
+                alt="XM255 PRO turbojet engine"
+                fill
+                priority
+                sizes="(max-width: 980px) 100vw, 46vw"
+              />
+            </div>
+          </section>
 
-        {/* Operating Envelope Box */}
-        <div style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.8rem", marginBottom: "4rem" }}>
-          <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.4rem", fontWeight: 800, marginBottom: "1.5rem", color: "#fff", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
-            OPERATING CONDITIONS & FLIGHT ENVELOPE
-          </h2>
-          <div style={{ gap: "2rem" }} className="desktop-grid-2">
-            {/* Starting conditions */}
-            <div style={{ background: "rgba(255,255,255,0.015)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.5rem" }}>
-              <h3 style={{ fontSize: "0.95rem", fontWeight: 800, textTransform: "uppercase", color: "var(--accent)", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.4rem" }}>
-                <span>🛫</span> Starting Conditions (Arranque en Vuelo)
-              </h3>
-              <div style={{ display: "grid", gap: "0.8rem" }}>
-                {startConditions.map((cond) => (
-                  <div key={cond.label} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", borderBottom: "1px solid rgba(255,255,255,0.03)", paddingBottom: "0.4rem" }}>
-                    <span style={{ color: "var(--text-soft)" }}>{cond.label}</span>
-                    <strong style={{ color: "#fff" }}>{cond.value}</strong>
+          <section className="xm-icon-proof" aria-label="XM255 PRO advantages">
+            {proofCards.map((card) => (
+              <IconCard key={card.title} icon={card.icon} title={card.title} description={card.description} />
+            ))}
+          </section>
+
+          <section className="xm-web-grid" aria-label="XM255 PRO technical data">
+            <article className="xm-spec-panel">
+              <h2>Engine specifications</h2>
+              <dl>
+                {specs.map((spec) => (
+                  <div key={spec.label}>
+                    <dt>{spec.label}</dt>
+                    <dd>{spec.value}</dd>
                   </div>
                 ))}
-              </div>
-            </div>
+              </dl>
+            </article>
 
-            {/* Running conditions */}
-            <div style={{ background: "rgba(255,255,255,0.015)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.5rem" }}>
-              <h3 style={{ fontSize: "0.95rem", fontWeight: 800, textTransform: "uppercase", color: "var(--accent-2)", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.4rem" }}>
-                <span>🚀</span> Running Conditions (Operación en Vuelo)
-              </h3>
-              <div style={{ display: "grid", gap: "0.8rem" }}>
-                {runConditions.map((cond) => (
-                  <div key={cond.label} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", borderBottom: "1px solid rgba(255,255,255,0.03)", paddingBottom: "0.4rem" }}>
-                    <span style={{ color: "var(--text-soft)" }}>{cond.label}</span>
-                    <strong style={{ color: "#fff" }}>{cond.value}</strong>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+            <TechnicalFeatureList title="Integrated electronics & control" items={electronicsFeatures} className="xm-feature-panel" />
+            <TechnicalFeatureList title="Control logic & telemetry" items={controlFeatures} className="xm-feature-panel" />
+          </section>
 
-        {/* Thrust Performance Dashboard: Table + SVG Chart */}
-        <div style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.8rem", marginBottom: "4rem" }}>
-          <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.4rem", fontWeight: 800, marginBottom: "1.5rem", color: "#fff", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
-            THRUST PERFORMANCE
-          </h2>
-          <div style={{ gap: "3rem" }} className="desktop-grid-2">
-            
-            {/* Table */}
-            <div>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem", color: "var(--text-soft)" }}>
+          <section className="xm-performance-section" aria-label="XM255 PRO thrust performance">
+            <div className="xm-section-heading">
+              <span className="xm-web-label">Performance</span>
+              <h2>Datos visibles, no decoracion.</h2>
+              <p>Tabla y grafica SVG se renderizan como HTML/CSS/SVG escalable para consulta tecnica real.</p>
+            </div>
+            <div className="xm-performance-layout">
+              <table className="xm-performance-table">
                 <thead>
-                  <tr style={{ borderBottom: "2px solid rgba(255,255,255,0.1)", textAlign: "left" }}>
-                    <th style={{ padding: "0.6rem" }}>RPM</th>
-                    <th style={{ padding: "0.6rem" }}>Consumo Combustible (ml/min)</th>
-                    <th style={{ padding: "0.6rem" }}>Empuje (N)</th>
+                  <tr>
+                    <th>RPM</th>
+                    <th>Fuel Flow</th>
+                    <th>Thrust</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {thrustData.map((d, index) => (
-                    <tr key={index} style={{ borderBottom: "1px solid rgba(255,255,255,0.04)", background: index % 2 === 0 ? "rgba(255,255,255,0.01)" : "transparent" }}>
-                      <td style={{ padding: "0.6rem", fontWeight: 700, color: "#fff" }}>{d.rpm}</td>
-                      <td style={{ padding: "0.6rem", color: "#4f92ff" }}>{d.flow}</td>
-                      <td style={{ padding: "0.6rem", color: "var(--accent)" }}>{d.thrust}</td>
+                  {thrustData.map((row) => (
+                    <tr key={row.rpm}>
+                      <td>{row.rpm}</td>
+                      <td>{row.flow} ml/min</td>
+                      <td>{row.thrust} N</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+              <PerformanceChart />
             </div>
+          </section>
 
-            {/* SVG Graph specific to XM255 */}
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <div style={{ position: "relative", width: "100%", background: "rgba(0,0,0,0.2)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "4px", padding: "1rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "0.5rem" }}>
-                  <span style={{ color: "#4f92ff", fontWeight: 600 }}>● Fuel Flow (ml/min)</span>
-                  <span style={{ color: "var(--accent)", fontWeight: 600 }}>● Thrust (N)</span>
-                </div>
-                <svg viewBox="0 0 400 220" style={{ width: "100%", height: "auto" }}>
-                  {/* Grid Lines */}
-                  <line x1="40" y1="30" x2="340" y2="30" stroke="rgba(255,255,255,0.08)" strokeDasharray="3" />
-                  <line x1="40" y1="70" x2="340" y2="70" stroke="rgba(255,255,255,0.08)" strokeDasharray="3" />
-                  <line x1="40" y1="110" x2="340" y2="110" stroke="rgba(255,255,255,0.08)" strokeDasharray="3" />
-                  <line x1="40" y1="150" x2="340" y2="150" stroke="rgba(255,255,255,0.08)" strokeDasharray="3" />
-                  <line x1="40" y1="190" x2="340" y2="190" stroke="rgba(255,255,255,0.15)" />
+          <section className="xm-conditions" aria-label="Operating conditions">
+            <ConditionColumn title="Starting conditions" rows={startConditions} />
+            <ConditionColumn title="Running conditions" rows={runConditions} />
+            <TechnicalFeatureList title="Integration features" items={integrationFeatures} className="xm-feature-panel" />
+          </section>
 
-                  <line x1="98" y1="30" x2="98" y2="190" stroke="rgba(255,255,255,0.05)" />
-                  <line x1="156" y1="30" x2="156" y2="190" stroke="rgba(255,255,255,0.05)" />
-                  <line x1="214" y1="30" x2="214" y2="190" stroke="rgba(255,255,255,0.05)" />
-                  <line x1="272" y1="30" x2="272" y2="190" stroke="rgba(255,255,255,0.05)" />
-                  <line x1="330" y1="30" x2="330" y2="190" stroke="rgba(255,255,255,0.05)" />
-
-                  {/* Y Axis Labels (Flow left, Thrust right) */}
-                  <text x="35" y="34" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="end">1000</text>
-                  <text x="35" y="74" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="end">750</text>
-                  <text x="35" y="114" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="end">500</text>
-                  <text x="35" y="154" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="end">250</text>
-                  <text x="35" y="194" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="end">0</text>
-
-                  <text x="345" y="34" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="start">300</text>
-                  <text x="345" y="74" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="start">220</text>
-                  <text x="345" y="114" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="start">150</text>
-                  <text x="345" y="154" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="start">75</text>
-                  <text x="345" y="194" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="start">0</text>
-
-                  {/* X Axis Labels */}
-                  <text x="98" y="206" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="middle">40</text>
-                  <text x="156" y="206" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="middle">60</text>
-                  <text x="214" y="206" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="middle">80</text>
-                  <text x="272" y="206" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="middle">100</text>
-                  <text x="330" y="206" fill="rgba(255,255,255,0.5)" fontSize="8" textAnchor="middle">120</text>
-                  <text x="190" y="218" fill="rgba(255,255,255,0.6)" fontSize="9" textAnchor="middle" fontWeight="bold">RPM (x1000)</text>
-
-                  {/* Fuel Flow Curve (Blue) */}
-                  <path
-                    d="M 63 182 L 98 178 L 127 172.6 L 156 162 L 214 148 L 243 124.6 L 278 101 L 307 72 L 330 45"
-                    fill="none"
-                    stroke="#4f92ff"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  {/* Thrust Curve (Red/Orange) */}
-                  <path
-                    d="M 63 184 L 98 179 L 127 174 L 156 163 L 214 150 L 243 131 L 278 108 L 307 75 L 330 42"
-                    fill="none"
-                    stroke="var(--accent)"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-
-                  {/* Flow dots */}
-                  <circle cx="330" cy="45" r="3" fill="#4f92ff" />
-                  <circle cx="278" cy="101" r="3" fill="#4f92ff" />
-                  <circle cx="214" cy="148" r="3" fill="#4f92ff" />
-                  <circle cx="98" cy="178" r="3" fill="#4f92ff" />
-
-                  {/* Thrust dots */}
-                  <circle cx="330" cy="42" r="3" fill="var(--accent)" />
-                  <circle cx="278" cy="108" r="3" fill="var(--accent)" />
-                  <circle cx="214" cy="150" r="3" fill="var(--accent)" />
-                  <circle cx="98" cy="179" r="3" fill="var(--accent)" />
-                </svg>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        {/* Integration Features 3x2 Grid */}
-        <div style={{ marginBottom: "4rem" }}>
-          <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.4rem", fontWeight: 800, marginBottom: "1.5rem", color: "#fff", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
-            INTEGRATION FEATURES
-          </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-            {integrationFeatures.map((item, idx) => (
-              <div key={idx} style={{ background: "rgba(255,255,255,0.015)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.5rem", display: "flex", gap: "1rem" }}>
-                <div style={{ flexShrink: 0, marginTop: "0.2rem" }}>{item.icon}</div>
-                <div>
-                  <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "0.3rem" }}>{item.title}</h4>
-                  <p style={{ color: "var(--text-soft)", fontSize: "0.8rem", lineHeight: "1.5" }}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-
-        {/* Configuration Software Wide Panel */}
-        <div
-          style={{
-            background: "linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.005) 100%)",
-            border: "1px solid rgba(255,255,255,0.06)",
-            borderRadius: "6px",
-            padding: "2rem",
-          }}
-        >
-          <div style={{ gap: "3rem" }} className="desktop-grid-2">
-            
-            {/* Visual software dashboard preview */}
-            <div style={{ background: "#05070a", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "6px", padding: "1rem", fontFamily: "monospace", color: "#4f92ff" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.5rem", marginBottom: "1rem" }}>
-                <span style={{ fontSize: "0.75rem", color: "#fff" }}>📡 JETSMUNT FADEC MONITORS V2.5</span>
-                <span style={{ fontSize: "0.75rem" }}>CONNECTED</span>
-              </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-                <div style={{ border: "1px solid rgba(255,255,255,0.05)", padding: "0.6rem", borderRadius: "4px" }}>
-                  <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>TURBINE SPEED</div>
-                  <div style={{ fontSize: "1.4rem", fontWeight: "bold", color: "var(--accent)" }}>110,000 <span style={{ fontSize: "0.8rem" }}>RPM</span></div>
-                </div>
-                <div style={{ border: "1px solid rgba(255,255,255,0.05)", padding: "0.6rem", borderRadius: "4px" }}>
-                  <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>EXHAUST TEMP</div>
-                  <div style={{ fontSize: "1.4rem", fontWeight: "bold", color: "#fff" }}>720 <span style={{ fontSize: "0.8rem" }}>°C</span></div>
-                </div>
-              </div>
-              <div style={{ marginTop: "1rem", height: "60px", position: "relative", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)", background: "#030406" }}>
-                <svg viewBox="0 0 200 60" style={{ width: "100%", height: "100%" }}>
-                  <path d="M 0 30 Q 25 10 50 30 T 100 30 T 150 30 T 200 30" fill="none" stroke="rgba(79, 146, 255, 0.4)" strokeWidth="1" />
-                  <path d="M 0 30 Q 15 20 30 30 T 60 30 T 90 30 T 120 30 T 150 30 T 180 30 T 200 30" fill="none" stroke="var(--accent)" strokeWidth="1.2" />
-                </svg>
-              </div>
-            </div>
-
-            {/* Description and Logos */}
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <span style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--accent-2)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
-                MONITORIZACIÓN EN TIEMPO REAL
-              </span>
-              <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.6rem", fontWeight: 800, margin: "0.5rem 0 1rem", color: "#fff" }}>
-                CONFIGURATION & MONITORING SOFTWARE
-              </h2>
-              <p style={{ color: "var(--text-soft)", fontSize: "0.88rem", lineHeight: "1.6", marginBottom: "1.8rem" }}>
-                Ofrecemos una interfaz gráfica potente y completa para la calibración, puesta a punto, teleoperación y monitorización detallada del motor en tiempo real.
+          <section className="xm-software-band" aria-label="Configuration software">
+            <div className="xm-software-copy">
+              <span className="xm-web-label">Configuration software</span>
+              <h2>Monitorizacion y ajuste multiplataforma.</h2>
+              <p>
+                Interfaz para configuracion, calibracion, operacion y diagnostico del motor. Compatible con
+                macOS, Linux y Windows.
               </p>
-              
-              <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-                  <svg style={{ width: "18px", height: "18px", fill: "rgba(255,255,255,0.6)" }} viewBox="0 0 170 170">
-                    <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.34.13-9.13-1.92-14.37-6.15-3.24-2.7-7.14-7.39-11.69-14.06-8.91-13.14-15.07-29.35-18.49-48.6-3.41-19.25-2.28-35.37 3.42-48.33 5.71-12.96 14.19-19.56 25.43-19.8 6.44-.12 12.8 2.01 19.08 6.41 6.28 4.4 11.2 6.59 14.77 6.59 3.58 0 8.2-2.1 13.88-6.3 5.68-4.2 11.83-6.2 18.45-6 10.05.35 18.25 4.02 24.58 11.04 6.34 7.02 10.3 15.01 11.9 23.95-18.52 7.74-27.46 20.3-26.8 37.66.66 13.1 5.92 23.79 15.77 32.06 9.86 8.28 21.36 12.63 34.52 13.06-.82 2.63-1.6 5.25-2.35 7.85zM119.22 35.24c0-7.72 2.76-14.88 8.28-21.49 5.52-6.61 12.35-10.45 20.5-11.5 1.05 8.12-1.83 15.79-8.64 22.99-6.8 7.2-13.91 10.97-20.14 10z" />
-                  </svg>
-                  <span style={{ fontSize: "0.75rem", color: "var(--text-soft)", fontWeight: 600 }}>macOS</span>
-                </div>
-
-                <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-                  <span style={{ fontSize: "1.1rem" }}>🐧</span>
-                  <span style={{ fontSize: "0.75rem", color: "var(--text-soft)", fontWeight: 600 }}>Linux</span>
-                </div>
-
-                <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-                  <svg style={{ width: "16px", height: "16px", fill: "rgba(255,255,255,0.6)" }} viewBox="0 0 88 88">
-                    <path d="M0 12.402l35.687-4.858v33.456H0V12.402zM0 45.395h35.687v33.84L0 74.341V45.395zM39.652 7.013L88 0v40.999H39.652V7.013zM39.652 45.395H88v41.979l-48.348-7.054V45.395z" />
-                  </svg>
-                  <span style={{ fontSize: "0.75rem", color: "var(--text-soft)", fontWeight: 600 }}>Windows</span>
-                </div>
+              <div className="xm-os-support" aria-label="Sistemas operativos compatibles">
+                {supportedSystems.map((system) => (
+                  <article key={system.label}>
+                    <TechnicalIcon name={system.icon} size={30} title={`${system.label} compatible`} />
+                    <div>
+                      <strong>{system.label}</strong>
+                      <span>{system.detail}</span>
+                    </div>
+                  </article>
+                ))}
               </div>
             </div>
-
-          </div>
+          </section>
         </div>
-
       </section>
       <SeoInternalLinks locale="es" />
     </SeoPageShell>
