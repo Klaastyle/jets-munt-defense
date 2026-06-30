@@ -5,10 +5,10 @@ interface SpotlightProps {
   fill?: string;
 }
 
-export function Spotlight({ className = "", fill = "white" }: SpotlightProps) {
+export function Spotlight({ fill = "white" }: SpotlightProps) {
   return (
     <svg
-      className={`pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%] opacity-0 ${className}`}
+      className="spotlight-svg"
       style={{
         animation: "spotlight 2s ease 0.75s 1 forwards",
       }}

@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "./Breadcrumbs";
@@ -38,6 +41,7 @@ export function SeoPageShell({
   breadcrumbPath?: string;
   locale?: "es" | "en" | "fr";
 }) {
+  const [activeZoomImage, setActiveZoomImage] = useState<string | null>(null);
   const defaultPrimaryHref = { es: "/contacto", en: "/en/contact", fr: "/fr/contact" }[locale];
   const defaultSecondaryHref = { es: "/motores", en: "/en/engines", fr: "/fr/moteurs" }[locale];
   const defaultPrimaryLabel = { es: "Iniciar consulta técnica", en: "Start technical enquiry", fr: "Lancer la consultation technique" }[locale];
@@ -52,18 +56,26 @@ export function SeoPageShell({
       <Nav />
       <main className="seo-page" style={{ position: "relative", overflow: "hidden" }}>
         {breadcrumbPath ? <Breadcrumbs pathname={breadcrumbPath} /> : null}
-        <section className={compact ? "seo-hero seo-hero-compact" : "seo-hero"} style={{ position: "relative", overflow: "hidden" }}>
+        <section
+          className={compact ? "seo-hero seo-hero-compact" : "seo-hero"}
+          style={{
+            position: "relative",
+            overflow: "hidden",
+            paddingTop: bentoGallery ? "2.5rem" : undefined,
+            paddingBottom: bentoGallery ? "2.5rem" : undefined
+          }}
+        >
           {showSpotlight && (
-            <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
+            <Spotlight fill="white" />
           )}
           {bentoGallery ? (
-            <div className="container" style={{ position: "relative", zIndex: 10, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "2.5rem" }}>
+            <div className="container" style={{ position: "relative", zIndex: 10, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "1.2rem" }}>
               <div style={{ maxWidth: "800px" }}>
-                <p className="section-label">{kicker}</p>
-                <h1 className="heading-lg" style={{ marginBottom: "1rem" }}>{title}</h1>
-                <p className="body-lg" style={{ color: "var(--text-soft)" }}>{description}</p>
+                <p className="section-label" style={{ marginBottom: "0.2rem" }}>{kicker}</p>
+                <h1 className="heading-lg" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", margin: "0.8rem auto 1rem", lineHeight: 1.1 }}>{title}</h1>
+                <p className="body-lg" style={{ color: "var(--text-soft)", fontSize: "0.95rem", margin: 0 }}>{description}</p>
               </div>
-              <div className="premium-bento-gallery" style={{ width: "100%", maxWidth: "1000px" }}>
+              <div className="premium-bento-gallery hero-bento-gallery">
                 <div className="bento-item bento-large" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", background: "#000" }}>
                   <video
                     src={bentoGallery.video}
@@ -73,7 +85,12 @@ export function SeoPageShell({
                   />
                 </div>
                 {bentoGallery.images.map((src, idx) => (
-                  <div key={idx} className="bento-item" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
+                  <div
+                    key={idx}
+                    className="bento-item zoomable-bento-item"
+                    style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}
+                    onClick={() => setActiveZoomImage(src)}
+                  >
                     <Image
                       src={src}
                       alt={`${title} detail ${idx + 1}`}
@@ -84,7 +101,7 @@ export function SeoPageShell({
                   </div>
                 ))}
               </div>
-              <div className="seo-actions" style={{ justifyContent: "center", marginTop: "0.5rem" }}>
+              <div className="seo-actions" style={{ justifyContent: "center", marginTop: "0.2rem" }}>
                 <Link href={actualPrimaryHref} className="btn btn-primary">
                   {actualPrimaryLabel}
                 </Link>
@@ -130,6 +147,71 @@ export function SeoPageShell({
         {children}
       </main>
       <Footer />
+      {activeZoomImage && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(0, 0, 0, 0.88)",
+            backdropFilter: "blur(12px)",
+            zIndex: 9999,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "zoom-out",
+            animation: "fadeIn 0.25s ease-out forwards",
+          }}
+          onClick={() => setActiveZoomImage(null)}
+        >
+          <div
+            style={{
+              position: "relative",
+              width: "90vw",
+              height: "80vh",
+              maxWidth: "1000px",
+              maxHeight: "800px",
+              animation: "scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+            }}
+          >
+            <Image
+              src={activeZoomImage}
+              alt="Zoomed Detail"
+              fill
+              style={{ objectFit: "contain" }}
+              sizes="90vw"
+              priority
+            />
+          </div>
+          <button
+            style={{
+              position: "absolute",
+              top: "2rem",
+              right: "2rem",
+              background: "rgba(255,255,255,0.1)",
+              border: "1px solid rgba(255,255,255,0.2)",
+              color: "#fff",
+              borderRadius: "50%",
+              width: "44px",
+              height: "44px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              fontSize: "1.2rem",
+              transition: "background 0.2s",
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveZoomImage(null);
+            }}
+          >
+            ✕
+          </button>
+        </div>
+      )}
     </>
   );
 }

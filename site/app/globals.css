@@ -2742,3 +2742,95 @@ img, video { display: block; max-width: 100%; }
     grid-row: span 2;
   }
 }
+
+/* Spotlight Animation & Layout */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-10%, -10%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.spotlight-svg {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  height: 169%;
+  width: 138%;
+  opacity: 0;
+  top: -10rem;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .spotlight-svg {
+    left: 15rem;
+    top: -5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .spotlight-svg {
+    width: 84%;
+  }
+}
+
+.hero-bento-gallery {
+  width: 100%;
+  max-width: 900px;
+}
+
+@media (min-width: 768px) {
+  .hero-bento-gallery {
+    height: 340px !important;
+  }
+}
+
+/* Bento Image Hover Zoom & Lightbox Animations */
+.zoomable-bento-item {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.zoomable-bento-item img {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.zoomable-bento-item:hover img {
+  transform: scale(1.06) !important;
+}
+
+.zoomable-bento-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.zoomable-bento-item:hover::after {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
