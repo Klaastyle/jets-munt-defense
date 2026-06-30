@@ -280,6 +280,16 @@ img, video { display: block; max-width: 100%; }
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(242, 106, 33, 0.1);
 }
 
+.nav-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  height: 1.1rem;
+  background: transparent;
+}
+
 .nav-item-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown-menu.open {
   opacity: 1;

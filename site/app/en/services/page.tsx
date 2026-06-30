@@ -29,14 +29,14 @@ export default function EnServicesPage() {
       slug: "uav-integration",
       kicker: "Platform Engineering",
       desc: "Technical integration support and custom fuel, electrical, and mount adaptations to seamlessly install turbojets onto tactical drones and target platforms.",
-      image: "/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png",
+      image: "/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png",
     },
     {
       title: "Engineering & Development",
       slug: "engineering-development",
       kicker: "Custom OEM Solutions",
       desc: "End-to-end engineering from concept definition and simulation to in-house prototyping, qualification testing, and flight validation for defense programs.",
-      image: "/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png",
+      image: "/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png",
     },
   ];
 
@@ -46,7 +46,7 @@ export default function EnServicesPage() {
       kicker="Specialized Services"
       title="UAV Propulsion Integration & Development Support"
       description="We provide defense-grade aerospace engineering services covering FADEC telemetry systems, physical engine integration, and custom micro-turbine development programs."
-      image="/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png"
+      image="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png"
       breadcrumbPath="/en/services"
       compact
     >

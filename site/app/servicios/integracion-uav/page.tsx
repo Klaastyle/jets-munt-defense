@@ -44,7 +44,7 @@ export default function UavIntegrationPage() {
       kicker="Integración Transparente. Máximo Rendimiento."
       title="Capacidades de Integración en UAV"
       description="Los motores JetsMunt están diseñados desde su origen para facilitar la integración en la plataforma del cliente, reduciendo drásticamente el peso del cableado y las horas de desarrollo de ingeniería."
-      image="/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png"
+      image="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png"
       breadcrumbPath="/servicios/integracion-uav"
       locale="es"
     >
