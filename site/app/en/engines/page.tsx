@@ -23,8 +23,8 @@ export default function EnEnginesPage() {
       thrust: "215 N",
       weight: "1,820 g",
       diameter: "73.9 mm",
-      img: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
-      summary: "Micro-turbine optimized with brushless FOC control electronics and real-time mission telemetry.",
+      img: "/media/215/Gemini_Generated_Image_h34k9mh34k9mh34k.png",
+      summary: "Microturbine optimized with brushless FOC control electronics and real-time mission telemetry.",
     },
     {
       name: "XM255 PRO",
@@ -32,18 +32,18 @@ export default function EnEnginesPage() {
       thrust: "255 N",
       weight: "2,080 g",
       diameter: "122 mm",
-      img: "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
-      summary: "Our highest thrust propulsion package with defense-grade build standards for tactical UAVs and target drones.",
+      img: "/media/255/Gemini_Generated_Image_g27l6rg27l6rg27l.png",
+      summary: "Our highest thrust and military performance propulsion unit for target platforms and tactical UAVs.",
     },
   ];
 
   return (
     <SeoPageShell
       locale="en"
-      kicker="PRO Engine Portfolio"
-      title="UAV Turbojet Propulsion Systems"
-      description="JetsMunt PRO engines integrate the engine control unit (ECU), diagnostic software, and flight sensors directly inside the engine hardware, eliminating external wiring and streamlining integration into unmanned platforms."
-      image="/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png"
+      kicker="PRO Engines Catalogue"
+      title="Turbojet Propulsion Systems for UAVs"
+      description="JetsMunt PRO engines integrate the control unit (ECU), diagnostic software, and flight sensors directly into the engine hardware, eliminating cables and simplifying installation on unmanned platforms."
+      image="/media/photos/Gemini_Generated_Image_bb2h12bb2h12bb2h.png"
       breadcrumbPath="/en/engines"
       compact
       primaryHref="/en/contact"
