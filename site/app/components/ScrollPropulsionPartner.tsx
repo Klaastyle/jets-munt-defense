@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import AnimatedShaderBackground from "./AnimatedShaderBackground";
 
 const stepsData = {
   es: [
@@ -133,6 +134,7 @@ export default function ScrollPropulsionPartner() {
 
   return (
     <section className="partner-section section" id="partner">
+      <AnimatedShaderBackground />
       <div className="container">
         <div className="partner-heading-center">
           <p className="section-label">{heading.label}</p>

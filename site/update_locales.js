@@ -1,52 +1,16 @@
 const fs = require('fs');
 
-function replaceInFileRegex(filePath, searchRegex, replaceFunc) {
-    if (!fs.existsSync(filePath)) return;
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = content.replace(searchRegex, replaceFunc);
-    if (modified !== content) {
-        fs.writeFileSync(filePath, modified);
-        console.log("Updated", filePath);
-    }
+function updateFile(file, locale, pathPrefix) {
+  let content = fs.readFileSync(file, 'utf8');
+  content = content.replace(/locale: "es_ES"/, `locale: "${locale}"`);
+  content = content.replace(/locale="es"/, `locale="${locale.split('_')[0]}"`);
+  content = content.replace(/path: "\/motores\//g, `path: "${pathPrefix}/`);
+  content = content.replace(/breadcrumbPath="\/motores\//g, `breadcrumbPath="${pathPrefix}/`);
+  fs.writeFileSync(file, content);
 }
 
-const glob = require('fs').readdirSync;
-const path = require('path');
-
-function getFiles(dir, files = []) {
-    if (!fs.existsSync(dir)) return files;
-    const fileList = fs.readdirSync(dir);
-    for (const file of fileList) {
-        const name = path.join(dir, file);
-        if (fs.statSync(name).isDirectory()) {
-            getFiles(name, files);
-        } else if (name.endsWith('.tsx')) {
-            files.push(name);
-        }
-    }
-    return files;
-}
-
-const enFiles = getFiles('c:/Users/Administrator/Desktop/Antigravity/Jets-Munt/site/app/en');
-enFiles.forEach(file => {
-    replaceInFileRegex(file, /<SeoPageShell([^>]*)>/g, (match, p1) => {
-        if (!p1.includes('locale=')) {
-            return `<SeoPageShell locale="en"${p1}>`;
-        }
-        return match;
-    });
-    replaceInFileRegex(file, /<SeoInternalLinks( ?)\/?>/g, '<SeoInternalLinks locale="en" />');
-});
-
-const frFiles = getFiles('c:/Users/Administrator/Desktop/Antigravity/Jets-Munt/site/app/fr');
-frFiles.forEach(file => {
-    replaceInFileRegex(file, /<SeoPageShell([^>]*)>/g, (match, p1) => {
-        if (!p1.includes('locale=')) {
-            return `<SeoPageShell locale="fr"${p1}>`;
-        }
-        return match;
-    });
-    replaceInFileRegex(file, /<SeoInternalLinks( ?)\/?>/g, '<SeoInternalLinks locale="fr" />');
-});
-
-console.log("Done");
+updateFile('app/en/engines/xm215-pro/page.tsx', 'en_US', '/en/engines');
+updateFile('app/en/engines/xm255-pro/page.tsx', 'en_US', '/en/engines');
+updateFile('app/fr/moteurs/xm215-pro/page.tsx', 'fr_FR', '/fr/moteurs');
+updateFile('app/fr/moteurs/xm255-pro/page.tsx', 'fr_FR', '/fr/moteurs');
+console.log('Done');

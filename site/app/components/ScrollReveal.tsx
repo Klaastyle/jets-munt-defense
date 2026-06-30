@@ -4,11 +4,13 @@ import { useEffect, useRef } from "react";
 export default function ScrollReveal({ 
   children, 
   className = "", 
-  delay = 0 
+  delay = 0,
+  style
 }: { 
   children: React.ReactNode; 
   className?: string;
   delay?: 0 | 1 | 2 | 3 | 4;
+  style?: React.CSSProperties;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -37,7 +39,7 @@ export default function ScrollReveal({
   const delayClass = delay ? `reveal-delay-${delay}` : "";
 
   return (
-    <div ref={ref} className={`reveal ${delayClass} ${className}`}>
+    <div ref={ref} className={`reveal ${delayClass} ${className}`} style={style}>
       {children}
     </div>
   );

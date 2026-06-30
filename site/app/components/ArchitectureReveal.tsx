@@ -12,17 +12,17 @@ const architectureData = {
       {
         title: "Motor turbojet compacto",
         text: "Un conjunto de turbina de alta densidad para plataformas UAV compactas.",
-        img: "/media/photos/Gemini_Generated_Image_8bxtuz8bxtuz8bxt.png",
+        img: "/media/photos/Gemini_Generated_Image_2akchy2akchy2akc.png",
       },
       {
         title: "ECU, sensores y registro de datos",
         text: "El control, la protección y la telemetría forman parte de la misma arquitectura de propulsión.",
-        img: "/media/capabilities/electronics-telemetry.png",
+        img: "/media/photos/Gemini_Generated_Image_o6vr2uo6vr2uo6vr.png",
       },
       {
         title: "Soporte de integración en plataforma",
         text: "Las restricciones de instalación, los requisitos de prueba y los datos del programa definen la ruta de propulsión final.",
-        img: "/media/capabilities/uav-integration.png",
+        img: "/media/photos/Gemini_Generated_Image_c0guk1c0guk1c0gu.png",
       },
     ],
   },
@@ -33,17 +33,17 @@ const architectureData = {
       {
         title: "Compact turbojet core",
         text: "A high-density turbine package for compact UAV airframes.",
-        img: "/media/photos/Gemini_Generated_Image_8bxtuz8bxtuz8bxt.png",
+        img: "/media/photos/Gemini_Generated_Image_2akchy2akchy2akc.png",
       },
       {
         title: "ECU, sensors and data logging",
         text: "Control, protection and telemetry are presented as part of the same propulsion architecture.",
-        img: "/media/capabilities/electronics-telemetry.png",
+        img: "/media/photos/Gemini_Generated_Image_o6vr2uo6vr2uo6vr.png",
       },
       {
         title: "Platform integration support",
         text: "Installation constraints, test requirements and program data shape the final propulsion route.",
-        img: "/media/capabilities/uav-integration.png",
+        img: "/media/photos/Gemini_Generated_Image_c0guk1c0guk1c0gu.png",
       },
     ],
   },
@@ -54,17 +54,17 @@ const architectureData = {
       {
         title: "Moteur turbojet compact",
         text: "Un ensemble turbine haute densité pour les plateformes UAV compactes.",
-        img: "/media/photos/Gemini_Generated_Image_8bxtuz8bxtuz8bxt.png",
+        img: "/media/photos/Gemini_Generated_Image_2akchy2akchy2akc.png",
       },
       {
         title: "ECU, capteurs et enregistrement de données",
         text: "Le contrôle, la protection et la télémétrie font partie de la même architecture de propulsion.",
-        img: "/media/capabilities/electronics-telemetry.png",
+        img: "/media/photos/Gemini_Generated_Image_o6vr2uo6vr2uo6vr.png",
       },
       {
         title: "Support d'intégration plateforme",
         text: "Les contraintes d'installation, les exigences de test et les données du programme définissent la route de propulsion finale.",
-        img: "/media/capabilities/uav-integration.png",
+        img: "/media/photos/Gemini_Generated_Image_c0guk1c0guk1c0gu.png",
       },
     ],
   },

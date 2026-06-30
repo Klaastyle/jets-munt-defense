@@ -336,7 +336,7 @@ export default function Xm255ProPage() {
             <TechnicalFeatureList title="Integration features" items={integrationFeatures} className="xm-feature-panel" />
           </section>
 
-          <section className="xm-software-band" aria-label="Configuration software">
+          <section className="xm-software-band" aria-label="Configuration software" style={{ maxWidth: '900px', margin: '0 auto' }}>
             <div className="xm-software-copy">
               <span className="xm-web-label">Configuration software</span>
               <h2>Monitorizacion y ajuste multiplataforma.</h2>

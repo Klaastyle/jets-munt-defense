@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import ScrollHeroVideos from "../components/ScrollHeroVideos";
+import HeroLoopVideo from "../components/HeroLoopVideo";
 import ContactEnquiryForm from "../components/ContactEnquiryForm";
 import { buildMetadata } from "../lib/metadata";
 import { homeAlternates } from "../lib/seo-data";
@@ -22,7 +22,7 @@ export default function FrHomePage() {
       <main>
         <section className="hero" id="top">
           <div className="hero-pin">
-            <ScrollHeroVideos sources={["/media/videos/hero-1-scrub.mp4", "/media/videos/hero-2-scrub.mp4"]} />
+            <HeroLoopVideo src="/media/videos/hero-xm-loop-seamless.mp4" />
             <div className="hero-overlay" />
             <div className="container hero-grid">
               <div className="hero-copy">
