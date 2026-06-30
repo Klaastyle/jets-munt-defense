@@ -62,10 +62,32 @@ export default function EnEnginesPage() {
                 <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#fff", marginBottom: "0.5rem" }}>{engine.name}</h2>
                 <p style={{ color: "var(--text-soft)", fontSize: "0.88rem", lineHeight: "1.6", marginBottom: "1.5rem", flexGrow: 1 }}>{engine.summary}</p>
                 
-                <div className="product-specs" style={{ display: "flex", justifyContent: "space-between", gap: "1rem", borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: "1rem", marginBottom: "1.5rem" }}>
-                  <span style={{ display: "flex", flexDirection: "column" }}><small style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Thrust</small><strong style={{ color: "#fff", fontSize: "0.95rem" }}>{engine.thrust}</strong></span>
-                  <span style={{ display: "flex", flexDirection: "column" }}><small style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Weight</small><strong style={{ color: "#fff", fontSize: "0.95rem" }}>{engine.weight}</strong></span>
-                  <span style={{ display: "flex", flexDirection: "column" }}><small style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Diameter</small><strong style={{ color: "#fff", fontSize: "0.95rem" }}>{engine.diameter}</strong></span>
+                <div className="product-specs" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.6rem", marginTop: "auto", marginBottom: "1.5rem" }}>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", background: "rgba(255,255,255,0.02)", padding: "1rem 0.5rem", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.04)", transition: "background 0.3s ease" }}>
+                    <svg style={{ width: "22px", height: "22px", stroke: "var(--accent)", fill: "none", strokeWidth: 1.5, marginBottom: "0.6rem" }} viewBox="0 0 24 24">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                    <small style={{ fontSize: "0.7rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.2rem" }}>Thrust</small>
+                    <strong style={{ color: "#fff", fontSize: "1.05rem" }}>{engine.thrust}</strong>
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", background: "rgba(255,255,255,0.02)", padding: "1rem 0.5rem", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.04)", transition: "background 0.3s ease" }}>
+                    <svg style={{ width: "22px", height: "22px", stroke: "var(--accent)", fill: "none", strokeWidth: 1.5, marginBottom: "0.6rem" }} viewBox="0 0 24 24">
+                      <rect x="4" y="8" width="16" height="12" rx="2" />
+                      <path d="M8 8V6a4 4 0 0 1 8 0v2" />
+                    </svg>
+                    <small style={{ fontSize: "0.7rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.2rem" }}>Weight</small>
+                    <strong style={{ color: "#fff", fontSize: "1.05rem" }}>{engine.weight}</strong>
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", background: "rgba(255,255,255,0.02)", padding: "1rem 0.5rem", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.04)", transition: "background 0.3s ease" }}>
+                    <svg style={{ width: "22px", height: "22px", stroke: "var(--accent)", fill: "none", strokeWidth: 1.5, marginBottom: "0.6rem" }} viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                      <polyline points="5 9 2 12 5 15" />
+                      <polyline points="19 9 22 12 19 15" />
+                    </svg>
+                    <small style={{ fontSize: "0.7rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.2rem" }}>Diam.</small>
+                    <strong style={{ color: "#fff", fontSize: "1.05rem" }}>{engine.diameter}</strong>
+                  </div>
                 </div>
                 
                 <Link href={`/en/engines/${engine.slug}`} className="btn btn-ghost" style={{ textAlign: "center", width: "100%", padding: "0.6rem" }}>
