@@ -14,6 +14,7 @@ export default function EngineButton({ name, href, delay = 0, style }: { name: s
     >
       <Link 
         href={href}
+        className="engine-btn"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{

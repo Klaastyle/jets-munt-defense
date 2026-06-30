@@ -4097,26 +4097,27 @@ img, video { display: block; max-width: 100%; }
 @media (max-width: 980px) {
   .hero-engine-buttons {
     position: absolute;
-    top: auto;
-    bottom: 30%;
+    top: 0;
     left: 0;
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column-reverse; /* XM255 arriba, XM215 abajo en móvil */
-    align-items: center;
-    justify-content: center;
-    gap: 1.25rem;
-    padding: 0 1rem;
-    box-sizing: border-box;
+    height: 100%;
+    display: block;
+    pointer-events: none;
   }
   .hero-engine-button-left,
   .hero-engine-button-right {
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
-    max-width: 100%;
+    position: absolute;
+    pointer-events: auto;
+  }
+  .hero-engine-button-left {
+    left: 22%;
+    top: 65%;
+    transform: translate(-50%, -50%) scale(0.65);
+  }
+  .hero-engine-button-right {
+    left: 78%;
+    top: 65%;
+    transform: translate(-50%, -50%) scale(0.65);
   }
 }
 
