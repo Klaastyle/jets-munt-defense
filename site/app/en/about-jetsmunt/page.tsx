@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SeoPageShell } from "../../components/SeoPage";
 import { buildMetadata } from "../../lib/metadata";
 import { primaryAlternates } from "../../lib/seo-data";
@@ -8,7 +9,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Learn about the history, timeline, and custom design and manufacturing capabilities of compact turbojet propulsion systems at JetsMunt.",
   path: "/en/about-jetsmunt",
-  image: "/media/capabilities/manufacturing-spain.png",
+  image: "/media/about/Gemini_Generated_Image_9k9e7o9k9e7o9k9e.png",
   keywords: ["about JetsMunt", "JetsMunt history", "aerospace engineering", "turbojet manufacturer"],
   locale: "en_US",
   languages: primaryAlternates("about"),
@@ -33,7 +34,7 @@ export default function AboutJetsMuntPage() {
       kicker="About Us"
       title="Three decades of innovation in compact turbojet propulsion."
       description="JetsMunt is a Spanish aerospace engineering company specialized in the design, development, and manufacturing of advanced turbojet systems for modern unmanned platforms."
-      image="/media/capabilities/manufacturing-spain.png"
+      image="/media/about/Gemini_Generated_Image_9k9e7o9k9e7o9k9e.png"
       breadcrumbPath="/en/about-jetsmunt"
       locale="en"
     >
@@ -89,6 +90,53 @@ export default function AboutJetsMuntPage() {
                 <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: "1.5" }}>
                   {item.desc}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Facilities & Development Gallery */}
+        <div style={{ margin: "4rem 0" }}>
+          <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.8rem", fontWeight: 800, marginBottom: "2rem", color: "#fff", textAlign: "center" }}>
+            Our Facilities & Development
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
+            {[
+              { src: "/media/about/Gemini_Generated_Image_c0guk1c0guk1c0gu.png", alt: "JetsMunt assembly facilities" },
+              { src: "/media/about/Gemini_Generated_Image_mt2eermt2eermt2e.png", alt: "Blade and rotor design & engineering" },
+              { src: "/media/about/Gemini_Generated_Image_n2rnkfn2rnkfn2rn.png", alt: "Turbine test bench cell" },
+              { src: "/media/about/Gemini_Generated_Image_vnxrcxvnxrcxvnxr.png", alt: "Quality control and metrology lab" },
+            ].map((img, index) => (
+              <div
+                key={index}
+                style={{
+                  position: "relative",
+                  height: "220px",
+                  borderRadius: "6px",
+                  overflow: "hidden",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+                }}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: "0",
+                    background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%)",
+                    display: "flex",
+                    alignItems: "flex-end",
+                    padding: "1rem",
+                  }}
+                >
+                  <p style={{ color: "#fff", fontSize: "0.85rem", fontWeight: 600, margin: 0 }}>{img.alt}</p>
+                </div>
               </div>
             ))}
           </div>

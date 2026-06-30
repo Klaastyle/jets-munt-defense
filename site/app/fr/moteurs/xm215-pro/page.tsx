@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SeoInternalLinks, SeoPageShell } from "../../../components/SeoPage";
 import { buildMetadata } from "../../../lib/metadata";
 import { proProductAlternates } from "../../../lib/seo-data";
@@ -8,7 +9,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Fiche technique et spécifications du turboréacteur XM215 PRO de 215 N avec ECU intégré, contrôle de moteur FOC et télémétrie CAN Bus.",
   path: "/fr/moteurs/xm215-pro",
-  image: "/media/turbina/m166ts-3.jpg",
+  image: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
   keywords: ["XM215 PRO", "turboreacteur 215 N", "propulsion UAV defense", "microturbine JetsMunt"],
   locale: "fr_FR",
   languages: proProductAlternates("xm215-pro"),
@@ -135,7 +136,7 @@ export default function Xm215ProPage() {
       kicker="Systèmes de Propulsion PRO"
       title="XM215 PRO"
       description="Turboréacteur de 215 N avec électronique FADEC et interfaces de télémétrie entièrement intégrées à l'intérieur du corps du moteur."
-      image="/media/turbina/m166ts-3.jpg"
+      image="/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png"
       breadcrumbPath="/fr/moteurs/xm215-pro"
       locale="fr"
     >
@@ -321,6 +322,54 @@ export default function Xm215ProPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Section Média : Vidéo & Galerie */}
+        <div style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.8rem", marginBottom: "4rem" }}>
+          <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.4rem", fontWeight: 800, marginBottom: "1.5rem", color: "#fff", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
+            MULTIMÉDIA ET GALERIE D'INTÉGRATION
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem" }} className="desktop-grid-2">
+            {/* Colonne Vidéo */}
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <p style={{ color: "var(--accent)", fontSize: "0.82rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.5rem" }}>
+                Démonstration sur Banc d'Essai
+              </p>
+              <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#fff", marginBottom: "1rem" }}>
+                Vidéo de Démonstration du Turboréacteur
+              </h3>
+              <div style={{ position: "relative", width: "100%", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)", aspectRatio: "16/9" }}>
+                <video
+                  src="/media/215/JetsMunt_XM21_Video_output_8s_v2mp4_9YYP-nCM.mp4"
+                  controls
+                  playsInline
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </div>
+            </div>
+            
+            {/* Colonne Galerie */}
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <p style={{ color: "var(--accent-2)", fontSize: "0.82rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.5rem" }}>
+                Détails du Matériel
+              </p>
+              <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#fff", marginBottom: "1rem" }}>
+                Vues Détaillées du Système
+              </h3>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                {[
+                  { src: "/media/215/Gemini_Generated_Image_gk1dtrgk1dtrgk1d.png", alt: "XM215 PRO vue latérale" },
+                  { src: "/media/215/Gemini_Generated_Image_lpf18glpf18glpf1.png", alt: "XM215 PRO vue frontale diffuseur et compresseur" },
+                  { src: "/media/215/Gemini_Generated_Image_t6c0vit6c0vit6c0.png", alt: "XM215 PRO intégration électronique interne" },
+                  { src: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png", alt: "XM215 PRO système d'échappement" },
+                ].map((img, i) => (
+                  <div key={i} style={{ position: "relative", height: "120px", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
+                    <Image src={img.src} alt={img.alt} fill style={{ objectFit: "cover" }} sizes="(max-width: 980px) 50vw, 25vw" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 

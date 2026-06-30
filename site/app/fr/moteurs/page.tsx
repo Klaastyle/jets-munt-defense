@@ -23,7 +23,7 @@ export default function FrMoteursPage() {
       thrust: "215 N",
       weight: "1 820 g",
       diameter: "73,9 mm",
-      img: "/media/turbina/m166ts-3.jpg",
+      img: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
       summary: "Microturbine optimisée avec électronique de contrôle FOC brushless et télémétrie de mission en temps réel.",
     },
     {
@@ -32,7 +32,7 @@ export default function FrMoteursPage() {
       thrust: "255 N",
       weight: "2 080 g",
       diameter: "122 mm",
-      img: "/media/turbina/m166ts-3.jpg",
+      img: "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
       summary: "Notre unité de propulsion à plus forte poussée avec des standards de construction de qualité militaire pour UAV tactiques.",
     },
   ];
@@ -43,7 +43,7 @@ export default function FrMoteursPage() {
       kicker="Gamme de Moteurs PRO"
       title="Systèmes de Propulsion Turboréacteur pour UAV"
       description="Les moteurs JetsMunt PRO intègrent l'unité de contrôle (ECU), le logiciel de diagnostic et les capteurs de vol directement dans le moteur, éliminant les câblages externes et simplifiant l'intégration."
-      image="/media/turbina/m166ts-3.jpg"
+      image="/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png"
       breadcrumbPath="/fr/moteurs"
       compact
       primaryHref="/fr/contact"

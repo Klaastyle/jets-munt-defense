@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const stepsData = {
@@ -113,7 +112,7 @@ const stepsData = {
     },
     {
       index: "06",
-      title: "FABRICATION DE PRÉCISION",
+      title: "FABRICACIÓN DE PRECISIÓN",
       text: "Fabrication de composants critiques et assemblage final dans nos installations en Espagne sous contrôle qualité strict.",
       bullets: ["Fabriqué en Espagne", "Contrôle qualité strict"],
     },
@@ -126,107 +125,38 @@ const headingData = {
   fr: { label: "Compétences Clés", title: "Capacités internes complètes." },
 };
 
-const videoLabelData = {
-  es: "Vista explosionada de la turbina",
-  en: "Turbine exploded view",
-  fr: "Vue éclatée de la turbine",
-};
-
 export default function ScrollPropulsionPartner() {
   const pathname = usePathname();
   const locale = pathname.startsWith("/en") ? "en" : pathname.startsWith("/fr") ? "fr" : "es";
   const steps = stepsData[locale];
   const heading = headingData[locale];
-  const videoLabel = videoLabelData[locale];
-
-  const sectionRef = useRef<HTMLElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const stepRefs = useRef<HTMLElement[]>([]);
-  const [activeStep, setActiveStep] = useState(0);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const video = videoRef.current;
-    if (!section || !video) return;
-
-    let ticking = false;
-
-    const updateVideo = () => {
-      const rect = section.getBoundingClientRect();
-      const viewport = window.innerHeight;
-      const scrollable = Math.max(1, rect.height - viewport);
-      const progress = Math.max(0, Math.min(1, -rect.top / scrollable));
-      const nextStep = Math.min(steps.length - 1, Math.floor(progress * steps.length));
-
-      if (video.readyState >= 2 && video.duration) {
-        const targetTime = progress * video.duration;
-        if (Math.abs(video.currentTime - targetTime) > 0.025) {
-          try {
-            video.fastSeek(targetTime);
-          } catch {
-            video.currentTime = targetTime;
-          }
-        }
-      }
-
-      setActiveStep(nextStep);
-      ticking = false;
-    };
-
-    const requestVideoUpdate = () => {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(updateVideo);
-    };
-
-    video.pause();
-    video.addEventListener("loadedmetadata", requestVideoUpdate);
-    window.addEventListener("scroll", requestVideoUpdate, { passive: true });
-    window.addEventListener("resize", requestVideoUpdate);
-    requestVideoUpdate();
-
-    return () => {
-      video.removeEventListener("loadedmetadata", requestVideoUpdate);
-      window.removeEventListener("scroll", requestVideoUpdate);
-      window.removeEventListener("resize", requestVideoUpdate);
-    };
-  }, [steps.length]);
 
   return (
-    <section ref={sectionRef} className="partner-scroll-section" id="partner">
-      <div className="partner-sticky">
-        <div className="container partner-grid">
-          <div className="partner-video-frame">
-            <video ref={videoRef} src="/media/videos/turbine-exploded-scrub.mp4" muted playsInline preload="auto" />
-            <div className="partner-video-label">{videoLabel}</div>
-          </div>
+    <section className="partner-section section" id="partner">
+      <div className="container">
+        <div className="partner-heading-center">
+          <p className="section-label">{heading.label}</p>
+          <h2 className="heading-lg" style={{ maxWidth: "none", marginBottom: "3rem" }}>{heading.title}</h2>
+        </div>
 
-          <div className="partner-steps">
-            <div className="partner-heading">
-              <p className="section-label">{heading.label}</p>
-              <h2 className="heading-lg">{heading.title}</h2>
-            </div>
-
-            {steps.map((step, index) => (
-              <article
-                className={`partner-step ${activeStep === index ? "active" : ""}`}
-                data-step={index}
-                key={step.title}
-                ref={(node) => {
-                  if (node) stepRefs.current[index] = node;
-                }}
-              >
-                <span>{step.index}</span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-                <ul>
-                  {step.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+        <div className="partner-grid-2col">
+          {steps.map((step) => (
+            <article className="partner-card-premium" key={step.title}>
+              <div className="partner-card-header">
+                <span className="partner-card-number">{step.index}</span>
+                <h3 className="partner-card-title">{step.title}</h3>
+              </div>
+              <p className="partner-card-desc">{step.text}</p>
+              <div className="partner-card-bullets">
+                {step.bullets.map((bullet) => (
+                  <span className="partner-card-bullet-tag" key={bullet}>
+                    <span className="bullet-dot"></span>
+                    {bullet}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

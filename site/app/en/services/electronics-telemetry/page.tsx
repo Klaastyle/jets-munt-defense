@@ -52,7 +52,7 @@ export default function EnElectronicsTelemetryPage() {
       kicker="Integrated Propulsion Intelligence"
       title="Advanced Electronics & Telemetry"
       description="Our turbojets feature an advanced, proprietary FADEC digital control architecture, grouping all processing, sensing, and control loops inside an EMI-shielded enclosure."
-      image="/media/capabilities/uav-integration.png"
+      image="/media/services/Gemini_Generated_Image_knhy4pknhy4pknhy.png"
       breadcrumbPath="/en/services/electronics-telemetry"
     >
       <section className="section container" style={{ paddingBottom: "3rem" }}>

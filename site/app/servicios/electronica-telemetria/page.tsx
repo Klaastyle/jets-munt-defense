@@ -51,7 +51,7 @@ export default function ElectronicsTelemetryPage() {
       kicker="Propulsión Inteligente Integrada"
       title="Electrónica Avanzada y Telemetría"
       description="Nuestros motores incorporan una arquitectura electrónica avanzada de desarrollo propio que centraliza el control digital total del motor (FADEC) en un solo cuerpo blindado contra interferencias."
-      image="/media/capabilities/uav-integration.png"
+      image="/media/services/Gemini_Generated_Image_knhy4pknhy4pknhy.png"
       breadcrumbPath="/servicios/electronica-telemetria"
       locale="es"
     >

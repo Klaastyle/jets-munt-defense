@@ -22,21 +22,21 @@ export default function FrServicesPage() {
       slug: "electronique-telemetrie",
       kicker: "Systèmes de Contrôle FADEC",
       desc: "Conception et intégration d'unités de contrôle électronique (ECU), liaisons série pour pilote automatique, réseaux CAN Bus, fibre optique et enregistrement SD haute fréquence.",
-      image: "/media/capabilities/uav-integration.png",
+      image: "/media/services/Gemini_Generated_Image_knhy4pknhy4pknhy.png",
     },
     {
       title: "Intégration UAV",
       slug: "integration-uav",
-      kicker: "Ingénierie de Plateforme",
+      kicker: "Ingenierie de Plateforme",
       desc: "Assistance technique d'intégration physique (circuits de carburant, alimentation, supports) pour l'installation de turboréacteurs sur drones tactiques et cibles.",
-      image: "/media/capabilities/uav-integration.png",
+      image: "/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png",
     },
     {
       title: "Ingénierie et Développement",
       slug: "ingenierie-developpement",
       kicker: "Solutions OEM Personnalisées",
       desc: "Support d'ingénierie complet depuis le concept initial et la simulation jusqu'à la fabrication in-house de prototypes, essais environnementaux et validation en vol.",
-      image: "/media/capabilities/target-drones.png",
+      image: "/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png",
     },
   ];
 
@@ -46,7 +46,7 @@ export default function FrServicesPage() {
       kicker="Services Spécialisés"
       title="Support d'Intégration et Développement de Propulsion UAV"
       description="Nous fournissons des services d'ingénierie aérospatiale avancés de qualité militaire couvrant le développement FADEC, la télémétrie, l'intégration physique et le prototypage de turbines."
-      image="/media/capabilities/uav-integration.png"
+      image="/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png"
       breadcrumbPath="/fr/services"
       compact
     >

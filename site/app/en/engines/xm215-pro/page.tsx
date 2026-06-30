@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SeoInternalLinks, SeoPageShell } from "../../../components/SeoPage";
 import { buildMetadata } from "../../../lib/metadata";
 import { proProductAlternates } from "../../../lib/seo-data";
@@ -8,7 +9,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Full technical specifications and capabilities of the 215 N XM215 PRO compact turbojet engine featuring integrated ECU, FOC brushless control, and CAN Bus telemetry.",
   path: "/en/engines/xm215-pro",
-  image: "/media/turbina/m166ts-3.jpg",
+  image: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
   keywords: ["XM215 PRO", "215 N turbojet", "UAV propulsion defense", "compact jet engine"],
   locale: "en_US",
   languages: proProductAlternates("xm215-pro"),
@@ -135,7 +136,7 @@ export default function Xm215ProPage() {
       kicker="PRO Propulsion Systems"
       title="XM215 PRO"
       description="A 215 N compact turbojet engine featuring full authority digital engine control (FADEC) and telemetry interfaces integrated directly inside the engine housing."
-      image="/media/turbina/m166ts-3.jpg"
+      image="/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png"
       breadcrumbPath="/en/engines/xm215-pro"
       locale="en"
     >
@@ -321,6 +322,54 @@ export default function Xm215ProPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Media Section: Video & Gallery */}
+        <div style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.8rem", marginBottom: "4rem" }}>
+          <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.4rem", fontWeight: 800, marginBottom: "1.5rem", color: "#fff", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
+            MULTIMEDIA & INTEGRATION GALLERY
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem" }} className="desktop-grid-2">
+            {/* Video Column */}
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <p style={{ color: "var(--accent)", fontSize: "0.82rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.5rem" }}>
+                Test Bench Demonstration
+              </p>
+              <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#fff", marginBottom: "1rem" }}>
+                Turbojet Engine Demonstration Video
+              </h3>
+              <div style={{ position: "relative", width: "100%", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)", aspectRatio: "16/9" }}>
+                <video
+                  src="/media/215/JetsMunt_XM21_Video_output_8s_v2mp4_9YYP-nCM.mp4"
+                  controls
+                  playsInline
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </div>
+            </div>
+            
+            {/* Gallery Column */}
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <p style={{ color: "var(--accent-2)", fontSize: "0.82rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.5rem" }}>
+                Hardware Details
+              </p>
+              <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#fff", marginBottom: "1rem" }}>
+                Detailed System Views
+              </h3>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                {[
+                  { src: "/media/215/Gemini_Generated_Image_gk1dtrgk1dtrgk1d.png", alt: "XM215 PRO casing side view" },
+                  { src: "/media/215/Gemini_Generated_Image_lpf18glpf18glpf1.png", alt: "XM215 PRO diffuser and compressor front view" },
+                  { src: "/media/215/Gemini_Generated_Image_t6c0vit6c0vit6c0.png", alt: "XM215 PRO internal electronics integration" },
+                  { src: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png", alt: "XM215 PRO exhaust and nozzle system" },
+                ].map((img, i) => (
+                  <div key={i} style={{ position: "relative", height: "120px", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
+                    <Image src={img.src} alt={img.alt} fill style={{ objectFit: "cover" }} sizes="(max-width: 980px) 50vw, 25vw" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 

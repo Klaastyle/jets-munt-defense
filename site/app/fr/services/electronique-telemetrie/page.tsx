@@ -52,7 +52,7 @@ export default function FrElectronicsTelemetryPage() {
       kicker="Intelligence de Propulsion Intégrée"
       title="Électronique Avancée et Télémétrie"
       description="Nos turboréacteurs intègrent une architecture FADEC avancée et propriétaire qui regroupe la puissance de calcul, les boucles de rétroaction et les capteurs sous un blindage EMI hermétique."
-      image="/media/capabilities/uav-integration.png"
+      image="/media/services/Gemini_Generated_Image_knhy4pknhy4pknhy.png"
       breadcrumbPath="/fr/services/electronique-telemetrie"
     >
       <section className="section container" style={{ paddingBottom: "3rem" }}>

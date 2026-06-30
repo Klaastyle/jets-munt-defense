@@ -50,7 +50,7 @@ export default function EnEngineeringDevelopmentPage() {
       kicker="From concept definition to flight-ready propulsion systems."
       title="Engineering & Custom Development"
       description="JetsMunt partners with aerospace OEMs, research organizations, and defense agencies, supplying dedicated engineering support to adapt or develop customized turbojets."
-      image="/media/capabilities/target-drones.png"
+      image="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png"
       breadcrumbPath="/en/services/engineering-development"
     >
       <section className="section container" style={{ paddingBottom: "3rem" }}>

@@ -23,7 +23,7 @@ export default function EnEnginesPage() {
       thrust: "215 N",
       weight: "1,820 g",
       diameter: "73.9 mm",
-      img: "/media/turbina/m166ts-3.jpg",
+      img: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
       summary: "Micro-turbine optimized with brushless FOC control electronics and real-time mission telemetry.",
     },
     {
@@ -32,7 +32,7 @@ export default function EnEnginesPage() {
       thrust: "255 N",
       weight: "2,080 g",
       diameter: "122 mm",
-      img: "/media/turbina/m166ts-3.jpg",
+      img: "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
       summary: "Our highest thrust propulsion package with defense-grade build standards for tactical UAVs and target drones.",
     },
   ];
@@ -43,7 +43,7 @@ export default function EnEnginesPage() {
       kicker="PRO Engine Portfolio"
       title="UAV Turbojet Propulsion Systems"
       description="JetsMunt PRO engines integrate the engine control unit (ECU), diagnostic software, and flight sensors directly inside the engine hardware, eliminating external wiring and streamlining integration into unmanned platforms."
-      image="/media/turbina/m166ts-3.jpg"
+      image="/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png"
       breadcrumbPath="/en/engines"
       compact
       primaryHref="/en/contact"
