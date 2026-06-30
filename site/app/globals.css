@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --bg: #080807;
@@ -4153,5 +4153,11 @@ img, video { display: block; max-width: 100%; }
   .hero-engine-button-right {
     left: 88%; /* Adjusted to match visual engine position in 16:9 */
     top: 65%;
+  }
+}
+@media (max-width: 980px) {
+  .nav {
+    background: #080807 !important;
+    backdrop-filter: none !important;
   }
 }
