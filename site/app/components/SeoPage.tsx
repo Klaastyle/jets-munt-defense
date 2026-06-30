@@ -80,6 +80,7 @@ export function SeoPageShell({
                   <video
                     src={bentoGallery.video}
                     controls
+                    muted
                     playsInline
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />

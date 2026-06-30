@@ -3377,7 +3377,7 @@ img, video { display: block; max-width: 100%; }
   --jm-sheet-muted: var(--xm-muted);
   --jm-sheet-line: var(--xm-line);
   --jm-sheet-orange: var(--xm-accent);
-  margin-top: clamp(2rem, 5vw, 4rem);
+  margin-top: clamp(5rem, 10vw, 8.5rem);
   background: var(--xm-bg);
   color: var(--xm-ink);
 }
@@ -3441,7 +3441,7 @@ img, video { display: block; max-width: 100%; }
 .xm-web-copy p,
 .xm-section-heading p,
 .xm-software-band p {
-  color: var(--text-soft);
+  color: var(--text);
   font-size: 1rem;
   line-height: 1.65;
   max-width: 60ch;
@@ -3565,7 +3565,7 @@ img, video { display: block; max-width: 100%; }
 }
 
 .xm-spec-panel dt {
-  color: var(--text-muted);
+  color: var(--text-soft);
   font-size: 0.85rem;
   font-weight: 650;
 }
@@ -3730,7 +3730,7 @@ img, video { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  color: var(--text-muted);
+  color: var(--text-soft);
   font-size: 0.82rem;
   font-weight: 800;
 }

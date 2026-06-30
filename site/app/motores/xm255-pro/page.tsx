@@ -255,11 +255,10 @@ export default function Xm255ProPage() {
         <div className="container">
           <section className="xm-web-hero">
             <div className="xm-web-copy">
-              <span className="xm-web-label">Technical HTML/CSS module</span>
-              <h2>Ficha tecnica web para integracion UAV.</h2>
+              <span className="xm-web-label">Ingeniería Avanzada</span>
+              <h2>Diseñado para la integración exigente.</h2>
               <p>
-                Una seccion construida con HTML semantico, SVG inline y CSS reutilizable. La referencia visual
-                informa la precision de los iconos y la densidad tecnica, pero la estructura esta pensada para web.
+                El XM255 PRO representa la cumbre en propulsión compacta para plataformas no tripuladas, ofreciendo un empuje excepcional y una arquitectura de telemetría completa para misiones críticas.
               </p>
               <div className="xm-web-actions" aria-label="XM255 PRO resumen tecnico">
                 <strong>255 N</strong>
@@ -304,9 +303,9 @@ export default function Xm255ProPage() {
 
           <section className="xm-performance-section" aria-label="XM255 PRO thrust performance">
             <div className="xm-section-heading">
-              <span className="xm-web-label">Performance</span>
-              <h2>Datos visibles, no decoracion.</h2>
-              <p>Tabla y grafica SVG se renderizan como HTML/CSS/SVG escalable para consulta tecnica real.</p>
+              <span className="xm-web-label">Rendimiento</span>
+              <h2>Curva de empuje y consumo.</h2>
+              <p>Datos de rendimiento validados en banco de pruebas en condiciones estándar de atmósfera (ISA).</p>
             </div>
             <div className="xm-performance-layout">
               <table className="xm-performance-table">
