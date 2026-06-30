@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
+import { TechnicalIcon, type TechnicalIconName } from "../../components/TechnicalIcon";
 import { buildMetadata } from "../../lib/metadata";
 import { primaryAlternates } from "../../lib/seo-data";
 
@@ -14,29 +15,29 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function UavIntegrationPage() {
-  const interfaces = [
-    { name: "CAN Bus", desc: "Compatible con SAE J1939 para una fácil comunicación en buses de aviónica complejos." },
-    { name: "I2C Bus", desc: "Diseñado para la interconexión con sensores ambientales periféricos y telemetría interna." },
-    { name: "Enlaces Serie", desc: "Soporte de canales serie RS232, RS422 y RS485 para redundancia de comandos de aceleración." },
-    { name: "PWM", desc: "Señal de modulación de ancho de pulso tradicional para entradas analógicas de aceleración de reserva." },
-    { name: "Tarjeta SD", desc: "Interfaz local para la recuperación de logs de vuelo de alta frecuencia y actualización de firmware." },
+  const interfaces: Array<{name: string, desc: string, icon: TechnicalIconName}> = [
+    { name: "CAN Bus", desc: "Compatible con SAE J1939 para una fácil comunicación en buses de aviónica complejos.", icon: "can-bus" },
+    { name: "I2C Bus", desc: "Diseñado para la interconexión con sensores ambientales periféricos y telemetría interna.", icon: "i2c" },
+    { name: "Enlaces Serie", desc: "Soporte de canales serie RS232, RS422 y RS485 para redundancia de comandos de aceleración.", icon: "code-serial" },
+    { name: "PWM", desc: "Señal de modulación de ancho de pulso tradicional para entradas analógicas de aceleración de reserva.", icon: "sine-wave" },
+    { name: "Tarjeta SD", desc: "Interfaz local para la recuperación de logs de vuelo de alta frecuencia y actualización de firmware.", icon: "sd-card" },
   ];
 
-  const applications = [
-    { title: "UAVs de Ala Fija", desc: "Integración aerodinámica óptima en góndolas internas y externas para vuelos de larga duración." },
-    { title: "Drones Blanco / Objetivos", desc: "Soluciones de montaje rápido preparadas para soportar altas aceleraciones y lanzamientos por catapulta." },
-    { title: "Sistemas Lanzados desde Tierra", desc: "Integración en lanzadores y misiles tácticos con arranque fiable en menos de 30 segundos." },
-    { title: "UAVs VTOL / Híbridos", desc: "Soporte para configuraciones de empuje vectorial y transición de vuelo vertical a horizontal." },
-    { title: "Munición Merodeadora", desc: "Soluciones ultraligeras y de bajo perfil optimizadas para un coste mínimo por ciclo de misión." },
-    { title: "Misiones Especiales", desc: "Desarrollos a medida para plataformas aeroespaciales en condiciones climáticas o de vuelo extremas." },
+  const applications: Array<{title: string, desc: string, icon: TechnicalIconName}> = [
+    { title: "UAVs de Ala Fija", desc: "Integración aerodinámica óptima en góndolas internas y externas para vuelos de larga duración.", icon: "aircraft" },
+    { title: "Drones Blanco / Objetivos", desc: "Soluciones de montaje rápido preparadas para soportar altas aceleraciones y lanzamientos por catapulta.", icon: "target-crosshair" },
+    { title: "Sistemas Lanzados desde Tierra", desc: "Integración en lanzadores y misiles tácticos con arranque fiable en menos de 30 segundos.", icon: "paper-plane" },
+    { title: "UAVs VTOL / Híbridos", desc: "Soporte para configuraciones de empuje vectorial y transición de vuelo vertical a horizontal.", icon: "puzzle" },
+    { title: "Munición Merodeadora", desc: "Soluciones ultraligeras y de bajo perfil optimizadas para un coste mínimo por ciclo de misión.", icon: "feather" },
+    { title: "Misiones Especiales", desc: "Desarrollos a medida para plataformas aeroespaciales en condiciones climáticas o de vuelo extremas.", icon: "globe" },
   ];
 
-  const benefits = [
-    { title: "Tiempo de Integración Reducido", desc: "Gracias a interfaces estandarizadas y software de configuración plug & play." },
-    { title: "Rendimiento Optimizado", desc: "Maximiza la relación empuje-peso y optimiza el consumo específico de combustible (SFC)." },
-    { title: "Fiabilidad de Misión", desc: "Sistemas electrónicos y de combustible validados para operaciones críticas y defensa." },
-    { title: "Eficiencia de Costes", desc: "Reduce la inversión inicial en desarrollo e ingeniería y los costes operativos continuos." },
-    { title: "Soporte Global", desc: "Soporte de ingeniería directa en el laboratorio y durante las pruebas de campo en todo el mundo." },
+  const benefits: Array<{title: string, desc: string, icon: TechnicalIconName}> = [
+    { title: "Tiempo de Integración Reducido", desc: "Gracias a interfaces estandarizadas y software de configuración plug & play.", icon: "calendar" },
+    { title: "Rendimiento Optimizado", desc: "Maximiza la relación empuje-peso y optimiza el consumo específico de combustible (SFC).", icon: "speedometer" },
+    { title: "Fiabilidad de Misión", desc: "Sistemas electrónicos y de combustible validados para operaciones críticas y defensa.", icon: "shield-check" },
+    { title: "Eficiencia de Costes", desc: "Reduce la inversión inicial en desarrollo e ingeniería y los costes operativos continuos.", icon: "chart-line" },
+    { title: "Soporte Global", desc: "Soporte de ingeniería directa en el laboratorio y durante las pruebas de campo en todo el mundo.", icon: "globe" },
   ];
 
   return (
@@ -58,6 +59,9 @@ export default function UavIntegrationPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem" }}>
             {applications.map((app) => (
               <div key={app.title} style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "6px", padding: "1.5rem" }}>
+                <div style={{ color: "var(--accent)", marginBottom: "1rem" }}>
+                  <TechnicalIcon name={app.icon} size={32} />
+                </div>
                 <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--accent)", marginBottom: "0.5rem" }}>{app.title}</h3>
                 <p style={{ color: "var(--text-soft)", fontSize: "0.85rem", lineHeight: "1.6" }}>{app.desc}</p>
               </div>
@@ -91,9 +95,14 @@ export default function UavIntegrationPage() {
             </h2>
             <div style={{ display: "grid", gap: "1rem" }}>
               {interfaces.map((inf) => (
-                <div key={inf.name} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem" }}>
-                  <strong style={{ color: "#fff", fontSize: "0.9rem", whiteSpace: "nowrap" }}>{inf.name}</strong>
-                  <span style={{ color: "var(--text-soft)", fontSize: "0.85rem", textAlign: "right" }}>{inf.desc}</span>
+                <div key={inf.name} style={{ display: "flex", alignItems: "flex-start", gap: "1rem" }}>
+                  <div style={{ color: "var(--text-muted)", marginTop: "0.15rem" }}>
+                    <TechnicalIcon name={inf.icon} size={24} />
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
+                    <strong style={{ color: "#fff", fontSize: "0.95rem" }}>{inf.name}</strong>
+                    <span style={{ color: "var(--text-soft)", fontSize: "0.85rem" }}>{inf.desc}</span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -108,6 +117,9 @@ export default function UavIntegrationPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem" }}>
             {benefits.map((b) => (
               <div key={b.title}>
+                <div style={{ color: "var(--accent-2)", marginBottom: "0.8rem" }}>
+                  <TechnicalIcon name={b.icon} size={28} />
+                </div>
                 <h4 style={{ fontSize: "0.95rem", fontWeight: 800, color: "var(--accent-2)", marginBottom: "0.4rem", textTransform: "uppercase" }}>{b.title}</h4>
                 <p style={{ color: "var(--text-soft)", fontSize: "0.82rem", lineHeight: "1.5" }}>{b.desc}</p>
               </div>

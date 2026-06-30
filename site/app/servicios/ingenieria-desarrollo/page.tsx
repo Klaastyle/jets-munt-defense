@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
+import { TechnicalIcon, type TechnicalIconName } from "../../components/TechnicalIcon";
 import { buildMetadata } from "../../lib/metadata";
 import { primaryAlternates } from "../../lib/seo-data";
 
@@ -28,20 +29,20 @@ export default function EngineeringDevelopmentPage() {
     "Diseño de Góndolas Integradas",
   ];
 
-  const processSteps = [
-    { num: "01", name: "Requisitos de Vuelo", desc: "Definición de envolvente, restricciones físicas y perfiles de misión del UAV." },
-    { num: "02", name: "Concepto y Diseño", desc: "Simulación termodinámica y modelado 3D preliminar del turborreactor." },
-    { num: "03", name: "Ingeniería de Detalle", desc: "Desarrollo mecánico, aerodinámico y de tarjetas electrónicas a medida." },
-    { num: "04", name: "Fabricación de Prototipos", desc: "Mecanizado CNC in-house de álabes, rotores y cámaras de combustión." },
-    { num: "05", name: "Calificación y Ensayos", desc: "Validación en bancos de pruebas estáticos y cámaras climáticas." },
-    { num: "06", name: "Integración en Vuelo", desc: "Acompañamiento técnico directo durante los primeros vuelos de prueba." },
+  const processSteps: Array<{num: string, name: string, desc: string, icon: TechnicalIconName}> = [
+    { num: "01", name: "Requisitos de Vuelo", desc: "Definición de envolvente, restricciones físicas y perfiles de misión del UAV.", icon: "chart-line" },
+    { num: "02", name: "Concepto y Diseño", desc: "Simulación termodinámica y modelado 3D preliminar del turborreactor.", icon: "puzzle" },
+    { num: "03", name: "Ingeniería de Detalle", desc: "Desarrollo mecánico, aerodinámico y de tarjetas electrónicas a medida.", icon: "monitor-settings" },
+    { num: "04", name: "Fabricación de Prototipos", desc: "Mecanizado CNC in-house de álabes, rotores y cámaras de combustión.", icon: "factory" },
+    { num: "05", name: "Calificación y Ensayos", desc: "Validación en bancos de pruebas estáticos y cámaras climáticas.", icon: "shield-check" },
+    { num: "06", name: "Integración en Vuelo", desc: "Acompañamiento técnico directo durante los primeros vuelos de prueba.", icon: "aircraft" },
   ];
 
-  const areas = [
-    { title: "Motores UAV Compactos", desc: "Adaptación y modificación rápida de nuestras plataformas de propulsión ya existentes." },
-    { title: "Plataformas de Empuje Incrementado", desc: "Desarrollo de nuevas configuraciones de microturbinas optimizadas para mayores perfiles de empuje." },
-    { title: "Sistemas de Propulsión Integrados", desc: "Soluciones completas 'llave en mano' que engloban motor, electrónica y telemetría en un solo kit." },
-    { title: "Misiones Especiales", desc: "Configuraciones avanzadas de propulsión preparadas para tolerar fuerzas G extremas y reencendidos a gran altitud." },
+  const areas: Array<{title: string, desc: string, icon: TechnicalIconName}> = [
+    { title: "Motores UAV Compactos", desc: "Adaptación y modificación rápida de nuestras plataformas de propulsión ya existentes.", icon: "feather" },
+    { title: "Plataformas de Empuje Incrementado", desc: "Desarrollo de nuevas configuraciones de microturbinas optimizadas para mayores perfiles de empuje.", icon: "speedometer" },
+    { title: "Sistemas de Propulsión Integrados", desc: "Soluciones completas 'llave en mano' que engloban motor, electrónica y telemetría en un solo kit.", icon: "microchip" },
+    { title: "Misiones Especiales", desc: "Configuraciones avanzadas de propulsión preparadas para tolerar fuerzas G extremas y reencendidos a gran altitud.", icon: "globe" },
   ];
 
   return (
@@ -65,9 +66,14 @@ export default function EngineeringDevelopmentPage() {
             </h2>
             <div style={{ display: "grid", gap: "1.5rem" }}>
               {areas.map((area) => (
-                <div key={area.title} style={{ background: "rgba(255,255,255,0.015)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "6px", padding: "1.2rem" }}>
-                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--accent)", marginBottom: "0.4rem" }}>{area.title}</h3>
-                  <p style={{ color: "var(--text-soft)", fontSize: "0.85rem", lineHeight: "1.6" }}>{area.desc}</p>
+                <div key={area.title} style={{ background: "rgba(255,255,255,0.015)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "6px", padding: "1.2rem", display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+                  <div style={{ color: "var(--accent)", padding: "0.2rem" }}>
+                    <TechnicalIcon name={area.icon} size={28} />
+                  </div>
+                  <div>
+                    <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--accent)", marginBottom: "0.4rem" }}>{area.title}</h3>
+                    <p style={{ color: "var(--text-soft)", fontSize: "0.85rem", lineHeight: "1.6" }}>{area.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -103,9 +109,14 @@ export default function EngineeringDevelopmentPage() {
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem" }}>
             {processSteps.map((step) => (
-              <div key={step.num} style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-                <span style={{ fontSize: "2rem", fontWeight: 900, color: "rgba(242, 106, 33, 0.2)", fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", lineHeight: 1 }}>{step.num}</span>
-                <h4 style={{ fontSize: "0.95rem", fontWeight: 800, color: "#fff" }}>{step.name}</h4>
+              <div key={step.num} style={{ display: "flex", flexDirection: "column", gap: "0.4rem", position: "relative" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <span style={{ fontSize: "2rem", fontWeight: 900, color: "rgba(242, 106, 33, 0.2)", fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", lineHeight: 1 }}>{step.num}</span>
+                  <div style={{ color: "var(--accent)", opacity: 0.8 }}>
+                    <TechnicalIcon name={step.icon} size={24} strokeWidth={1.5} />
+                  </div>
+                </div>
+                <h4 style={{ fontSize: "0.95rem", fontWeight: 800, color: "#fff", marginTop: "0.5rem" }}>{step.name}</h4>
                 <p style={{ color: "var(--text-soft)", fontSize: "0.8rem", lineHeight: "1.5" }}>{step.desc}</p>
               </div>
             ))}
