@@ -3048,7 +3048,7 @@ img, video { display: block; max-width: 100%; }
 
 .jm-icon-card p,
 .jm-feature-row p {
-  color: #2c3746;
+  color: var(--jm-sheet-muted);
   font-size: 0.84rem;
   line-height: 1.45;
 }
@@ -3377,7 +3377,7 @@ img, video { display: block; max-width: 100%; }
   --jm-sheet-muted: var(--xm-muted);
   --jm-sheet-line: var(--xm-line);
   --jm-sheet-orange: var(--xm-accent);
-  margin-top: clamp(5rem, 10vw, 8.5rem);
+  margin-top: 0;
   background: var(--xm-bg);
   color: var(--xm-ink);
 }
