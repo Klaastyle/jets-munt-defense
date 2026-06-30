@@ -56,22 +56,14 @@ export function SeoPageShell({
           {showSpotlight && (
             <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
           )}
-          <div className="container seo-hero-grid" style={{ position: "relative", zIndex: 10 }}>
-            <div>
-              <p className="section-label">{kicker}</p>
-              <h1 className="heading-lg">{title}</h1>
-              <p className="body-lg">{description}</p>
-              <div className="seo-actions">
-                <Link href={actualPrimaryHref} className="btn btn-primary">
-                  {actualPrimaryLabel}
-                </Link>
-                <Link href={actualSecondaryHref} className="btn btn-ghost">
-                  {actualSecondaryLabel}
-                </Link>
+          {bentoGallery ? (
+            <div className="container" style={{ position: "relative", zIndex: 10, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "2.5rem" }}>
+              <div style={{ maxWidth: "800px" }}>
+                <p className="section-label">{kicker}</p>
+                <h1 className="heading-lg" style={{ marginBottom: "1rem" }}>{title}</h1>
+                <p className="body-lg" style={{ color: "var(--text-soft)" }}>{description}</p>
               </div>
-            </div>
-            {bentoGallery ? (
-              <div className="premium-bento-gallery" style={{ width: "100%" }}>
+              <div className="premium-bento-gallery" style={{ width: "100%", maxWidth: "1000px" }}>
                 <div className="bento-item bento-large" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", background: "#000" }}>
                   <video
                     src={bentoGallery.video}
@@ -92,23 +84,48 @@ export function SeoPageShell({
                   </div>
                 ))}
               </div>
-            ) : video ? (
-              <div className="seo-hero-media" style={{ position: "relative", borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", aspectRatio: "16/9" }}>
-                <video
-                  src={video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
+              <div className="seo-actions" style={{ justifyContent: "center", marginTop: "0.5rem" }}>
+                <Link href={actualPrimaryHref} className="btn btn-primary">
+                  {actualPrimaryLabel}
+                </Link>
+                <Link href={actualSecondaryHref} className="btn btn-ghost">
+                  {actualSecondaryLabel}
+                </Link>
               </div>
-            ) : image ? (
-              <div className="seo-hero-media">
-                <Image src={image} alt={title} fill sizes="(max-width: 980px) 100vw, 44vw" priority />
+            </div>
+          ) : (
+            <div className="container seo-hero-grid" style={{ position: "relative", zIndex: 10 }}>
+              <div>
+                <p className="section-label">{kicker}</p>
+                <h1 className="heading-lg">{title}</h1>
+                <p className="body-lg">{description}</p>
+                <div className="seo-actions">
+                  <Link href={actualPrimaryHref} className="btn btn-primary">
+                    {actualPrimaryLabel}
+                  </Link>
+                  <Link href={actualSecondaryHref} className="btn btn-ghost">
+                    {actualSecondaryLabel}
+                  </Link>
+                </div>
               </div>
-            ) : null}
-          </div>
+              {video ? (
+                <div className="seo-hero-media" style={{ position: "relative", borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", aspectRatio: "16/9" }}>
+                  <video
+                    src={video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </div>
+              ) : image ? (
+                <div className="seo-hero-media">
+                  <Image src={image} alt={title} fill sizes="(max-width: 980px) 100vw, 44vw" priority />
+                </div>
+              ) : null}
+            </div>
+          )}
         </section>
         {children}
       </main>
