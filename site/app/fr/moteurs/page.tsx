@@ -55,8 +55,8 @@ export default function FrMoteursPage() {
         <div className="seo-card-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem" }}>
           {proEnginesList.map((engine) => (
             <article className="seo-product-card" key={engine.slug} style={{ display: "flex", flexDirection: "column", height: "100%", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "6px", overflow: "hidden" }}>
-              <div className="seo-card-media" style={{ position: "relative", aspectRatio: "16/9", width: "100%", background: "#050505" }}>
-                <Image src={engine.img} alt={`${engine.name} turboréacteur compact professionnel`} fill style={{ objectFit: "contain" }} sizes="(max-width: 980px) 100vw, 50vw" />
+              <div className="seo-card-media" style={{ position: "relative", aspectRatio: "4/3", width: "100%", background: "#050505" }}>
+                <Image src={engine.img} alt={`${engine.name} turboréacteur compact professionnel`} fill style={{ objectFit: "cover" }} sizes="(max-width: 980px) 100vw, 50vw" />
               </div>
               <div className="seo-card-body" style={{ padding: "1.5rem", display: "flex", flexDirection: "column", flexGrow: 1 }}>
                 <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#fff", marginBottom: "0.5rem" }}>{engine.name}</h2>
