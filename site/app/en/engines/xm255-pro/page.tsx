@@ -402,7 +402,14 @@ export default function Xm255ProPage() {
               <Image src="/media/255/Gemini_Generated_Image_vs8tv5vs8tv5vs8t.png" alt="XM255 PRO internal electronics integration" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
             <div className="bento-item" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}>
-              <Image src="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png" alt="CAD drawing and UAV system integration" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 50vw, 25vw" />
+              <video
+                src="/media/255/PROMPT_VIDEO_—_XM_PRO_M.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
             </div>
           </div>
         </div>
