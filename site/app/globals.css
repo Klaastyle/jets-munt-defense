@@ -64,7 +64,7 @@ img, video { display: block; max-width: 100%; }
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
 
-.section { padding: clamp(4.5rem, 9vw, 8.5rem) 0; }
+.section { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 
 .heading-xl,
 .heading-lg,
@@ -667,7 +667,7 @@ img, video { display: block; max-width: 100%; }
     radial-gradient(circle at 76% 10%, rgba(242,106,33,0.13), transparent 26rem),
     linear-gradient(180deg, var(--bg) 0%, #0c0b0a 50%, #080807 100%);
   border-bottom: 1px solid var(--line-soft);
-  padding: clamp(4.5rem, 9vw, 8.5rem) 0;
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
 }
 
 .partner-section::before,
