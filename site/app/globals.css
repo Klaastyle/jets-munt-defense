@@ -4159,3 +4159,8 @@ img, video { display: block; max-width: 100%; }
     backdrop-filter: none !important;
   }
 }
+@media (max-width: 980px) {
+  .hero-desc {
+    visibility: hidden;
+  }
+}
