@@ -96,6 +96,16 @@ export default function Home() {
             <HeroLoopVideo src="/media/videos/hero-engines-seamless.mp4" />
             <div className="hero-overlay" />
 
+            {/* Botones responsivos de los motores (Fuera del container para alineación perfecta con video 16:9 full-width) */}
+            <div className="hero-engine-buttons">
+              <div className="hero-engine-button-left">
+                <EngineButton name="XM215 PRO" href="/motores/xm215-pro" delay={0} />
+              </div>
+              <div className="hero-engine-button-right">
+                <EngineButton name="XM255 PRO" href="/motores/xm255-pro" delay={1.5} />
+              </div>
+            </div>
+
             <div className="container" style={{ 
               position: 'relative', 
               zIndex: 2, 
@@ -109,15 +119,7 @@ export default function Home() {
                 <div className="hero-kicker" style={{ color: 'var(--accent-2)', margin: 0, textTransform: 'uppercase' }}>Defense Propulsion Systems</div>
               </div>
 
-              {/* Botones responsivos de los motores */}
-              <div className="hero-engine-buttons">
-                <div className="hero-engine-button-left">
-                  <EngineButton name="XM215 PRO" href="/motores/xm215-pro" delay={0} />
-                </div>
-                <div className="hero-engine-button-right">
-                  <EngineButton name="XM255 PRO" href="/motores/xm255-pro" delay={1.5} />
-                </div>
-              </div>
+
 
               {/* Contenido inferior (claims) */}
               <div className="hero-copy" style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', width: '100%' }}>

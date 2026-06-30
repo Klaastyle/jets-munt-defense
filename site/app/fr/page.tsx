@@ -99,20 +99,22 @@ export default function FrHomePage() {
             <HeroLoopVideo src="/media/videos/hero-engines-seamless.mp4" />
             <div className="hero-overlay" />
 
+            <div className="hero-engine-buttons">
+              <div className="hero-engine-button-left">
+                <EngineButton name="XM215 PRO" href="/fr/moteurs/xm215-pro" delay={0} />
+              </div>
+              <div className="hero-engine-button-right">
+                <EngineButton name="XM255 PRO" href="/fr/moteurs/xm255-pro" delay={1.5} />
+              </div>
+            </div>
+
             <div className="container" style={{ position: 'relative', zIndex: 2, height: '100%', width: '100%', paddingBottom: '2rem' }}>
               <div className="hero-copy" style={{ position: 'absolute', top: 'calc(var(--nav-height) + 2rem)', left: '50%', transform: 'translateX(-50%)', width: '90%' }}>
                 <h1 className="heading-md" style={{ marginBottom: '0.25rem', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>Propulsion européenne par turboréacteur pour<br/>systèmes sans pilote avancés</h1>
                 <div className="hero-kicker" style={{ color: 'var(--accent-2)', margin: 0, textTransform: 'uppercase' }}>Systèmes de propulsion de défense</div>
               </div>
 
-              <div className="hero-engine-buttons">
-                <div className="hero-engine-button-left">
-                  <EngineButton name="XM215 PRO" href="/fr/moteurs/xm215-pro" delay={0} />
-                </div>
-                <div className="hero-engine-button-right">
-                  <EngineButton name="XM255 PRO" href="/fr/moteurs/xm255-pro" delay={1.5} />
-                </div>
-              </div>
+
 
               <div className="hero-copy" style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', width: '100%' }}>
                 <p className="hero-desc" style={{ margin: '0 auto 1rem', maxWidth: '800px' }}>

@@ -4127,3 +4127,31 @@ img, video { display: block; max-width: 100%; }
     transform: translateY(-50%);
   }
 }
+@media (min-width: 981px) {
+  .hero {
+    min-height: 0;
+  }
+  .hero-pin {
+    height: 56.25vw !important; /* Forces 16:9 aspect ratio based on screen width */
+    max-height: none;
+  }
+  .hero-engine-buttons {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* so clicking empty space goes through */
+  }
+  .hero-engine-button-left,
+  .hero-engine-button-right {
+    pointer-events: auto; /* re-enable clicks on the buttons */
+  }
+  .hero-engine-button-left {
+    left: 12%; /* Adjusted to match visual engine position in 16:9 */
+    top: 65%;
+  }
+  .hero-engine-button-right {
+    left: 88%; /* Adjusted to match visual engine position in 16:9 */
+    top: 65%;
+  }
+}
