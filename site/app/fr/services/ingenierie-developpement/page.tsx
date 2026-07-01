@@ -50,7 +50,7 @@ export default function FrEngineeringDevelopmentPage() {
       kicker="De la définition du concept jusqu'aux systèmes de propulsion prêts à voler."
       title="Ingénierie et Développement sur Mesure"
       description="JetsMunt collabore étroitement avec les fabricants OEM, centres d'essais aérospatiaux et forces de défense en apportant un support technique d'ingénierie directe pour concevoir des turbines spécifiques."
-      image="/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png"
+      image="/media/services/Gemini_Generated_Image_knhy4pknhy4pknhy.png"
       breadcrumbPath="/fr/services/ingenierie-developpement"
     >
       <section className="section container" style={{ paddingBottom: "3rem" }}>

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { IconCard } from "../../components/IconCard";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
@@ -235,18 +235,12 @@ function ConditionColumn({
 export default function Xm255ProPage() {
   return (
     <SeoPageShell
-      kicker="Sistemas de Propulsion PRO"
+      kicker="Sistemas de Propulsión PRO"
       title="XM255 PRO"
-      description="El turborreactor de mayor empuje y rendimiento de la familia JetsMunt, disenado para plataformas aereas no tripuladas exigentes, misiles de crucero y drones objetivo rapidos."
-      bentoGallery={{
-        video: "/media/255/PROMPT_VIDEO_â€”_XM_PRO_M.mp4",
-        images: [
-          "/media/255/Gemini_Generated_Image_onajxeonajxeonaj.png",
-          "/media/255/Gemini_Generated_Image_q0loh8q0loh8q0lo.png",
-          "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
-          "/media/255/Gemini_Generated_Image_vs8tv5vs8tv5vs8t.png",
-        ],
-      }}
+      description="El turborreactor de mayor empuje y rendimiento de la familia JetsMunt, diseñado para plataformas aéreas no tripuladas exigentes, misiles de crucero y drones objetivo rápidos."
+      image="/xm255-hero.png"
+      imageFit="contain"
+      compact={true}
       showSpotlight={true}
       breadcrumbPath="/motores/xm255-pro"
       locale="es"
@@ -255,10 +249,10 @@ export default function Xm255ProPage() {
         <div className="container">
           <section className="xm-web-hero">
             <div className="xm-web-copy">
-              <span className="xm-web-label">IngenierÃ­a Avanzada</span>
-              <h2>DiseÃ±ado para la integraciÃ³n exigente.</h2>
+              <span className="xm-web-label">Ingeniería Avanzada</span>
+              <h2>Diseñado para la integración exigente.</h2>
               <p>
-                El XM255 PRO representa la cumbre en propulsiÃ³n compacta para plataformas no tripuladas, ofreciendo un empuje excepcional y una arquitectura de telemetrÃ­a completa para misiones crÃ­ticas.
+                El XM255 PRO representa la cumbre en propulsión compacta para plataformas no tripuladas, ofreciendo un empuje excepcional y una arquitectura de telemetría completa para misiones críticas.
               </p>
               <div className="xm-web-actions" aria-label="XM255 PRO resumen tecnico">
                 <strong>255 N</strong>
@@ -267,12 +261,13 @@ export default function Xm255ProPage() {
               </div>
             </div>
 
-            <div className="xm-web-media">
+            <div className="xm-web-media" style={{ background: 'transparent', border: 'none' }}>
               <Image
-                src="/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png"
+                src="/xm255-tech.png"
                 alt="XM255 PRO turbojet engine"
                 fill
                 priority
+                style={{ objectFit: 'contain' }}
                 sizes="(max-width: 980px) 100vw, 46vw"
               />
             </div>

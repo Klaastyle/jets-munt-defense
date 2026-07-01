@@ -235,18 +235,12 @@ function ConditionColumn({
 export default function Xm255ProPage() {
   return (
     <SeoPageShell
-      kicker="Sistemas de Propulsion PRO"
+      kicker="Systèmes de Propulsion PRO"
       title="XM255 PRO"
-      description="El turborreactor de mayor empuje y rendimiento de la familia JetsMunt, disenado para plataformas aereas no tripuladas exigentes, misiles de crucero y drones objetivo rapidos."
-      bentoGallery={{
-        video: "/media/255/PROMPT_VIDEO_—_XM_PRO_M.mp4",
-        images: [
-          "/media/255/Gemini_Generated_Image_onajxeonajxeonaj.png",
-          "/media/255/Gemini_Generated_Image_q0loh8q0loh8q0lo.png",
-          "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
-          "/media/255/Gemini_Generated_Image_vs8tv5vs8tv5vs8t.png",
-        ],
-      }}
+      description="Le turboréacteur avec la plus haute poussée et performance de la famille JetsMunt, conçu pour les plateformes UAV exigeantes, les missiles de croisière et les drones cibles à grande vitesse."
+      image="/xm255-hero.png"
+      imageFit="contain"
+      compact={true}
       showSpotlight={true}
       breadcrumbPath="/fr/moteurs/xm255-pro"
       locale="fr"
@@ -267,12 +261,13 @@ export default function Xm255ProPage() {
               </div>
             </div>
 
-            <div className="xm-web-media">
+            <div className="xm-web-media" style={{ background: 'transparent', border: 'none' }}>
               <Image
-                src="/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png"
+                src="/xm255-tech.png"
                 alt="XM255 PRO turbojet engine"
                 fill
                 priority
+                style={{ objectFit: 'contain' }}
                 sizes="(max-width: 980px) 100vw, 46vw"
               />
             </div>

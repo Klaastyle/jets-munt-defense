@@ -235,18 +235,12 @@ function ConditionColumn({
 export default function Xm215ProPage() {
   return (
     <SeoPageShell
-      kicker="Sistemas de Propulsion PRO"
+      kicker="Systèmes de Propulsion PRO"
       title="XM215 PRO"
-      description="Turborreactor de 215 N con electrónica inteligente de control total (FADEC) y telemetría avanzada integradas dentro del propio motor."
-      bentoGallery={{
-        video: "/media/215/JetsMunt_XM21_Video_output_8s_v2mp4_9YYP-nCM.mp4",
-        images: [
-          "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
-          "/media/215/Gemini_Generated_Image_t6c0vit6c0vit6c0.png",
-          "/media/215/Gemini_Generated_Image_gk1dtrgk1dtrgk1d.png",
-          "/media/215/Gemini_Generated_Image_lpf18glpf18glpf1.png",
-        ],
-      }}
+      description="Turboréacteur de 215 N avec contrôle intelligent complet (FADEC) et télémétrie avancée intégrés."
+      image="/xm215-hero.png"
+      imageFit="contain"
+      compact={true}
       showSpotlight={true}
       breadcrumbPath="/fr/moteurs/xm215-pro"
       locale="fr"
@@ -267,12 +261,13 @@ export default function Xm215ProPage() {
               </div>
             </div>
 
-            <div className="xm-web-media">
+            <div className="xm-web-media" style={{ background: 'transparent', border: 'none' }}>
               <Image
-                src="/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png"
+                src="/xm215-tech.png"
                 alt="XM215 PRO turbojet engine"
                 fill
                 priority
+                style={{ objectFit: 'contain' }}
                 sizes="(max-width: 980px) 100vw, 46vw"
               />
             </div>
@@ -305,7 +300,7 @@ export default function Xm215ProPage() {
             <div className="xm-section-heading">
               <span className="xm-web-label">Rendimiento</span>
               <h2>Curva de empuje y consumo.</h2>
-              <p>Datos de rendimiento validados en banco de pruebas en condiciones estÃ¡ndar de atmÃ³sfera (ISA).</p>
+              <p>Données de performance validées sur banc d'essai dans des conditions atmosphériques standard (ISA).</p>
             </div>
             <div className="xm-performance-layout">
               <table className="xm-performance-table">

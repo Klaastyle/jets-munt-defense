@@ -9,7 +9,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Découvrez l'histoire, la chronologie et les capacités de conception et de fabrication personnalisées de turboréacteurs compacts chez JetsMunt.",
   path: "/fr/a-propos-jetsmunt",
-  image: "/media/about/Gemini_Generated_Image_9k9e7o9k9e7o9k9e.png",
+  image: "/about-hero.png",
   keywords: ["a propos de JetsMunt", "histoire JetsMunt", "ingenierie aerospatiale", "fabricant turboreacteur"],
   locale: "fr_FR",
   languages: primaryAlternates("about"),
@@ -24,7 +24,7 @@ export default function AProposJetsMuntPage() {
   ];
 
   const stats = [
-    { value: "98 N - 255 N", label: "Gamme de poussée" },
+    { value: "98 N - 500 N", label: "Gamme de poussée" },
     { value: "50+ Pays", label: "Présence mondiale" },
     { value: "30+ Ans", label: "Expérience technique" },
   ];
@@ -34,7 +34,7 @@ export default function AProposJetsMuntPage() {
       kicker="À Propos"
       title="Trois décennies d'innovation en propulsion turbojet compacte."
       description="JetsMunt is a Spanish aerospace engineering company specialized in the design, development, and manufacturing of advanced turbojet systems for modern unmanned platforms."
-      image="/media/about/Gemini_Generated_Image_9k9e7o9k9e7o9k9e.png"
+      image="/about-hero.png"
       breadcrumbPath="/fr/a-propos-jetsmunt"
       locale="fr"
     >
@@ -110,7 +110,7 @@ export default function AProposJetsMuntPage() {
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
             {[
-              { src: "/media/about/Gemini_Generated_Image_c0guk1c0guk1c0gu.png", alt: "Installations d'assemblage JetsMunt" },
+              { src: "/assembly-facility.png", alt: "Installations d'assemblage JetsMunt" },
               { src: "/media/about/Gemini_Generated_Image_mt2eermt2eermt2e.png", alt: "Conception et ingénierie des aubes et rotors" },
               { src: "/media/about/Gemini_Generated_Image_n2rnkfn2rnkfn2rn.png", alt: "Cellule de banc d'essai de turbine" },
               { src: "/media/about/Gemini_Generated_Image_vnxrcxvnxrcxvnxr.png", alt: "Laboratoire de contrôle qualité et métrologie" },

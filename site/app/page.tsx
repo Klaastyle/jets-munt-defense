@@ -1,26 +1,15 @@
 import Image from "next/image";
 import Nav from "./components/Nav";
 import ScrollReveal from "./components/ScrollReveal";
-import HeroLoopVideo from "./components/HeroLoopVideo";
 import ScrollPropulsionPartner from "./components/ScrollPropulsionPartner";
-import ArchitectureReveal from "./components/ArchitectureReveal";
 import ContactEnquiryForm from "./components/ContactEnquiryForm";
 import Footer from "./components/Footer";
-import AnoAI from "@/components/ui/animated-shader-background";
-import EngineButton from "./components/EngineButton";
 import { engines, siteUrl } from "./lib/seo-data";
 
-const capabilities = [
-  { title: "Integración UAV", desc: "Arquitectura de combustible, interfaces de control, revisión de instalación y soporte de plataforma.", img: "/media/photos/Gemini_Generated_Image_xztybfxztybfxzty.png" },
-  { title: "ECU y telemetría", desc: "Electrónica de control, CAN Bus, interfaces serie, sensores y registro de datos.", img: "/media/capabilities/electronics-telemetry.png" },
-  { title: "Desarrollo a medida", desc: "Análisis de misión, adaptación dimensional, prototipos e ingeniería de programa.", img: "/media/capabilities/custom-development.png" },
-  { title: "Ensayo y validación", desc: "Banco de pruebas, análisis de rendimiento y preparación para vuelo.", img: "/media/capabilities/testing-validation.png" },
-  { title: "Fabricación en España", desc: "Diseño europeo, fabricación, montaje y soporte técnico.", img: "/media/capabilities/manufacturing-spain.png" },
-  { title: "Propulsión target drone", desc: "Empuje compacto y soporte de integración para plataformas exigentes.", img: "/media/capabilities/target-drones.png" },
-];
+
 
 const proofStrip = [
-  ["98 N - 255 N", "Gama de productos"],
+  ["98 N - 500 N", "Gama de productos"],
   ["50+ Países", "Alcance global"],
   ["30+ Años", "Experiencia en ingeniería"],
   ["6.000+ Motores", "Entregados en el mundo"],
@@ -93,18 +82,8 @@ export default function Home() {
       <main>
         <section className="hero" id="top">
           <div className="hero-pin">
-            <HeroLoopVideo src="/media/videos/hero-engines-seamless.mp4" />
+            <Image src="/hero-image.png" alt="Jets-Munt Propulsion" fill style={{ objectFit: 'cover' }} priority />
             <div className="hero-overlay" />
-
-            {/* Botones responsivos de los motores (Fuera del container para alineación perfecta con video 16:9 full-width) */}
-            <div className="hero-engine-buttons">
-              <div className="hero-engine-button-left">
-                <EngineButton name="XM215 PRO" href="/motores/xm215-pro" delay={0} />
-              </div>
-              <div className="hero-engine-button-right">
-                <EngineButton name="XM255 PRO" href="/motores/xm255-pro" delay={1.5} />
-              </div>
-            </div>
 
             <div className="container" style={{ 
               position: 'relative', 
@@ -115,76 +94,42 @@ export default function Home() {
             }}>
               {/* H1 justo por debajo del menu */}
               <div className="hero-copy" style={{ position: 'absolute', top: 'calc(var(--nav-height) + 2rem)', left: '50%', transform: 'translateX(-50%)', width: '90%' }}>
-                <h1 className="heading-md" style={{ marginBottom: '0.25rem', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>European Turbojet Propulsion for<br/>Advanced Unmanned Systems</h1>
-                <div className="hero-kicker" style={{ color: 'var(--accent-2)', margin: 0, textTransform: 'uppercase' }}>Defense Propulsion Systems</div>
+                <h1 className="heading-md" style={{ marginBottom: '0.25rem', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>Propulsión Europea en Turborreactores para<br/>Sistemas No Tripulados Avanzados</h1>
+                <div className="hero-kicker" style={{ color: 'var(--accent-2)', margin: 0, textTransform: 'uppercase' }}>Sistemas de Propulsión de Defensa</div>
               </div>
 
+            </div>
 
-
-              {/* Contenido inferior (claims) */}
-              <div className="hero-copy" style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', width: '100%' }}>
-                <p className="hero-desc" style={{ margin: '0 auto 1rem', maxWidth: '800px' }}>
-                  Diseñado y fabricado en España para UAV, target drones y plataformas aeroespaciales avanzadas.
-                </p>
-                <div className="hero-proof-grid" aria-label="JetsMunt technical proof points">
-                  {heroProofCards.map(([label, detail]) => (
-                    <div className="hero-proof-card" key={label}>
-                      <strong>{label}</strong>
-                      <span>{detail}</span>
-                    </div>
-                  ))}
-                </div>
+            {/* Claims - raised above the model strip */}
+            <div className="hero-copy" style={{ position: 'absolute', bottom: '6rem', left: '50%', transform: 'translateX(-50%)', width: '100%', zIndex: 12 }}>
+              <div className="hero-proof-grid" aria-label="JetsMunt technical proof points">
+                {heroProofCards.map(([label, detail]) => (
+                  <div className="hero-proof-card" key={label}>
+                    <strong>{label}</strong>
+                    <span>{detail}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-        </section>
 
-        <section className="model-strip" aria-label="JetsMunt engine families">
-          <div className="model-strip-inner">
-            {proofStrip.concat(proofStrip).map(([label, detail], index) => (
-              <span className="model-pill" key={`${label}-${index}`}>
-                <strong>{label}</strong> {detail}
-              </span>
-            ))}
+            {/* Model Strip - pinned to bottom of hero */}
+            <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', zIndex: 11 }}>
+              <section className="model-strip" aria-label="JetsMunt engine families" style={{ borderBottom: 'none' }}>
+                <div className="model-strip-inner">
+                  {proofStrip.concat(proofStrip).map(([label, detail], index) => (
+                    <span className="model-pill" key={`${label}-${index}`}>
+                      <strong>{label}</strong> {detail}
+                    </span>
+                  ))}
+                </div>
+              </section>
+            </div>
           </div>
         </section>
 
         <ScrollPropulsionPartner />
 
-        <ArchitectureReveal />
 
-
-
-        <section className="section capabilities-section" id="capabilities">
-          <AnoAI />
-          <div className="container capabilities-section-inner">
-            <ScrollReveal>
-              <div className="section-heading split">
-                <div>
-                  <p className="section-label">Capacidades de ingeniería</p>
-                  <h2 className="heading-lg">Profundidad técnica más allá del catálogo.</h2>
-                </div>
-                <p className="body-md">
-                  Un programa necesita más que una cifra de empuje. JetsMunt ayuda a seleccionar, integrar, validar y soportar el paquete de propulsión completo.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <div className="capabilities-grid">
-              {capabilities.map((cap, index) => (
-                <ScrollReveal key={cap.title} delay={(index % 3 + 1) as 1 | 2 | 3 | 4}>
-                  <article className="capability-card">
-                    <Image src={cap.img} alt={cap.title} fill sizes="(max-width: 980px) 100vw, 33vw" />
-                    <div className="capability-overlay">
-                      <h3>{cap.title}</h3>
-                      <p>{cap.desc}</p>
-                    </div>
-                  </article>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <section className="section workflow-section" id="workflow">
           <video className="workflow-bg-video" src="/media/videos/loop-seamless.mp4" autoPlay muted loop playsInline />

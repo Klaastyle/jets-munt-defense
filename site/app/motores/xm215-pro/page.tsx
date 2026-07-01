@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { IconCard } from "../../components/IconCard";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
@@ -8,9 +8,9 @@ import { buildMetadata } from "../../lib/metadata";
 import { proProductAlternates } from "../../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Motor Turbojet XM215 PRO | PropulsiÃ³n Avanzada UAV",
+  title: "Motor Turbojet XM215 PRO | Propulsión Avanzada UAV",
   description:
-    "Especificaciones completas y capacidades del turborreactor XM215 PRO de 215 N con electrÃ³nica integrada, control FOC y telemetrÃ­a avanzada.",
+    "Especificaciones completas y capacidades del turborreactor XM215 PRO de 215 N con electrónica integrada, control FOC y telemetría avanzada.",
   path: "/motores/xm215-pro",
   image: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
   keywords: ["XM215 PRO", "turbojet 215 N", "propulsiÃ³n UAV defensa", "microturbinas JetsMunt"],
@@ -235,18 +235,12 @@ function ConditionColumn({
 export default function Xm215ProPage() {
   return (
     <SeoPageShell
-      kicker="Sistemas de Propulsion PRO"
+      kicker="Sistemas de Propulsión PRO"
       title="XM215 PRO"
-      description="Turborreactor de 215 N con electrÃ³nica inteligente de control total (FADEC) y telemetrÃ­a avanzada integradas dentro del propio motor."
-      bentoGallery={{
-        video: "/media/215/JetsMunt_XM21_Video_output_8s_v2mp4_9YYP-nCM.mp4",
-        images: [
-          "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
-          "/media/215/Gemini_Generated_Image_t6c0vit6c0vit6c0.png",
-          "/media/215/Gemini_Generated_Image_gk1dtrgk1dtrgk1d.png",
-          "/media/215/Gemini_Generated_Image_lpf18glpf18glpf1.png",
-        ],
-      }}
+      description="Turborreactor de 215 N con electrónica inteligente de control total (FADEC) y telemetría avanzada integradas dentro del propio motor."
+      image="/xm215-hero.png"
+      imageFit="contain"
+      compact={true}
       showSpotlight={true}
       breadcrumbPath="/motores/xm215-pro"
       locale="es"
@@ -255,10 +249,10 @@ export default function Xm215ProPage() {
         <div className="container">
           <section className="xm-web-hero">
             <div className="xm-web-copy">
-              <span className="xm-web-label">IngenierÃ­a Avanzada</span>
-              <h2>DiseÃ±ado para la integraciÃ³n exigente.</h2>
+              <span className="xm-web-label">Ingeniería Avanzada</span>
+              <h2>Diseñado para la integración exigente.</h2>
               <p>
-                El XM215 PRO ofrece 215 N de empuje constante en una arquitectura ultra-compacta, integrando control FOC y telemetrÃ­a avanzada.
+                El XM215 PRO ofrece 215 N de empuje constante en una arquitectura ultra-compacta, integrando control FOC y telemetría avanzada.
               </p>
               <div className="xm-web-actions" aria-label="XM215 PRO resumen tecnico">
                 <strong>215 N</strong>
@@ -267,12 +261,13 @@ export default function Xm215ProPage() {
               </div>
             </div>
 
-            <div className="xm-web-media">
+            <div className="xm-web-media" style={{ background: 'transparent', border: 'none' }}>
               <Image
-                src="/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png"
+                src="/xm215-tech.png"
                 alt="XM215 PRO turbojet engine"
                 fill
                 priority
+                style={{ objectFit: 'contain' }}
                 sizes="(max-width: 980px) 100vw, 46vw"
               />
             </div>

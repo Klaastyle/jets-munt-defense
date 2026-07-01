@@ -3,13 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import HeroLoopVideo from "../components/HeroLoopVideo";
 import ContactEnquiryForm from "../components/ContactEnquiryForm";
 import ScrollReveal from "../components/ScrollReveal";
 import ScrollPropulsionPartner from "../components/ScrollPropulsionPartner";
-import ArchitectureReveal from "../components/ArchitectureReveal";
-import AnoAI from "@/components/ui/animated-shader-background";
-import EngineButton from "../components/EngineButton";
 import { engines, siteUrl } from "../lib/seo-data";
 import { buildMetadata } from "../lib/metadata";
 import { homeAlternates } from "../lib/seo-data";
@@ -22,17 +18,10 @@ export const metadata: Metadata = buildMetadata({
   languages: homeAlternates(),
 });
 
-const capabilities = [
-  { title: "UAV Integration", desc: "Fuel architecture, control interfaces, installation review and platform support.", img: "/media/photos/Gemini_Generated_Image_xztybfxztybfxzty.png" },
-  { title: "ECU & Telemetry", desc: "Control electronics, CAN Bus, serial interfaces, sensors and data logging.", img: "/media/capabilities/electronics-telemetry.png" },
-  { title: "Custom Development", desc: "Mission analysis, dimensional adaptation, prototypes and program engineering.", img: "/media/capabilities/custom-development.png" },
-  { title: "Testing & Validation", desc: "Test bench, performance analysis and flight preparation.", img: "/media/capabilities/testing-validation.png" },
-  { title: "Manufacturing in Spain", desc: "European design, manufacturing, assembly and technical support.", img: "/media/capabilities/manufacturing-spain.png" },
-  { title: "Target Drone Propulsion", desc: "Compact thrust and integration support for demanding platforms.", img: "/media/capabilities/target-drones.png" },
-];
+
 
 const proofStrip = [
-  ["98 N - 255 N", "Product range"],
+  ["98 N - 500 N", "Product range"],
   ["50+ Countries", "Global reach"],
   ["30+ Years", "Engineering experience"],
   ["6,000+ Engines", "Delivered worldwide"],
@@ -96,17 +85,8 @@ export default function EnHomePage() {
       <main>
         <section className="hero" id="top">
           <div className="hero-pin">
-            <HeroLoopVideo src="/media/videos/hero-engines-seamless.mp4" />
+            <Image src="/hero-image.png" alt="Jets-Munt Propulsion" fill style={{ objectFit: 'cover' }} priority />
             <div className="hero-overlay" />
-
-            <div className="hero-engine-buttons">
-              <div className="hero-engine-button-left">
-                <EngineButton name="XM215 PRO" href="/en/engines/xm215-pro" delay={0} />
-              </div>
-              <div className="hero-engine-button-right">
-                <EngineButton name="XM255 PRO" href="/en/engines/xm255-pro" delay={1.5} />
-              </div>
-            </div>
 
             <div className="container" style={{ position: 'relative', zIndex: 2, height: '100%', width: '100%', paddingBottom: '2rem' }}>
               <div className="hero-copy" style={{ position: 'absolute', top: 'calc(var(--nav-height) + 2rem)', left: '50%', transform: 'translateX(-50%)', width: '90%' }}>
@@ -114,68 +94,37 @@ export default function EnHomePage() {
                 <div className="hero-kicker" style={{ color: 'var(--accent-2)', margin: 0, textTransform: 'uppercase' }}>Defense Propulsion Systems</div>
               </div>
 
+            </div>
 
-
-              <div className="hero-copy" style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', width: '100%' }}>
-                <p className="hero-desc" style={{ margin: '0 auto 1rem', maxWidth: '800px' }}>
-                  Designed and manufactured in Spain for UAV, target drones and advanced aerospace platforms.
-                </p>
-                <div className="hero-proof-grid" aria-label="JetsMunt technical proof points">
-                  {heroProofCards.map(([label, detail]) => (
-                    <div className="hero-proof-card" key={label}>
-                      <strong>{label}</strong>
-                      <span>{detail}</span>
-                    </div>
-                  ))}
-                </div>
+            {/* Claims - raised above the model strip */}
+            <div className="hero-copy" style={{ position: 'absolute', bottom: '6rem', left: '50%', transform: 'translateX(-50%)', width: '100%', zIndex: 12 }}>
+              <div className="hero-proof-grid" aria-label="JetsMunt technical proof points">
+                {heroProofCards.map(([label, detail]) => (
+                  <div className="hero-proof-card" key={label}>
+                    <strong>{label}</strong>
+                    <span>{detail}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-        </section>
 
-        <section className="model-strip" aria-label="JetsMunt engine families">
-          <div className="model-strip-inner">
-            {proofStrip.concat(proofStrip).map(([label, detail], index) => (
-              <span className="model-pill" key={`${label}-${index}`}>
-                <strong>{label}</strong> {detail}
-              </span>
-            ))}
+            {/* Model Strip - pinned to bottom of hero */}
+            <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', zIndex: 11 }}>
+              <section className="model-strip" aria-label="JetsMunt engine families" style={{ borderBottom: 'none' }}>
+                <div className="model-strip-inner">
+                  {proofStrip.concat(proofStrip).map(([label, detail], index) => (
+                    <span className="model-pill" key={`${label}-${index}`}>
+                      <strong>{label}</strong> {detail}
+                    </span>
+                  ))}
+                </div>
+              </section>
+            </div>
           </div>
         </section>
 
         <ScrollPropulsionPartner />
-        <ArchitectureReveal />
 
-        <section className="section capabilities-section" id="capabilities">
-          <AnoAI />
-          <div className="container capabilities-section-inner">
-            <ScrollReveal>
-              <div className="section-heading split">
-                <div>
-                  <p className="section-label">Engineering Capabilities</p>
-                  <h2 className="heading-lg">Technical depth beyond the catalog.</h2>
-                </div>
-                <p className="body-md">
-                  A program needs more than a thrust figure. JetsMunt helps select, integrate, validate and support the complete propulsion package.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <div className="capabilities-grid">
-              {capabilities.map((cap, index) => (
-                <ScrollReveal key={cap.title} delay={(index % 3 + 1) as 1 | 2 | 3 | 4}>
-                  <article className="capability-card">
-                    <Image src={cap.img} alt={cap.title} fill sizes="(max-width: 980px) 100vw, 33vw" />
-                    <div className="capability-overlay">
-                      <h3>{cap.title}</h3>
-                      <p>{cap.desc}</p>
-                    </div>
-                  </article>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <section className="section workflow-section" id="workflow">
           <video className="workflow-bg-video" src="/media/videos/loop-seamless.mp4" autoPlay muted loop playsInline />

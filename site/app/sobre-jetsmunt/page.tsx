@@ -1,40 +1,40 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { SeoPageShell } from "../components/SeoPage";
 import { buildMetadata } from "../lib/metadata";
 import { primaryAlternates } from "../lib/seo-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Sobre JetsMunt | MÃ¡s de Tres DÃ©cadas de Experiencia en Turbinas",
+  title: "Sobre JetsMunt | Más de Tres Décadas de Experiencia en Turbinas",
   description:
-    "Conoce la historia, trayectoria y capacidades de desarrollo y fabricaciÃ³n de sistemas de propulsiÃ³n turbojet compactos de JetsMunt.",
+    "Conoce la historia, trayectoria y capacidades de desarrollo y fabricación de sistemas de propulsión turbojet compactos de JetsMunt.",
   path: "/sobre-jetsmunt",
-  image: "/media/about/Gemini_Generated_Image_9k9e7o9k9e7o9k9e.png",
-  keywords: ["sobre JetsMunt", "historia JetsMunt", "ingenieria aeroespacial", "fabricante turbojet"],
+  image: "/about-hero.png",
+  keywords: ["sobre JetsMunt", "historia JetsMunt", "ingeniería aeroespacial", "fabricante turbojet"],
   locale: "es_ES",
   languages: primaryAlternates("about"),
 });
 
 export default function SobreJetsMuntPage() {
   const timelineItems = [
-    { year: "1994", title: "Inicio de InvestigaciÃ³n", desc: "Comienzan las actividades de investigaciÃ³n tÃ©cnica en tecnologÃ­a de turbinas compactas." },
-    { year: "1996", title: "Primer Vuelo Exitoso", desc: "Se logra realizar con Ã©xito el primer vuelo propulsado por una turbina de desarrollo propio." },
-    { year: "1998", title: "FundaciÃ³n de la Empresa", desc: "Se constituye formalmente JetsMunt para la comercializaciÃ³n y desarrollo continuo de motores." },
-    { year: "2025+", title: "LÃ­der de PropulsiÃ³n UAV", desc: "MÃ¡s de 6.000 motores entregados en todo el mundo con operaciones y experiencia global acumulada." },
+    { year: "1994", title: "Inicio de Investigación", desc: "Comienzan las actividades de investigación técnica en tecnología de turbinas compactas." },
+    { year: "1996", title: "Primer Vuelo Exitoso", desc: "Se logra realizar con éxito el primer vuelo propulsado por una turbina de desarrollo propio." },
+    { year: "1998", title: "Fundación de la Empresa", desc: "Se constituye formalmente JetsMunt para la comercialización y desarrollo continuo de motores." },
+    { year: "2025+", title: "Líder de Propulsión UAV", desc: "Más de 6.000 motores entregados en todo el mundo con operaciones y experiencia global acumulada." },
   ];
 
   const stats = [
-    { value: "98N - 255N", label: "Rango de empuje" },
-    { value: "50+ PaÃ­ses", label: "Presencia global" },
-    { value: "30+ AÃ±os", label: "Experiencia tÃ©cnica" },
+    { value: "98 N - 500 N", label: "Rango de empuje" },
+    { value: "50+ Países", label: "Presencia global" },
+    { value: "30+ Años", label: "Experiencia técnica" },
   ];
 
   return (
     <SeoPageShell
       kicker="Sobre Nosotros"
-      title="Tres dÃ©cadas de innovaciÃ³n en propulsiÃ³n turbojet compacta."
-      description="JetsMunt es una empresa de ingenierÃ­a aeroespacial espaÃ±ola dedicada al diseÃ±o, desarrollo y fabricaciÃ³n de sistemas de propulsiÃ³n turbojet avanzados para plataformas no tripuladas modernas."
-      image="/media/about/Gemini_Generated_Image_9k9e7o9k9e7o9k9e.png"
+      title="Tres décadas de innovación en propulsión turbojet compacta."
+      description="JetsMunt es una empresa de ingeniería aeroespacial española dedicada al diseño, desarrollo y fabricación de sistemas de propulsión turbojet avanzados para plataformas no tripuladas modernas."
+      image="/about-hero.png"
       breadcrumbPath="/sobre-jetsmunt"
       locale="es"
     >
@@ -45,10 +45,10 @@ export default function SobreJetsMuntPage() {
               Nuestra Trayectoria
             </h2>
             <p style={{ color: "var(--text-soft)", marginBottom: "1.2rem", fontSize: "0.98rem", lineHeight: "1.7" }}>
-              Los orÃ­genes de JetsMunt se remontan a 1994, cuando comenzaron los primeros desarrollos e investigaciones teÃ³ricas y experimentales en la tecnologÃ­a de microturbinas. La validaciÃ³n prÃ¡ctica en vuelo se alcanzÃ³ en 1996, sentando las bases para la posterior creaciÃ³n formal de la compaÃ±Ã­a en 1998.
+              Los orígenes de JetsMunt se remontan a 1994, cuando comenzaron los primeros desarrollos e investigaciones teóricas y experimentales en la tecnología de microturbinas. La validación práctica en vuelo se alcanzó en 1996, sentando las bases para la posterior creación formal de la compañía en 1998.
             </p>
             <p style={{ color: "var(--text-soft)", fontSize: "0.98rem", lineHeight: "1.7" }}>
-              Hoy en dÃ­a, JetsMunt desarrolla soluciones de propulsiÃ³n completas y robustas, integrando de extremo a extremo el diseÃ±o aerodinÃ¡mico, el anÃ¡lisis termodinÃ¡mico, el desarrollo de control electrÃ³nico (ECU) y software embebido de tiempo real, todo bajo un mismo techo en nuestras instalaciones de EspaÃ±a.
+              Hoy en día, JetsMunt desarrolla soluciones de propulsión completas y robustas, integrando de extremo a extremo el diseño aerodinámico, el análisis termodinámico, el desarrollo de control electrónico (ECU) y software embebido de tiempo real, todo bajo un mismo techo en nuestras instalaciones de España.
             </p>
           </div>
           <div>
@@ -56,10 +56,10 @@ export default function SobreJetsMuntPage() {
               Experiencia Operativa
             </h2>
             <p style={{ color: "var(--text-soft)", marginBottom: "1.2rem", fontSize: "0.98rem", lineHeight: "1.7" }}>
-              Con mÃ¡s de 6.000 motores entregados en todo el mundo, nuestras turbinas operan en diversas plataformas de defensa y UAV comerciales en mÃ¡s de 50 paÃ­ses. La robustez y fiabilidad de nuestros sistemas es el resultado de un riguroso proceso de pruebas y validaciones internas en bancos de ensayo especializados.
+              Con más de 6.000 motores entregados en todo el mundo, nuestras turbinas operan en diversas plataformas de defensa y UAV comerciales en más de 50 países. La robustez y fiabilidad de nuestros sistemas es el resultado de un riguroso proceso de pruebas y validaciones internas en bancos de ensayo especializados.
             </p>
             <p style={{ color: "var(--text-soft)", fontSize: "0.98rem", lineHeight: "1.7" }}>
-              Al contar con una cadena de suministro Ã­ntegramente europea y libre de regulaciones ITAR, ofrecemos a nuestros clientes internacionales soluciones seguras, fiables y con cortos plazos de entrega.
+              Al contar con una cadena de suministro íntegramente europea y libre de regulaciones ITAR, ofrecemos a nuestros clientes internacionales soluciones seguras, fiables y con cortos plazos de entrega.
             </p>
           </div>
         </div>
@@ -103,17 +103,17 @@ export default function SobreJetsMuntPage() {
           </div>
         </div>
 
-        {/* GalerÃ­a de Instalaciones y Desarrollo */}
+        {/* Galería de Instalaciones y Desarrollo */}
         <div style={{ margin: "4rem 0" }}>
           <h2 style={{ fontFamily: "var(--font-archivo, 'Archivo', sans-serif)", fontSize: "1.8rem", fontWeight: 800, marginBottom: "2rem", color: "#fff", textAlign: "center" }}>
             Nuestras Instalaciones y Desarrollo
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
             {[
-              { src: "/media/about/Gemini_Generated_Image_c0guk1c0guk1c0gu.png", alt: "Instalaciones de ensamblaje JetsMunt" },
-              { src: "/media/about/Gemini_Generated_Image_mt2eermt2eermt2e.png", alt: "Desarrollo y diseÃ±o de Ã¡labes y rotores" },
+              { src: "/assembly-facility.png", alt: "Instalaciones de ensamblaje JetsMunt" },
+              { src: "/media/about/Gemini_Generated_Image_mt2eermt2eermt2e.png", alt: "Desarrollo y diseño de álabes y rotores" },
               { src: "/media/about/Gemini_Generated_Image_n2rnkfn2rnkfn2rn.png", alt: "Banco de pruebas de turbinas" },
-              { src: "/media/about/Gemini_Generated_Image_vnxrcxvnxrcxvnxr.png", alt: "Control de calidad y metrologÃ­a" },
+              { src: "/media/about/Gemini_Generated_Image_vnxrcxvnxrcxvnxr.png", alt: "Control de calidad y metrología" },
             ].map((img, index) => (
               <div
                 key={index}

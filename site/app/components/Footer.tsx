@@ -55,14 +55,14 @@ const footerByLocale = {
     statement: "Sistemas turbojet compactos europeos.",
     sub: "Motores, accesorios, distribuidores y servicio técnico para programas de propulsion JetsMunt.",
     rights: "Todos los derechos reservados.",
-    legal: [["Contacto", "/contacto"], ["Soporte", "/support"], ["Distribuidores", "/distribuidores"]],
+    legal: [["Aviso legal", "/aviso-legal"], ["Política de privacidad", "/politica-de-privacidad"], ["Cookies", "/politica-de-cookies"], ["Contacto", "/contacto"]],
     groups: footerGroups,
   },
   en: {
     statement: "European compact turbojet systems.",
     sub: "Engines, accessories, distributors and technical service for JetsMunt propulsion programs.",
     rights: "All rights reserved.",
-    legal: [["Contact", "/en/contact"], ["Support", "/support"], ["Distributors", "/en/distributors"]],
+    legal: [["Legal notice", "/aviso-legal"], ["Privacy policy", "/politica-de-privacidad"], ["Cookies", "/politica-de-cookies"], ["Contact", "/en/contact"]],
     groups: [
       { title: "Catalogue", links: [["Engines", "/en/engines"], ["Accessories", "/en/accessories"], ["PRO series", "/pro-series"], ["Compact turbojets", "/en/compact-turbojet-engines"]] },
       { title: "Support", links: [["Technical service", "/en/technical-service"], ["Distributors", "/en/distributors"], ["Downloads", "/support/downloads"], ["FAQ", "/support/faq"]] },
@@ -74,7 +74,7 @@ const footerByLocale = {
     statement: "Systemes turbojet compacts europeens.",
     sub: "Moteurs, accessoires, distributeurs et service technique pour programmes de propulsion JetsMunt.",
     rights: "Tous droits reserves.",
-    legal: [["Contact", "/fr/contact"], ["Support", "/support"], ["Distributeurs", "/fr/distributeurs"]],
+    legal: [["Mentions légales", "/aviso-legal"], ["Politique de confidentialité", "/politica-de-privacidad"], ["Cookies", "/politica-de-cookies"], ["Contact", "/fr/contact"]],
     groups: [
       { title: "Catalogue", links: [["Moteurs", "/fr/moteurs"], ["Accessoires", "/fr/accessoires"], ["Serie PRO", "/pro-series"], ["Turbojets compacts", "/fr/moteurs-turbojet-compacts"]] },
       { title: "Support", links: [["Service technique", "/fr/service-technique"], ["Distributeurs", "/fr/distributeurs"], ["Telechargements", "/support/downloads"], ["FAQ", "/support/faq"]] },

@@ -18,6 +18,7 @@ export function SeoPageShell({
   bentoGallery,
   children,
   compact = false,
+  imageFit = "cover",
   secondaryHref,
   primaryLabel,
   primaryHref,
@@ -31,9 +32,10 @@ export function SeoPageShell({
   image?: string;
   video?: string;
   showSpotlight?: boolean;
-  bentoGallery?: { video: string; images: string[] };
+  bentoGallery?: { video?: string; images: string[] };
   children: React.ReactNode;
   compact?: boolean;
+  imageFit?: "cover" | "contain";
   primaryLabel?: string;
   primaryHref?: string;
   secondaryLabel?: string;
@@ -76,16 +78,27 @@ export function SeoPageShell({
                 <p className="body-lg" style={{ color: "var(--text-soft)", fontSize: "0.95rem", margin: 0 }}>{description}</p>
               </div>
               <div className="premium-bento-gallery hero-bento-gallery">
-                <div className="bento-item bento-large" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", background: "#000" }}>
-                  <video
-                    src={bentoGallery.video}
-                    controls
-                    muted
-                    playsInline
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  />
+                <div className="bento-item bento-large" style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", background: "#000", aspectRatio: (!bentoGallery.video && bentoGallery.images.length === 1) ? "2.5/1" : undefined }}>
+                  {bentoGallery.video ? (
+                    <video
+                      src={bentoGallery.video}
+                      controls
+                      muted
+                      playsInline
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  ) : bentoGallery.images.length > 0 ? (
+                    <Image
+                      src={bentoGallery.images[0]}
+                      alt="Hero Media"
+                      fill
+                      style={{ objectFit: "contain" }}
+                      sizes="(max-width: 1100px) 100vw, 1100px"
+                      priority
+                    />
+                  ) : null}
                 </div>
-                {bentoGallery.images.map((src, idx) => (
+                {bentoGallery.images.slice(bentoGallery.video ? 0 : 1).map((src, idx) => (
                   <div
                     key={idx}
                     className="bento-item zoomable-bento-item"
@@ -138,8 +151,8 @@ export function SeoPageShell({
                   />
                 </div>
               ) : image ? (
-                <div className="seo-hero-media">
-                  <Image src={image} alt={title} fill sizes="(max-width: 980px) 100vw, 44vw" priority />
+                <div className="seo-hero-media" style={imageFit === 'contain' ? { background: 'transparent', border: 'none' } : undefined}>
+                  <Image src={image} alt={title} fill sizes="(max-width: 980px) 100vw, 44vw" priority style={{ objectFit: imageFit }} />
                 </div>
               ) : null}
             </div>

@@ -45,7 +45,7 @@ export default function FrUavIntegrationPage() {
       kicker="Intégration Transparente. Performances Maximales."
       title="Capacidades de Intégration en UAV"
       description="Les turboréacteurs JetsMunt sont optimisés pour une intégration physique et électrique rapide, limitant le poids du câblage et simplifiant les interfaces."
-      image="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png"
+      image="/media/services/uav-integration.png"
       breadcrumbPath="/fr/services/integration-uav"
     >
       <section className="section container" style={{ paddingBottom: "3rem" }}>

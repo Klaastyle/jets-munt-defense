@@ -45,7 +45,7 @@ export default function EnUavIntegrationPage() {
       kicker="Seamless Integration. Maximum Performance."
       title="UAV Integration Capabilities"
       description="JetsMunt engines are optimized from the ground up for quick platform integration, reducing wiring harnesses, structural weight, and developmental overhead."
-      image="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png"
+      image="/media/services/uav-integration.png"
       breadcrumbPath="/en/services/uav-integration"
     >
       <section className="section container" style={{ paddingBottom: "3rem" }}>
