@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import HtmlLangSetter from "./components/HtmlLangSetter";
+import CookieBanner from "./components/CookieBanner";
 import { buildMetadata } from "./lib/metadata";
 import { homeAlternates, siteUrl } from "./lib/seo-data";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body>
         <HtmlLangSetter />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
