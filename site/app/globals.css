@@ -4164,3 +4164,27 @@ img, video { display: block; max-width: 100%; }
     visibility: hidden;
   }
 }
+@media (max-width: 680px) {
+  .xm-performance-table {
+    font-size: 0.72rem;
+  }
+  .xm-performance-table th, 
+  .xm-performance-table td {
+    padding: 0.4rem 0.3rem;
+  }
+}
+@media (max-width: 680px) {
+  .xm-spec-row {
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
+  .xm-spec-value {
+    text-align: left;
+  }
+}
+@media (max-width: 680px) {
+  .xm-chart-legend {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
