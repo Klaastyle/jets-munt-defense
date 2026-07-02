@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
-import { engines } from "../../lib/seo-data";
+import { engines, proEngines, Engine } from "../../lib/seo-data";
 
 export default function OldEnginesPage() {
   return (
@@ -59,7 +59,7 @@ export default function OldEnginesPage() {
               </tr>
             </thead>
             <tbody>
-              {[...engines, { name: "XM215 PRO", slug: "xm215-pro", thrust: "215 N", weight: "1.820 g", diameter: "73,9 mm", img: "/media/215/Gemini_Generated_Image_h34k9mh34k9mh34k.png" }, { name: "XM255 PRO", slug: "xm255-pro", thrust: "255 N", weight: "2.080 g", diameter: "122 mm", img: "/media/255/Gemini_Generated_Image_g27l6rg27l6rg27l.png" }].map((engine, index, array) => (
+              {[...engines, ...proEngines].map((engine: Engine, index, array) => (
                 <tr key={engine.slug} style={{ borderBottom: index === array.length - 1 ? 'none' : '1px solid rgba(255,255,255,0.04)', transition: 'background 0.2s ease', cursor: 'default' }}>
                   <td style={{ padding: '0.5rem 1rem' }}>
                     <div style={{ position: 'relative', width: '50px', height: '50px', borderRadius: '4px', overflow: 'hidden', background: '#050505', border: '1px solid rgba(255,255,255,0.1)' }}>
