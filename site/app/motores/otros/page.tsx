@@ -41,6 +41,39 @@ export default function OldEnginesPage() {
             </article>
           ))}
         </div>
+        
+        <div style={{ marginTop: '5rem', marginBottom: '1.5rem' }}>
+          <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#fff', marginBottom: '0.5rem' }}>Tabla Comparativa</h3>
+          <p style={{ color: 'var(--text-soft)', fontSize: '1rem' }}>Comparación técnica de todos los motores de las series NG y PRO.</p>
+        </div>
+        <div style={{ overflowX: 'auto', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '6px' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.01)' }}>
+                <th style={{ padding: '1rem', color: '#fff', fontWeight: 600 }}>Modelo</th>
+                <th style={{ padding: '1rem', color: '#fff', fontWeight: 600 }}>Empuje</th>
+                <th style={{ padding: '1rem', color: '#fff', fontWeight: 600 }}>Peso</th>
+                <th style={{ padding: '1rem', color: '#fff', fontWeight: 600 }}>Diámetro</th>
+                <th style={{ padding: '1rem', color: '#fff', fontWeight: 600 }}></th>
+              </tr>
+            </thead>
+            <tbody>
+              {[...engines, { name: "XM215 PRO", slug: "xm215-pro", thrust: "215 N", weight: "1.820 g", diameter: "73,9 mm" }, { name: "XM255 PRO", slug: "xm255-pro", thrust: "255 N", weight: "2.080 g", diameter: "122 mm" }].map((engine, index, array) => (
+                <tr key={engine.slug} style={{ borderBottom: index === array.length - 1 ? 'none' : '1px solid rgba(255,255,255,0.04)', transition: 'background 0.2s ease', cursor: 'default' }} onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.03)'} onMouseOut={(e) => e.currentTarget.style.background = 'transparent'}>
+                  <td style={{ padding: '1rem', color: 'var(--accent)', fontWeight: 600 }}>{engine.name}</td>
+                  <td style={{ padding: '1rem', color: 'var(--text-soft)' }}>{engine.thrust}</td>
+                  <td style={{ padding: '1rem', color: 'var(--text-soft)' }}>{engine.weightEs || engine.weight}</td>
+                  <td style={{ padding: '1rem', color: 'var(--text-soft)' }}>{engine.diameterEs || engine.diameter}</td>
+                  <td style={{ padding: '1rem', textAlign: 'right' }}>
+                    <Link href={engine.slug.includes('pro') ? `/motores/${engine.slug}` : "/contacto"} style={{ fontSize: '0.8rem', color: '#fff', textDecoration: 'underline', opacity: 0.7 }}>
+                      {engine.slug.includes('pro') ? 'Ver detalles' : 'Consultar'}
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
       <SeoInternalLinks locale="es" />
     </SeoPageShell>
