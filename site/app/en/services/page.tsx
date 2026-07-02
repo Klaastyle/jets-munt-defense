@@ -45,8 +45,8 @@ export default function EnServicesPage() {
       locale="en"
       kicker="Specialized Services"
       title="UAV Propulsion Integration & Development Support"
-      description="We provide defense-grade aerospace engineering services covering FADEC telemetry systems, physical engine integration, and custom micro-turbine development programs."
-      image="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png"
+      description="We offer advanced aerospace engineering solutions ranging from firmware development and control telemetry to technical assistance for integration into aerial platforms."
+      image="/servicios-hero.png"
       breadcrumbPath="/en/services"
       compact
     >

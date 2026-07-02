@@ -45,7 +45,7 @@ export default function ServicesPage() {
       kicker="Servicios Especializados"
       title="Soporte y Desarrollo de Propulsión para UAV"
       description="Ofrecemos soluciones avanzadas de ingeniería aeroespacial que abarcan desde el desarrollo de firmware y telemetría de control hasta la asistencia técnica de integración en plataformas aéreas."
-      image="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png"
+      image="/servicios-hero.png"
       breadcrumbPath="/servicios"
       compact
     >

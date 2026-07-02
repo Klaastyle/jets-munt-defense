@@ -17,3 +17,6 @@ Thumbs.db
 **/.next/
 **/out/
 **/build/
+
+.vercel
+.env*

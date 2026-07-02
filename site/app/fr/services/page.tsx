@@ -45,8 +45,8 @@ export default function FrServicesPage() {
       locale="fr"
       kicker="Services Spécialisés"
       title="Support d'Intégration et Développement de Propulsion UAV"
-      description="Nous fournissons des services d'ingénierie aérospatiale avancés de qualité militaire couvrant le développement FADEC, la télémétrie, l'intégration physique et le prototypage de turbines."
-      image="/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png"
+      description="Nous offrons des solutions d'ingénierie aérospatiale avancées allant du développement de firmware et télémétrie de contrôle à l'assistance technique pour l'intégration dans les plateformes aériennes."
+      image="/servicios-hero.png"
       breadcrumbPath="/fr/services"
       compact
     >
