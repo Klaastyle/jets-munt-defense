@@ -1,6 +1,22 @@
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jetsmuntdefense.com";
 
-export const engines = [
+export interface Engine {
+  name: string;
+  slug: string;
+  thrust: string;
+  weight: string;
+  diameter: string;
+  img: string;
+  summary: string;
+  summaryEs: string;
+  summaryFr: string;
+  weightEs?: string;
+  weightFr?: string;
+  diameterEs?: string;
+  diameterFr?: string;
+}
+
+export const engines: Engine[] = [
   {
     name: "XM98NG",
     slug: "xm98ng",
@@ -102,11 +118,13 @@ export const engines = [
   },
 ];
 
-export const proEngines = [
+export const proEngines: Engine[] = [
   {
     name: "XM215 PRO",
     slug: "xm215-pro",
     thrust: "215 N",
+    weight: "1.820 g",
+    diameter: "73.9 mm",
     img: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
     summary: "Professional compact turbojet propulsion class for programs requiring engineering support, telemetry and validation depth.",
     summaryEs: "Clase de propulsión turbojet compacta profesional para programas que requieren soporte de ingeniería, telemetría y profundidad de validación.",
@@ -116,6 +134,8 @@ export const proEngines = [
     name: "XM255 PRO",
     slug: "xm255-pro",
     thrust: "255 N",
+    weight: "2.080 g",
+    diameter: "122 mm",
     img: "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
     summary: "Professional high-thrust compact turbojet package for advanced UAV and target platform propulsion programs.",
     summaryEs: "Paquete turbojet compacto profesional de alto empuje para programas avanzados de propulsión de UAV y plataformas target.",
