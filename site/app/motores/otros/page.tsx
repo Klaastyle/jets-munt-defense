@@ -50,6 +50,7 @@ export default function OldEnginesPage() {
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
             <thead>
               <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.01)' }}>
+                <th style={{ padding: '1rem', width: '60px' }}></th>
                 <th style={{ padding: '1rem', color: '#fff', fontWeight: 600 }}>Modelo</th>
                 <th style={{ padding: '1rem', color: '#fff', fontWeight: 600 }}>Empuje</th>
                 <th style={{ padding: '1rem', color: '#fff', fontWeight: 600 }}>Peso</th>
@@ -58,8 +59,13 @@ export default function OldEnginesPage() {
               </tr>
             </thead>
             <tbody>
-              {[...engines, { name: "XM215 PRO", slug: "xm215-pro", thrust: "215 N", weight: "1.820 g", diameter: "73,9 mm" }, { name: "XM255 PRO", slug: "xm255-pro", thrust: "255 N", weight: "2.080 g", diameter: "122 mm" }].map((engine, index, array) => (
+              {[...engines, { name: "XM215 PRO", slug: "xm215-pro", thrust: "215 N", weight: "1.820 g", diameter: "73,9 mm", img: "/media/215/Gemini_Generated_Image_h34k9mh34k9mh34k.png" }, { name: "XM255 PRO", slug: "xm255-pro", thrust: "255 N", weight: "2.080 g", diameter: "122 mm", img: "/media/255/Gemini_Generated_Image_g27l6rg27l6rg27l.png" }].map((engine, index, array) => (
                 <tr key={engine.slug} style={{ borderBottom: index === array.length - 1 ? 'none' : '1px solid rgba(255,255,255,0.04)', transition: 'background 0.2s ease', cursor: 'default' }}>
+                  <td style={{ padding: '0.5rem 1rem' }}>
+                    <div style={{ position: 'relative', width: '50px', height: '50px', borderRadius: '4px', overflow: 'hidden', background: '#050505', border: '1px solid rgba(255,255,255,0.1)' }}>
+                      <Image src={engine.img || '/media/turbina/m166ts-2.jpg'} alt={engine.name} fill style={{ objectFit: 'cover' }} sizes="50px" />
+                    </div>
+                  </td>
                   <td style={{ padding: '1rem', color: 'var(--accent)', fontWeight: 600 }}>{engine.name}</td>
                   <td style={{ padding: '1rem', color: 'var(--text-soft)' }}>{engine.thrust}</td>
                   <td style={{ padding: '1rem', color: 'var(--text-soft)' }}>{engine.weightEs || engine.weight}</td>
