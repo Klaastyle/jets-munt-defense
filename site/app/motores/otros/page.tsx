@@ -59,7 +59,7 @@ export default function OldEnginesPage() {
             </thead>
             <tbody>
               {[...engines, { name: "XM215 PRO", slug: "xm215-pro", thrust: "215 N", weight: "1.820 g", diameter: "73,9 mm" }, { name: "XM255 PRO", slug: "xm255-pro", thrust: "255 N", weight: "2.080 g", diameter: "122 mm" }].map((engine, index, array) => (
-                <tr key={engine.slug} style={{ borderBottom: index === array.length - 1 ? 'none' : '1px solid rgba(255,255,255,0.04)', transition: 'background 0.2s ease', cursor: 'default' }} onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.03)'} onMouseOut={(e) => e.currentTarget.style.background = 'transparent'}>
+                <tr key={engine.slug} style={{ borderBottom: index === array.length - 1 ? 'none' : '1px solid rgba(255,255,255,0.04)', transition: 'background 0.2s ease', cursor: 'default' }}>
                   <td style={{ padding: '1rem', color: 'var(--accent)', fontWeight: 600 }}>{engine.name}</td>
                   <td style={{ padding: '1rem', color: 'var(--text-soft)' }}>{engine.thrust}</td>
                   <td style={{ padding: '1rem', color: 'var(--text-soft)' }}>{engine.weightEs || engine.weight}</td>
