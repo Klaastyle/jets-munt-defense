@@ -15,6 +15,7 @@ const navByLocale = {
           { label: "Ver todos", href: "/motores" },
           { label: "XM215 PRO", href: "/motores/xm215-pro" },
           { label: "XM255 PRO", href: "/motores/xm255-pro" },
+          { label: "Otros motores", href: "/motores/otros" },
         ],
       },
       {
@@ -42,6 +43,7 @@ const navByLocale = {
           { label: "All engines", href: "/en/engines" },
           { label: "XM215 PRO", href: "/en/engines/xm215-pro" },
           { label: "XM255 PRO", href: "/en/engines/xm255-pro" },
+          { label: "Other engines", href: "/motores/otros" },
         ],
       },
       {
@@ -69,6 +71,7 @@ const navByLocale = {
           { label: "Tous les moteurs", href: "/fr/moteurs" },
           { label: "XM215 PRO", href: "/fr/moteurs/xm215-pro" },
           { label: "XM255 PRO", href: "/fr/moteurs/xm255-pro" },
+          { label: "Autres moteurs", href: "/motores/otros" },
         ],
       },
       {
