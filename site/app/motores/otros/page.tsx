@@ -6,8 +6,8 @@ import { engines } from "../../lib/seo-data";
 export default function OldEnginesPage() {
   return (
     <SeoPageShell
-      kicker="Catálogo Original"
-      title="Motores turbojet compactos (Versión Antigua)"
+      kicker="Catálogo"
+      title="Otros motores"
       description="Los motores JetsMunt XM se seleccionan por empuje, masa, diámetro, integración ECU y requisitos de validacion para plataformas aeroespaciales compactas."
       image="/media/turbina/m166ts-2.jpg"
       breadcrumbPath="/motores/otros"
