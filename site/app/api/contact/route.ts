@@ -65,10 +65,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: copy.email }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY || "re_HLzW7KEe_NjUUDfP8ubdmA87prVM2HGvF";
-  const rawTo = process.env.CONTACT_TO_EMAIL ?? "albertponslajusticia@gmail.com";
-  const to = rawTo.includes(',') ? rawTo.split(',').map(e => e.trim()) : rawTo;
-  const from = process.env.CONTACT_FROM_EMAIL ?? "JetsMunt Website <onboarding@resend.dev>";
+  const apiKey = "re_HLzW7KEe_NjUUDfP8ubdmA87prVM2HGvF";
+  const to = "albertponslajusticia@gmail.com";
+  const from = "JetsMunt Website <onboarding@resend.dev>";
 
   if (!apiKey) {
     return NextResponse.json(
