@@ -11,21 +11,21 @@ const messages: Record<Locale, Record<string, string>> = {
     required: "Completa los campos obligatorios.",
     email: "Introduce un email valido.",
     notConfigured: "El formulario esta listo, pero el envio de email aun no esta configurado.",
-    failed: "No se ha podido entregar la consulta. Contacta con info@jets-munt.com.",
+    failed: "No se ha podido entregar la consulta. Contacta con info@jetsmuntdefense.com.",
   },
   en: {
     invalid: "Invalid form submission.",
     required: "Please complete the required fields.",
     email: "Please enter a valid email address.",
     notConfigured: "The form is ready, but email delivery is not configured yet.",
-    failed: "The enquiry could not be delivered. Please contact info@jets-munt.com.",
+    failed: "The enquiry could not be delivered. Please contact info@jetsmuntdefense.com.",
   },
   fr: {
     invalid: "Envoi de formulaire non valide.",
     required: "Veuillez completer les champs obligatoires.",
     email: "Veuillez saisir une adresse email valide.",
     notConfigured: "Le formulaire est pret, mais l'envoi d'email n'est pas encore configure.",
-    failed: "La demande n'a pas pu etre livree. Contactez info@jets-munt.com.",
+    failed: "La demande n'a pas pu etre livree. Contactez info@jetsmuntdefense.com.",
   },
 };
 
