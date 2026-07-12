@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import Image from "next/image";
 import { IconCard } from "../../components/IconCard";
@@ -12,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Especificaciones completas y capacidades del turborreactor XM215 PRO de 215 N con electrónica integrada, control FOC y telemetría avanzada.",
   path: "/motores/xm215-pro",
-  image: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
+  image: "/media/215/motor-turbojet-xm215-pro-1.png",
   keywords: ["XM215 PRO", "turbojet 215 N", "propulsiÃ³n UAV defensa", "microturbinas JetsMunt"],
   locale: "es_ES",
   languages: proProductAlternates("xm215-pro"),

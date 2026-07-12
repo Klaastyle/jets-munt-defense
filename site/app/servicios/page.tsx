@@ -1,3 +1,4 @@
+ 
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -22,21 +23,21 @@ export default function ServicesPage() {
       slug: "electronica-telemetria",
       kicker: "Inteligencia de Control FADEC",
       desc: "Diseño e integración de módulos de control electrónico de motores (ECU), protocolos serie de piloto automático, CAN Bus, fibra óptica y registro a alta frecuencia en tarjetas SD.",
-      image: "/media/services/Gemini_Generated_Image_knhy4pknhy4pknhy.png",
+      image: "/media/services/servicio-tecnico-mantenimiento-32.png",
     },
     {
       title: "Integración en UAV",
       slug: "integracion-uav",
       kicker: "Ingeniería de Plataforma",
       desc: "Asistencia técnica y soluciones físicas de acoplamiento (líneas de combustible, alimentación, interfaces) para integrar turborreactores en drones tácticos y blancos aéreos.",
-      image: "/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png",
+      image: "/media/services/servicio-tecnico-mantenimiento-34.png",
     },
     {
       title: "Ingeniería y Desarrollo",
       slug: "ingenieria-desarrollo",
       kicker: "Desarrollo a Medida OEM",
       desc: "Soporte completo desde la definición conceptual hasta la fabricación in-house de prototipos y la validación en vuelo para programas especiales de defensa y espacio.",
-      image: "/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png",
+      image: "/media/services/servicio-tecnico-mantenimiento-33.png",
     },
   ];
 

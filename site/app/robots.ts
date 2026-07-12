@@ -1,3 +1,4 @@
+ 
 import { MetadataRoute } from 'next';
 import { siteUrl } from './lib/seo-data';
 

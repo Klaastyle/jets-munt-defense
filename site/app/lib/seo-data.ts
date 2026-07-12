@@ -1,3 +1,4 @@
+ 
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jetsmuntdefense.com";
 
 export interface Engine {
@@ -125,7 +126,7 @@ export const proEngines: Engine[] = [
     thrust: "215 N",
     weight: "1.820 g",
     diameter: "73.9 mm",
-    img: "/media/215/Gemini_Generated_Image_3o0as33o0as33o0a.png",
+    img: "/media/215/motor-turbojet-xm215-pro-1.png",
     summary: "Professional compact turbojet propulsion class for programs requiring engineering support, telemetry and validation depth.",
     summaryEs: "Clase de propulsión turbojet compacta profesional para programas que requieren soporte de ingeniería, telemetría y profundidad de validación.",
     summaryFr: "Classe de propulsion turboréacteur compacte professionnelle pour les programmes nécessitant un support d'ingénierie, de la télémétrie et une validation approfondie.",
@@ -136,7 +137,7 @@ export const proEngines: Engine[] = [
     thrust: "255 N",
     weight: "2.080 g",
     diameter: "122 mm",
-    img: "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
+    img: "/media/255/motor-turbojet-xm255-pro-7.png",
     summary: "Professional high-thrust compact turbojet package for advanced UAV and target platform propulsion programs.",
     summaryEs: "Paquete turbojet compacto profesional de alto empuje para programas avanzados de propulsión de UAV y plataformas target.",
     summaryFr: "Pack turboréacteur compact professionnel à forte poussée pour les programmes avancés de propulsion d'UAV et de plateformes cibles.",
@@ -218,7 +219,7 @@ export const solutionPages = [
     title: "Propulsion Architecture",
     slug: "propulsion-architecture",
     label: "Architecture",
-    image: "/media/photos/Gemini_Generated_Image_8bxtuz8bxtuz8bxt.png",
+    image: "/media/photos/jetsmunt-galeria-motores-24.png",
     description:
       "Engine, ECU, telemetry, sensors, fuel system and support architecture designed as one propulsion stack.",
     keywords: ["turbojet propulsion architecture", "UAV engine ECU", "telemetry turbojet engine"],

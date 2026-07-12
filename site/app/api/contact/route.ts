@@ -1,3 +1,4 @@
+ 
 import { NextResponse } from "next/server";
 
 const requiredFields = ["name", "email", "country", "request_type", "consent"];

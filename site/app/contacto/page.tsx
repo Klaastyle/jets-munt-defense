@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import ContactEnquiryForm from "../components/ContactEnquiryForm";
 import GlobePulse from "../components/GlobePulse";

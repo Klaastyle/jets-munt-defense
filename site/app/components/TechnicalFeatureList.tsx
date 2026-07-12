@@ -1,3 +1,4 @@
+ 
 import { TechnicalIcon, type TechnicalIconName } from "./TechnicalIcon";
 
 export type TechnicalFeatureItem = {

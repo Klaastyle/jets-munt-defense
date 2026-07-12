@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -23,7 +24,7 @@ export default function FrMoteursPage() {
       thrust: "215 N",
       weight: "1 820 g",
       diameter: "73,9 mm",
-      img: "/media/215/Gemini_Generated_Image_h34k9mh34k9mh34k.png",
+      img: "/media/215/motor-turbojet-xm215-pro-3.png",
       summary: "Microturbine optimisée avec électronique de contrôle brushless FOC et télémétrie de mission en temps réel.",
     },
     {
@@ -32,7 +33,7 @@ export default function FrMoteursPage() {
       thrust: "255 N",
       weight: "2 080 g",
       diameter: "122 mm",
-      img: "/media/255/Gemini_Generated_Image_g27l6rg27l6rg27l.png",
+      img: "/media/255/motor-turbojet-xm255-pro-8.png",
       summary: "Notre unité de propulsion avec la plus forte poussée et performance militaire pour les plateformes cibles et les drones tactiques.",
     },
   ];
@@ -43,7 +44,7 @@ export default function FrMoteursPage() {
       kicker="Catalogue de Moteurs PRO"
       title="Systèmes de Propulsion Turboréacteur pour Drones"
       description="Les moteurs JetsMunt PRO intègrent l'unité de contrôle (ECU), le logiciel de diagnostic et les capteurs de vol directement dans le matériel du moteur, éliminant les câbles et simplifiant l'installation sur les plateformes sans pilote."
-      image="/media/photos/Gemini_Generated_Image_bb2h12bb2h12bb2h.png"
+      image="/media/photos/jetsmunt-galeria-motores-26.png"
       breadcrumbPath="/fr/moteurs"
       compact
       primaryHref="/fr/contact"

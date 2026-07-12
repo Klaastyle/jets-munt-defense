@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
 import { TechnicalIcon, type TechnicalIconName } from "../../components/TechnicalIcon";
@@ -50,7 +51,7 @@ export default function EngineeringDevelopmentPage() {
       kicker="Desde la definición del concepto hasta sistemas listos para el vuelo."
       title="Ingeniería y Desarrollo a Medida"
       description="JetsMunt colabora con fabricantes OEM, centros de investigación aeroespacial y fuerzas de defensa proporcionando soporte de ingeniería directo para adaptar o desarrollar turborreactores específicos para misiones críticas."
-      image="/media/services/Gemini_Generated_Image_knhy4pknhy4pknhy.png"
+      image="/media/services/servicio-tecnico-mantenimiento-32.png"
       breadcrumbPath="/servicios/ingenieria-desarrollo"
       locale="es"
     >

@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
 import { TechnicalIcon, type TechnicalIconName } from "../../components/TechnicalIcon";
@@ -57,7 +58,7 @@ export default function ElectronicsTelemetryPage() {
       kicker="Propulsión Inteligente Integrada"
       title="Electrónica Avanzada y Telemetría"
       description="Nuestros motores incorporan una arquitectura electrónica avanzada de desarrollo propio que centraliza el control digital total del motor (FADEC) en un solo cuerpo blindado contra interferencias."
-      image="/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png"
+      image="/media/services/servicio-tecnico-mantenimiento-33.png"
       breadcrumbPath="/servicios/electronica-telemetria"
       locale="es"
     >

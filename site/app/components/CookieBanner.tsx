@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,6 +11,7 @@ export default function CookieBanner() {
     // Check if user has already accepted or rejected cookies
     const consent = localStorage.getItem("jm_cookie_consent");
     if (!consent) {
+// eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(true);
     }
   }, []);

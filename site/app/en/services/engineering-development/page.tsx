@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../../components/SeoPage";
 import { buildMetadata } from "../../../lib/metadata";
@@ -50,7 +51,7 @@ export default function EnEngineeringDevelopmentPage() {
       kicker="From concept definition to flight-ready propulsion systems."
       title="Engineering & Custom Development"
       description="JetsMunt partners with aerospace OEMs, research organizations, and defense agencies, supplying dedicated engineering support to adapt or develop customized turbojets."
-      image="/media/services/Gemini_Generated_Image_knhy4pknhy4pknhy.png"
+      image="/media/services/servicio-tecnico-mantenimiento-32.png"
       breadcrumbPath="/en/services/engineering-development"
     >
       <section className="section container" style={{ paddingBottom: "3rem" }}>

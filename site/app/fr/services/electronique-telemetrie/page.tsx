@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../../components/SeoPage";
 import { buildMetadata } from "../../../lib/metadata";
@@ -52,7 +53,7 @@ export default function FrElectronicsTelemetryPage() {
       kicker="Intelligence de Propulsion Intégrée"
       title="Électronique Avancée et Télémétrie"
       description="Nos turboréacteurs intègrent une architecture FADEC avancée et propriétaire qui regroupe la puissance de calcul, les boucles de rétroaction et les capteurs sous un blindage EMI hermétique."
-      image="/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png"
+      image="/media/services/servicio-tecnico-mantenimiento-33.png"
       breadcrumbPath="/fr/services/electronique-telemetrie"
     >
       <section className="section container" style={{ paddingBottom: "3rem" }}>

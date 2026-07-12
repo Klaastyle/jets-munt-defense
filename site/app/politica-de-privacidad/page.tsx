@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import { SeoPageShell } from "../components/SeoPage";
 import { buildMetadata } from "../lib/metadata";

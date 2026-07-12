@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import Image from "next/image";
 import { SeoPageShell } from "../../components/SeoPage";
@@ -111,9 +112,9 @@ export default function AboutJetsMuntPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
             {[
               { src: "/assembly-facility.png", alt: "JetsMunt assembly facilities" },
-              { src: "/media/about/Gemini_Generated_Image_mt2eermt2eermt2e.png", alt: "Blade and rotor design & engineering" },
-              { src: "/media/about/Gemini_Generated_Image_n2rnkfn2rnkfn2rn.png", alt: "Turbine test bench cell" },
-              { src: "/media/about/Gemini_Generated_Image_vnxrcxvnxrcxvnxr.png", alt: "Quality control and metrology lab" },
+              { src: "/media/about/jetsmunt-empresa-instalaciones-15.png", alt: "Blade and rotor design & engineering" },
+              { src: "/media/about/jetsmunt-empresa-instalaciones-16.png", alt: "Turbine test bench cell" },
+              { src: "/media/about/jetsmunt-empresa-instalaciones-17.png", alt: "Quality control and metrology lab" },
             ].map((img, index) => (
               <div
                 key={index}

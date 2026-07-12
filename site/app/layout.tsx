@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
@@ -42,6 +43,8 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-WZXV52DB');
         `}
       </Script>
+      <Script src="https://cdn.iubenda.com/iubenda.js" strategy="lazyOnload" />
+      <Script src="https://embeds.iubenda.com/widgets/87ee51b7-0e96-4412-9a87-4a6d0e394795.js" strategy="afterInteractive" />
       <body>
         <noscript
           dangerouslySetInnerHTML={{

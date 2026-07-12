@@ -1,3 +1,4 @@
+ 
 "use client";
 
 import { FormEvent, useState } from "react";
@@ -96,6 +97,15 @@ export default function ContactEnquiryForm({ compact = false }: { compact?: bool
       setState("sent");
       setMessage(copy.sent);
       form.reset();
+
+      // Send conversion event to GTM
+      if (typeof window !== "undefined" && (window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: "generate_lead",
+          formType: (data as any).request_type,
+          formLocale: locale,
+        });
+      }
     } catch (error) {
       setState("error");
       setMessage(error instanceof Error ? error.message : copy.error);

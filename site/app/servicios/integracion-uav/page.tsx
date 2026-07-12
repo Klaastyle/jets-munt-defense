@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
 import { TechnicalIcon, type TechnicalIconName } from "../../components/TechnicalIcon";

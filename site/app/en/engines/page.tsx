@@ -1,3 +1,4 @@
+ 
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -23,7 +24,7 @@ export default function EnEnginesPage() {
       thrust: "215 N",
       weight: "1,820 g",
       diameter: "73.9 mm",
-      img: "/media/215/Gemini_Generated_Image_h34k9mh34k9mh34k.png",
+      img: "/media/215/motor-turbojet-xm215-pro-3.png",
       summary: "Microturbine optimized with brushless FOC control electronics and real-time mission telemetry.",
     },
     {
@@ -32,7 +33,7 @@ export default function EnEnginesPage() {
       thrust: "255 N",
       weight: "2,080 g",
       diameter: "122 mm",
-      img: "/media/255/Gemini_Generated_Image_g27l6rg27l6rg27l.png",
+      img: "/media/255/motor-turbojet-xm255-pro-8.png",
       summary: "Our highest thrust and military performance propulsion unit for target platforms and tactical UAVs.",
     },
   ];
@@ -43,7 +44,7 @@ export default function EnEnginesPage() {
       kicker="PRO Engines Catalogue"
       title="Turbojet Propulsion Systems for UAVs"
       description="JetsMunt PRO engines integrate the control unit (ECU), diagnostic software, and flight sensors directly into the engine hardware, eliminating cables and simplifying installation on unmanned platforms."
-      image="/media/photos/Gemini_Generated_Image_bb2h12bb2h12bb2h.png"
+      image="/media/photos/jetsmunt-galeria-motores-26.png"
       breadcrumbPath="/en/engines"
       compact
       primaryHref="/en/contact"

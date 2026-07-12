@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../../components/SeoPage";
 import { buildMetadata } from "../../../lib/metadata";
@@ -52,7 +53,7 @@ export default function EnElectronicsTelemetryPage() {
       kicker="Integrated Propulsion Intelligence"
       title="Advanced Electronics & Telemetry"
       description="Our turbojets feature an advanced, proprietary FADEC digital control architecture, grouping all processing, sensing, and control loops inside an EMI-shielded enclosure."
-      image="/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png"
+      image="/media/services/servicio-tecnico-mantenimiento-33.png"
       breadcrumbPath="/en/services/electronics-telemetry"
     >
       <section className="section container" style={{ paddingBottom: "3rem" }}>

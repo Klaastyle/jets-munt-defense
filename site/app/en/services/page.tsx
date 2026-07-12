@@ -1,3 +1,4 @@
+ 
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -22,21 +23,21 @@ export default function EnServicesPage() {
       slug: "electronics-telemetry",
       kicker: "FADEC Control Systems",
       desc: "Design and integration of electronic engine control units (ECU), autopilot serial links, CAN Bus networks, fiber optic telemetry, and high-frequency SD card datalogging.",
-      image: "/media/services/Gemini_Generated_Image_knhy4pknhy4pknhy.png",
+      image: "/media/services/servicio-tecnico-mantenimiento-32.png",
     },
     {
       title: "UAV Integration",
       slug: "uav-integration",
       kicker: "Platform Engineering",
       desc: "Technical integration support and custom fuel, electrical, and mount adaptations to seamlessly install turbojets onto tactical drones and target platforms.",
-      image: "/media/services/Gemini_Generated_Image_xztybfxztybfxzty.png",
+      image: "/media/services/servicio-tecnico-mantenimiento-34.png",
     },
     {
       title: "Engineering & Development",
       slug: "engineering-development",
       kicker: "Custom OEM Solutions",
       desc: "End-to-end engineering from concept definition and simulation to in-house prototyping, qualification testing, and flight validation for defense programs.",
-      image: "/media/services/Gemini_Generated_Image_saa7dvsaa7dvsaa7.png",
+      image: "/media/services/servicio-tecnico-mantenimiento-33.png",
     },
   ];
 

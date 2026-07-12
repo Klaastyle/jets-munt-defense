@@ -1,3 +1,4 @@
+ 
 import type { Metadata } from "next";
 import Image from "next/image";
 import { IconCard } from "../../components/IconCard";
@@ -12,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Especificaciones tecnicas completas, envolvente operativa y caracteristicas de integracion del turborreactor XM255 PRO de 255 N.",
   path: "/motores/xm255-pro",
-  image: "/media/255/Gemini_Generated_Image_a79y7wa79y7wa79y.png",
+  image: "/media/255/motor-turbojet-xm255-pro-7.png",
   keywords: ["XM255 PRO", "turbojet 255 N", "propulsion UAV militar", "envolvente operativa turbina"],
   locale: "es_ES",
   languages: proProductAlternates("xm255-pro"),

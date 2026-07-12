@@ -1,7 +1,8 @@
+ 
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./Logo";
 
 const navByLocale = {
@@ -112,6 +113,17 @@ export default function Nav() {
   const locale = getLocale(pathname);
   const nav = navByLocale[locale];
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <nav className="nav" id="main-nav">
       <div className="nav-inner">
@@ -119,7 +131,7 @@ export default function Nav() {
           <Logo />
         </Link>
 
-        <div className="nav-menu" style={open ? mobileOpen : undefined}>
+        <div className={`nav-menu ${open ? "open" : ""}`}>
           <div className="nav-links">
             {nav.links.map((l) => {
               if (l.children) {
@@ -176,7 +188,7 @@ export default function Nav() {
         </div>
 
         <button
-          className="nav-burger"
+          className={`nav-burger ${open ? "open" : ""}`}
           onClick={() => setOpen(!open)}
           aria-label="Abrir menú de navegación"
           id="nav-toggle"
@@ -189,17 +201,4 @@ export default function Nav() {
     </nav>
   );
 }
-
-const mobileOpen: React.CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  position: "fixed",
-  inset: 0,
-  top: "var(--nav-height)",
-  background: "#080807",
-  backdropFilter: "none",
-  padding: "2rem",
-  gap: "1.5rem",
-  zIndex: 99,
-};
 
