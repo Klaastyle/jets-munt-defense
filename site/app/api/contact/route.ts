@@ -66,7 +66,7 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const rawTo = process.env.CONTACT_TO_EMAIL ?? "info@jets-munt.com";
+  const rawTo = process.env.CONTACT_TO_EMAIL ?? "albertponslajusticia@gmail.com";
   const to = rawTo.includes(',') ? rawTo.split(',').map(e => e.trim()) : rawTo;
   const from = process.env.CONTACT_FROM_EMAIL ?? "JetsMunt Website <onboarding@resend.dev>";
 
@@ -112,6 +112,8 @@ export async function POST(request: Request) {
   });
 
   if (!response.ok) {
+    const errorData = await response.text();
+    console.error("RESEND ERROR:", errorData);
     return NextResponse.json(
       { message: copy.failed },
       { status: 502 },
