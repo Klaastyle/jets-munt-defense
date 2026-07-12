@@ -25,12 +25,14 @@ export default function PrivacyPage() {
             JETS MUNT SL asegura que todos los datos de nuestros usuarios están sometidos al Compromiso de Privacidad, y que en ningún caso se destinarán a fines ajenos a los propios del sistema ni se entregarán a terceras partes, de acuerdo con los principios de la Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales.
           </p>
           <p>
-            En cumplimiento de la legislación vigente, todo usuario de JETS MUNT SL tiene derecho a solicitar, obtener, modificar o eliminar sus datos de carácter personal; para ello puede contactarnos solicitando dicha información, corrección o anulación a través de la dirección de correo electrónico info@jets-munt.com.
+            En cumplimiento de la legislación vigente, todo usuario de JETS MUNT SL tiene derecho a solicitar, obtener, modificar o eliminar sus datos de carácter personal; para ello puede contactarnos solicitando dicha información, corrección o anulación a través de la dirección de correo electrónico info@jetsmuntdefense.com.
           </p>
+        </section>
 
-          <h2 style={{ color: "#fff", marginTop: "2rem" }}>Condiciones de Uso</h2>
+        <section>
+          <h2>6. Ley de Servicios de la Sociedad de la Información (LSSI)</h2>
           <p>
-            En cumplimiento de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, JETS MUNT SL le informa de que es titular del website jetsmunt.com. De acuerdo con la exigencia del artículo 10 de la citada Ley, JETS MUNT SL informa de los siguientes datos: El titular de esta página web es JETS MUNT SL, con domicilio social en POL. IND. TORRENT D EN PUIG, 31, 08358 ARENYS DE MUNT. La dirección de correo electrónico de contacto con la empresa es info@jets-munt.com.
+            En cumplimiento de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, JETS MUNT SL le informa de que es titular del website jetsmunt.com. De acuerdo con la exigencia del artículo 10 de la citada Ley, JETS MUNT SL informa de los siguientes datos: El titular de esta página web es JETS MUNT SL, con domicilio social en POL. IND. TORRENT D EN PUIG, 31, 08358 ARENYS DE MUNT. La dirección de correo electrónico de contacto con la empresa es info@jetsmuntdefense.com.
           </p>
 
           <h2 style={{ color: "#fff", marginTop: "2rem" }}>Política de Enlaces y Exenciones de Responsabilidad</h2>

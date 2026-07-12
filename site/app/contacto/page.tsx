@@ -53,9 +53,9 @@ export default function ContactoPage() {
           </p>
 
           <div className="contact-methods">
-            <a href="mailto:info@jets-munt.com">
-              <span>Email</span>
-              info@jets-munt.com
+            <a href="mailto:info@jetsmuntdefense.com">
+              <Mail className="contact-info-icon" />
+              info@jetsmuntdefense.com
             </a>
             <a href="tel:+34937950113">
               <span>Teléfono</span>

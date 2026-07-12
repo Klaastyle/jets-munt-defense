@@ -29,7 +29,7 @@ export default function AvisoLegalPage() {
             <li><strong>CIF:</strong> B63532485</li>
             <li><strong>Domicilio social:</strong> POL. IND. TORRENT D EN PUIG, 31, 08358 ARENYS DE MUNT (Barcelona)</li>
             <li><strong>Registro Mercantil:</strong> Inscrita en el Registro Mercantil de Barcelona, tomo 36648, folio 191, hoja B 281424, inscripción primera.</li>
-            <li><strong>Correo electrónico:</strong> info@jets-munt.com</li>
+            <li><strong>Correo electrónico:</strong> info@jetsmuntdefense.com</li>
           </ul>
 
           <h2 style={{ color: "#fff", marginTop: "2rem" }}>Usuario y Régimen de Responsabilidades</h2>
