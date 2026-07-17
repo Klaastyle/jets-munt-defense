@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
+import EngineActionButtons from "../../components/EngineActionButtons";
 import { buildMetadata } from "../../lib/metadata";
 import { engines, productAlternates, siteUrl } from "../../lib/seo-data";
 
@@ -96,9 +97,7 @@ export default async function EnginePage({ params }: EnginePageProps) {
               <li>Planificación de integración ECU, sensores y telemetría.</li>
               <li>Soporte de validación en banco y preparación de pruebas de vuelo.</li>
             </ul>
-            <Link href="/contacto" className="btn btn-primary">
-              Consultar este motor
-            </Link>
+            <EngineActionButtons engineModel={engine.name} />
           </div>
           <div className="seo-inline-media">
             <Image src={engine.img} alt={`${engine.name} hardware de motor`} fill sizes="(max-width: 980px) 100vw, 45vw" />

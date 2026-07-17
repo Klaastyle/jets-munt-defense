@@ -1,5 +1,5 @@
- 
-import { NextResponse } from "next/server";
+ import { NextResponse } from "next/server";
+import { formRateLimiter } from "@/lib/rate-limit";
 
 const requiredFields = ["name", "email", "country", "request_type", "consent"];
 const locales = ["es", "en", "fr"] as const;
@@ -43,6 +43,12 @@ function line(label: string, value: unknown) {
 }
 
 export async function POST(request: Request) {
+  const ip = request.headers.get("x-forwarded-for") ?? "127.0.0.1";
+  const rateLimitResult = formRateLimiter.check(ip);
+  if (!rateLimitResult.success) {
+    return new NextResponse("Too Many Requests", { status: 429 });
+  }
+
   const data = await request.json().catch(() => null);
   const locale = getLocale(data && typeof data === "object" ? (data as Record<string, unknown>).locale : null);
   const copy = messages[locale];

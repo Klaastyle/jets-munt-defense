@@ -1,5 +1,6 @@
  
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SeoPageShell } from "../components/SeoPage";
 import { buildMetadata } from "../lib/metadata";
 
@@ -27,9 +28,6 @@ export default function PrivacyPage() {
           <p>
             En cumplimiento de la legislación vigente, todo usuario de JETS MUNT SL tiene derecho a solicitar, obtener, modificar o eliminar sus datos de carácter personal; para ello puede contactarnos solicitando dicha información, corrección o anulación a través de la dirección de correo electrónico info@jetsmuntdefense.com.
           </p>
-        </section>
-
-        <section>
           <h2>6. Ley de Servicios de la Sociedad de la Información (LSSI)</h2>
           <p>
             En cumplimiento de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, JETS MUNT SL le informa de que es titular del website jetsmunt.com. De acuerdo con la exigencia del artículo 10 de la citada Ley, JETS MUNT SL informa de los siguientes datos: El titular de esta página web es JETS MUNT SL, con domicilio social en POL. IND. TORRENT D EN PUIG, 31, 08358 ARENYS DE MUNT. La dirección de correo electrónico de contacto con la empresa es info@jetsmuntdefense.com.
@@ -47,6 +45,11 @@ export default function PrivacyPage() {
           <p>
             JETS MUNT SL se reserva el derecho a realizar las modificaciones que considere oportunas, sin aviso previo, en el contenido de su website. Tanto en lo referente a los contenidos de la website, como en las condiciones de uso de la misma o en las condiciones generales de contratación. Dichas modificaciones podrán realizarse, a través de su website, de cualquier forma admisible en derecho y serán de obligado cumplimiento durante el tiempo en que se encuentren publicadas en la web y hasta que no sean modificadas válidamente por otras posteriores.
           </p>
+          
+          <div style={{ marginTop: "2rem" }}>
+            <a href="https://www.iubenda.com/privacy-policy/92540265" className="iubenda-white iubenda-noiframe iubenda-embed" title="Política de Privacidad ">Política de Privacidad</a>
+            <Script id="iubenda-privacy" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);` }} />
+          </div>
         </div>
       </section>
     </SeoPageShell>

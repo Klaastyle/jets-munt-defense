@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import ContactEnquiryForm from "../components/ContactEnquiryForm";
 import GlobePulse from "../components/GlobePulse";
 import { SeoPageShell } from "../components/SeoPage";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { buildMetadata } from "../lib/metadata";
 import { distributors, primaryAlternates } from "../lib/seo-data";
 

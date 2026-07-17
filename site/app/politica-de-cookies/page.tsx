@@ -1,5 +1,6 @@
  
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SeoPageShell } from "../components/SeoPage";
 import { buildMetadata } from "../lib/metadata";
 
@@ -40,6 +41,11 @@ export default function CookiesPage() {
           <p>
             Las cookies que pueden no ser particularmente necesarias para que el sitio web funcione y se utilizan específicamente para recopilar datos personales del usuario a través de análisis, anuncios y otros contenidos incrustados se denominan cookies no necesarias. Es obligatorio obtener el consentimiento del usuario antes de ejecutar estas cookies en su sitio web.
           </p>
+          
+          <div style={{ marginTop: "2rem" }}>
+            <a href="https://www.iubenda.com/privacy-policy/92540265/cookie-policy" className="iubenda-white iubenda-noiframe iubenda-embed" title="Política de Cookies ">Política de Cookies</a>
+            <Script id="iubenda-cookies" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);` }} />
+          </div>
         </div>
       </section>
     </SeoPageShell>
