@@ -1,9 +1,21 @@
 export function rateLimit(options: { max: number; windowMs: number }) {
   const ipCache = new Map<string, { count: number; expiresAt: number }>();
+  let lastCleanup = Date.now();
 
   return {
     check: (ip: string) => {
       const now = Date.now();
+
+      // Lazy cleanup: prune expired entries to prevent memory leaks (CWE-400)
+      if (now - lastCleanup > options.windowMs) {
+        for (const [key, record] of ipCache.entries()) {
+          if (record.expiresAt < now) {
+            ipCache.delete(key);
+          }
+        }
+        lastCleanup = now;
+      }
+
       const record = ipCache.get(ip);
 
       if (!record || record.expiresAt < now) {

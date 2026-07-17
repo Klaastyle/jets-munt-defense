@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 import { formRateLimiter } from "@/lib/rate-limit";
 
-// Use hardcoded values to prevent Vercel environment issues
-const RESEND_API_KEY = "re_HLzW7KEe_NjUUDfP8ubdmA87prVM2HGvF";
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const JETSMUNT_EMAIL = "albertponslajusticia@gmail.com"; 
 const FROM_EMAIL = "JetsMunt CAD Center <onboarding@resend.dev>";
 
