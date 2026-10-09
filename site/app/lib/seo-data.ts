@@ -543,14 +543,23 @@ export const localizedSolutionPages = solutionPages.map((page) => {
   }> = {
     "uav-propulsion": {
       slug: "propulsion-uav",
-      title: "Propulsion UAV",
+      title: "Systèmes de Propulsion UAV",
       label: "Propulsion UAV",
-      description: "Propulsion turbojet compacte, ECU, telemetrie et support d'integration pour programmes UAV.",
-      keywords: ["propulsion UAV", "moteur turbojet UAV", "turbojet compact UAV"],
+      description: "Systèmes de propulsion turboréacteur compacts (98 N - 255 N) 100% européens et exempts d'ITAR pour drones industriels, drones cibles et plateformes aérospatiales avancées.",
+      keywords: [
+        "systèmes de propulsion UAV",
+        "moteurs turboréacteurs pour drones",
+        "propulsion turboréacteur compacte",
+        "moteurs UAV sans ITAR",
+        "propulsion drones cibles",
+        "fabricant européen de microturbines"
+      ],
       points: [
-        "Selection de classe de poussee selon masse, mission et enveloppe d'installation.",
-        "Revue carburant, electrique et interfaces de controle pour equipes UAV.",
-        "Support validation banc et preparation essais en vol avant deploiement.",
+        "Conception et fabrication 100% en Espagne : chaîne d'approvisionnement européenne sans contraintes ITAR.",
+        "Microturbines compactes à haute densité de poussée (98 N à 255 N) pour missions tactiques et drones d'entraînement haute vitesse.",
+        "ECU numérique intégrée avec télémétrie temps réel via bus CAN et liaison série pour interconnexion avec l'avionique de bord.",
+        "Démarrage brushless immédiat et compatibilité multi-carburants (Jet A-1, Diesel, Kérosène).",
+        "Support technique d'intégration direct : modèles 3D CAD (.STEP), validation au banc et adaptation des enveloppes sur mesure."
       ],
     },
     "uav-integration": {
