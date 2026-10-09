@@ -34,7 +34,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.iubenda.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cdn.iubenda.com https://api.iubenda.com; frame-src 'self' https://www.iubenda.com; object-src 'none'; base-uri 'self';",
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.iubenda.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://cdn.iubenda.com https://api.iubenda.com https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com; frame-src 'self' https://www.iubenda.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self';",
           },
           {
             key: "Permissions-Policy",

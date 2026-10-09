@@ -72,8 +72,14 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = "albertponslajusticia@gmail.com";
-  const from = "JetsMunt Website <onboarding@resend.dev>";
+  const to = [
+    "albertponslajusticia@gmail.com",
+    "albert@jetsmuntdefense.com",
+    "francesc@jetsmuntdefense.com",
+    "gunther@jetsmuntdefense.com",
+    "info@jetsmuntdefense.com",
+  ];
+  const from = "JetsMunt Website <formulario@jetsmuntdefense.com>";
 
   if (!apiKey) {
     return NextResponse.json(

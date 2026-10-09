@@ -2,8 +2,14 @@ import { NextResponse } from "next/server";
 import { formRateLimiter } from "@/lib/rate-limit";
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const JETSMUNT_EMAIL = "albertponslajusticia@gmail.com"; 
-const FROM_EMAIL = "JetsMunt CAD Center <onboarding@resend.dev>";
+const JETSMUNT_EMAIL = [
+  "albertponslajusticia@gmail.com",
+  "albert@jetsmuntdefense.com",
+  "francesc@jetsmuntdefense.com",
+  "gunther@jetsmuntdefense.com",
+  "info@jetsmuntdefense.com",
+]; 
+const FROM_EMAIL = "JetsMunt CAD Center <formulario@jetsmuntdefense.com>";
 
 export async function POST(request: Request) {
   // 1. Rate Limiting
@@ -19,6 +25,10 @@ export async function POST(request: Request) {
 
     if (!name || !company || !email || !engineModel) {
       return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
+    }
+
+    if (String(data.hp ?? "").trim()) {
+      return NextResponse.json({ success: true });
     }
 
     // 2. Email to JetsMunt Team (Lead Capture)
