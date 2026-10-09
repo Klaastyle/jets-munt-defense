@@ -147,15 +147,25 @@ export default function AnimatedShaderBackground() {
     const start = performance.now();
     const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.75);
 
+    let isVisible = false;
+
     const resize = () => {
       const { width, height } = canvas.getBoundingClientRect();
-      canvas.width = Math.max(1, Math.floor(width * pixelRatio));
-      canvas.height = Math.max(1, Math.floor(height * pixelRatio));
-      gl.viewport(0, 0, canvas.width, canvas.height);
+      const newWidth = Math.max(1, Math.floor(width * pixelRatio));
+      const newHeight = Math.max(1, Math.floor(height * pixelRatio));
+      
+      if (canvas.width !== newWidth || canvas.height !== newHeight) {
+        canvas.width = newWidth;
+        canvas.height = newHeight;
+        gl.viewport(0, 0, canvas.width, canvas.height);
+      }
     };
 
     const render = (now: number) => {
-      resize();
+      if (!isVisible) {
+        animationFrame = requestAnimationFrame(render);
+        return;
+      }
       gl.useProgram(program);
       gl.enableVertexAttribArray(positionLocation);
       gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
@@ -166,12 +176,21 @@ export default function AnimatedShaderBackground() {
       animationFrame = requestAnimationFrame(render);
     };
 
+    // Initial sizing
+    resize();
     animationFrame = requestAnimationFrame(render);
+    
     window.addEventListener("resize", resize);
+
+    const observer = new IntersectionObserver((entries) => {
+      isVisible = entries[0].isIntersecting;
+    });
+    observer.observe(canvas);
 
     return () => {
       cancelAnimationFrame(animationFrame);
       window.removeEventListener("resize", resize);
+      observer.disconnect();
       gl.deleteBuffer(positionBuffer);
       gl.deleteProgram(program);
       gl.deleteShader(vertexShader);
