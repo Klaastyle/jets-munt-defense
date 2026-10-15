@@ -2100,25 +2100,26 @@ img, video { display: block; max-width: 100%; }
   position: relative;
   overflow: hidden;
   min-height: 520px;
-  display: grid;
-  align-content: end;
-  gap: 1rem;
-  padding: clamp(1rem, 3vw, 1.6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background:
-    radial-gradient(circle at 50% 38%, rgba(242,106,33,0.2), transparent 32%),
-    radial-gradient(circle at 50% 45%, rgba(255,255,255,0.08), transparent 42%),
-    linear-gradient(145deg, rgba(23,21,18,0.95), rgba(8,8,7,0.98));
+    radial-gradient(circle at 50% 40%, rgba(242,106,33,0.15), transparent 45%),
+    linear-gradient(165deg, rgba(23,21,18,0.96), rgba(8,8,7,0.99));
 }
 
-.pulse-globe {
-  position: absolute;
-  inset: 1.1rem 1rem 6.7rem;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  isolation: isolate;
+.cobe-globe-wrapper {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pulse-globe-ambient {
