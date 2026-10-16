@@ -4,6 +4,42 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+declare global {
+  interface Window {
+    dataLayer?: any[];
+    gtag?: (...args: any[]) => void;
+  }
+}
+
+function updateGoogleConsent(status: "granted" | "denied") {
+  if (typeof window === "undefined") return;
+  window.dataLayer = window.dataLayer || [];
+
+  if (typeof window.gtag === "function") {
+    window.gtag("consent", "update", {
+      analytics_storage: status,
+      ad_storage: status,
+      ad_user_data: status,
+      ad_personalization: status,
+    });
+  } else {
+    window.dataLayer.push([
+      "consent",
+      "update",
+      {
+        analytics_storage: status,
+        ad_storage: status,
+        ad_user_data: status,
+        ad_personalization: status,
+      },
+    ]);
+  }
+
+  window.dataLayer.push({
+    event: status === "granted" ? "cookie_consent_accepted" : "cookie_consent_rejected",
+  });
+}
+
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -13,17 +49,22 @@ export default function CookieBanner() {
     if (!consent) {
 // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(true);
+    } else if (consent === "accepted") {
+      updateGoogleConsent("granted");
+    } else if (consent === "rejected") {
+      updateGoogleConsent("denied");
     }
   }, []);
 
   const acceptCookies = () => {
     localStorage.setItem("jm_cookie_consent", "accepted");
+    updateGoogleConsent("granted");
     setIsVisible(false);
-    // Here you would typically initialize Google Analytics or other trackers
   };
 
   const rejectCookies = () => {
     localStorage.setItem("jm_cookie_consent", "rejected");
+    updateGoogleConsent("denied");
     setIsVisible(false);
   };
 

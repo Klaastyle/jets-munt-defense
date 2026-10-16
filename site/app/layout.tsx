@@ -34,6 +34,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      {/* Google Consent Mode v2 Initialization (must load before GTM) */}
+      <Script id="google-consent-mode" strategy="beforeInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          window.gtag = gtag;
+
+          // Check previous consent from localStorage if available
+          var storedConsent = null;
+          try {
+            storedConsent = localStorage.getItem('jm_cookie_consent');
+          } catch(e) {}
+
+          var isGranted = storedConsent === 'accepted';
+
+          gtag('consent', 'default', {
+            'analytics_storage': isGranted ? 'granted' : 'denied',
+            'ad_storage': isGranted ? 'granted' : 'denied',
+            'ad_user_data': isGranted ? 'granted' : 'denied',
+            'ad_personalization': isGranted ? 'granted' : 'denied',
+            'wait_for_update': 500
+          });
+        `}
+      </Script>
+
       <Script id="google-tag-manager" strategy="afterInteractive">
         {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
