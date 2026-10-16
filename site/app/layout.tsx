@@ -48,6 +48,11 @@ export default function RootLayout({
           } catch(e) {}
 
           var isGranted = storedConsent === 'accepted';
+          if (isGranted) {
+            try {
+              document.cookie = '_iub_cs-s4605151={"consent":true,"purposes":{"1":true,"2":true,"3":true,"4":true,"5":true}}; path=/; max-age=31536000; SameSite=Lax';
+            } catch(e) {}
+          }
 
           gtag('consent', 'default', {
             'analytics_storage': isGranted ? 'granted' : 'denied',
@@ -56,6 +61,12 @@ export default function RootLayout({
             'ad_personalization': isGranted ? 'granted' : 'denied',
             'wait_for_update': 500
           });
+
+          if (isGranted) {
+            window.dataLayer.push({ event: 'iubenda_consent_given_purpose_1' });
+            window.dataLayer.push({ event: 'iubenda_consent_given_purpose_4' });
+            window.dataLayer.push({ event: 'iubenda_consent_given_purpose_5' });
+          }
         `}
       </Script>
 

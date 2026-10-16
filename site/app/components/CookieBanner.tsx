@@ -15,6 +15,20 @@ function updateGoogleConsent(status: "granted" | "denied") {
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer || [];
 
+  if (status === "granted") {
+    try {
+      document.cookie = '_iub_cs-s4605151={"consent":true,"purposes":{"1":true,"2":true,"3":true,"4":true,"5":true}}; path=/; max-age=31536000; SameSite=Lax';
+    } catch (e) {
+      console.warn("Could not set iubenda cookie", e);
+    }
+  } else {
+    try {
+      document.cookie = '_iub_cs-s4605151={"consent":false,"purposes":{"1":false,"2":false,"3":false,"4":false,"5":false}}; path=/; max-age=31536000; SameSite=Lax';
+    } catch (e) {
+      console.warn("Could not set iubenda cookie", e);
+    }
+  }
+
   if (typeof window.gtag === "function") {
     window.gtag("consent", "update", {
       analytics_storage: status,
@@ -38,6 +52,12 @@ function updateGoogleConsent(status: "granted" | "denied") {
   window.dataLayer.push({
     event: status === "granted" ? "cookie_consent_accepted" : "cookie_consent_rejected",
   });
+
+  if (status === "granted") {
+    window.dataLayer.push({ event: "iubenda_consent_given_purpose_1" });
+    window.dataLayer.push({ event: "iubenda_consent_given_purpose_4" });
+    window.dataLayer.push({ event: "iubenda_consent_given_purpose_5" });
+  }
 }
 
 export default function CookieBanner() {
