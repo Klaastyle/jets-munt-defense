@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../../components/SeoPage";
 import { buildMetadata } from "../../lib/metadata";
-import { engines, localizedSolutionPages, solutionAlternates } from "../../lib/seo-data";
+import { engines, localizedSolutionPages, solutionAlternates, getSolutionFaqs } from "../../lib/seo-data";
 
 type LocalizedSolutionPageProps = {
   params: Promise<{ slug: string }>;
@@ -43,6 +43,7 @@ export default async function EnSolutionPage({ params }: LocalizedSolutionPagePr
   }
 
   const page = entry.en;
+  const faqs = getSolutionFaqs(entry.baseSlug, "en");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -69,6 +70,17 @@ export default async function EnSolutionPage({ params }: LocalizedSolutionPagePr
             }
           }))
         }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
       }
     ]
   };
@@ -150,6 +162,22 @@ export default async function EnSolutionPage({ params }: LocalizedSolutionPagePr
               We collaborate with OEM platform engineers to adapt mounting lugs, starter sequences, generator outputs, and multi-fuel settings to match your exact mission envelope.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Technical FAQ and Compliance (FAQPage) */}
+      <section className="section container faq-section">
+        <p className="section-label" style={{ textAlign: "center", marginBottom: "0.5rem" }}>Technical Specifications & Insights</p>
+        <h2 className="heading-md" style={{ textAlign: "center", marginBottom: "2.5rem" }}>Frequently Asked Questions</h2>
+        <div className="faq-list">
+          {faqs.map((faq, idx) => (
+            <details key={faq.question} className="faq-item" open={idx === 0}>
+              <summary className="faq-summary">{faq.question}</summary>
+              <div className="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </details>
+          ))}
         </div>
       </section>
 

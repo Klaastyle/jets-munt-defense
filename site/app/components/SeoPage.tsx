@@ -235,6 +235,8 @@ export function SeoInternalLinks({ locale = "es" }: { locale?: "es" | "en" | "fr
   const linkSets = {
     es: [
       ["Propulsión UAV", "/propulsion-uav"],
+      ["Propulsión Libre de ITAR", "/propulsion-libre-itar"],
+      ["Investigación Aeroespacial", "/propulsion-investigacion-aeroespacial"],
       ["Propulsión para target drones", "/propulsion-target-drone"],
       ["Arquitectura de propulsión", "/arquitectura-propulsion"],
       ["Electrónica y telemetría", "/electronica-telemetria"],
@@ -243,6 +245,8 @@ export function SeoInternalLinks({ locale = "es" }: { locale?: "es" | "en" | "fr
     ],
     en: [
       ["UAV propulsion", "/en/uav-propulsion"],
+      ["ITAR-Free propulsion", "/en/itar-free-propulsion"],
+      ["Aerospace research", "/en/aerospace-research-propulsion"],
       ["Target drone propulsion", "/en/target-drone-propulsion"],
       ["Propulsion architecture", "/en/propulsion-architecture"],
       ["Electronics and telemetry", "/en/electronics-telemetry"],
@@ -251,6 +255,8 @@ export function SeoInternalLinks({ locale = "es" }: { locale?: "es" | "en" | "fr
     ],
     fr: [
       ["Propulsion UAV", "/fr/propulsion-uav"],
+      ["Propulsion sans ITAR", "/fr/propulsion-sans-itar"],
+      ["Recherche aérospatiale", "/fr/propulsion-recherche-aerospatiale"],
       ["Propulsion drone cible", "/fr/propulsion-drone-cible"],
       ["Architecture propulsion", "/fr/architecture-propulsion"],
       ["Électronique et télémétrie", "/fr/electronique-telemetrie"],

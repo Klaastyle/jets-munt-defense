@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SeoInternalLinks, SeoPageShell } from "../components/SeoPage";
 import { buildMetadata } from "../lib/metadata";
-import { engines, solutionAlternates, localizedSolutionPages } from "../lib/seo-data";
+import { engines, solutionAlternates, localizedSolutionPages, getSolutionFaqs } from "../lib/seo-data";
 
 type SolutionPageProps = {
   params: Promise<{ slug: string }>;
@@ -49,6 +49,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
   }
   
   const page = basePage.es;
+  const faqs = getSolutionFaqs(basePage.baseSlug, "es");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -75,6 +76,17 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
             }
           }))
         }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
       }
     ]
   };
@@ -156,6 +168,22 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
               Colaboramos directamente con los equipos de ingeniería para adaptar anclajes, secuencias de arranque, generadores eléctricos y perfiles multicombustible a los requisitos exactos de la misión.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Preguntas Técnicas y Certificación (FAQPage) */}
+      <section className="section container faq-section">
+        <p className="section-label" style={{ textAlign: "center", marginBottom: "0.5rem" }}>Especificaciones y Respuestas Técnicas</p>
+        <h2 className="heading-md" style={{ textAlign: "center", marginBottom: "2.5rem" }}>Preguntas Frecuentes de Integración e Ingeniería</h2>
+        <div className="faq-list">
+          {faqs.map((faq, idx) => (
+            <details key={faq.question} className="faq-item" open={idx === 0}>
+              <summary className="faq-summary">{faq.question}</summary>
+              <div className="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </details>
+          ))}
         </div>
       </section>
 

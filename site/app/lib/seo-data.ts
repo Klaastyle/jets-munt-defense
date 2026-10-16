@@ -323,6 +323,52 @@ export const solutionPages = [
       "B2B supply conversations built around program requirements.",
     ],
   },
+  {
+    title: "ITAR-Free European Propulsion Systems",
+    slug: "itar-free-propulsion",
+    label: "ITAR-Free Propulsion",
+    image: "/media/capabilities/manufacturing-spain.png",
+    description:
+      "100% European sovereign ITAR-free compact turbojet propulsion systems (98 N - 255 N) designed and manufactured in Spain for defense, civil UAVs, and special aerospace programs.",
+    keywords: [
+      "itar-free turbojet engines",
+      "itar free uav propulsion",
+      "european microturbojet manufacturer",
+      "sovereign uav propulsion europe",
+      "european compact jet engines oem",
+      "itar-free drone engines"
+    ],
+    points: [
+      "100% European design, firmware and precision manufacturing in Arenys de Munt (Barcelona, Spain): Sovereign ITAR-free supply chain.",
+      "Zero export licensing delays from the US State Department: Unrestricted civilian and defense aerospace program timelines.",
+      "Technical exemption under EU Dual-Use Regulation 2021/821 (Control Entry 9A101) operating under 1 kN thrust and exceeding 0.018 kg/(N·h) SFC.",
+      "Full traceability and supply chain compliance meeting NATO and European procurement sovereignty standards.",
+      "Direct OEM engineering collaboration: 3D CAD modeling (.STEP), CAN Bus telemetry integration, and custom airframe adaptation."
+    ],
+  },
+  {
+    title: "Aerospace Research & Academic Propulsion",
+    slug: "aerospace-research-propulsion",
+    label: "Aerospace Research",
+    image: "/media/capabilities/testing-validation.png",
+    description:
+      "Precision axial-flow compact microturbines engineered for university aerospace laboratories, high-speed wind tunnels, test benches, and SAF alternative fuel research.",
+    keywords: [
+      "micro gas turbine wind tunnel testing",
+      "axial flow turbine academic research",
+      "aerospace r&d microturbojet",
+      "saf alternative fuel microturbine testing",
+      "test bench micro jet engine",
+      "university aerospace propulsion"
+    ],
+    points: [
+      "Precision axial-flow microturbines optimized for aerodynamic wind tunnels and thermodynamic test benches.",
+      "High-speed real-time telemetry output directly to university DAQ and dataloggers via CAN Bus and RS232 serial interfaces.",
+      "Extensive validation for Sustainable Aviation Fuels (SAF), bio-kerosene, and Jet A-1 blends with full EGT and emissions logging.",
+      "Integrated barometric and ambient temperature sensors for automated atmospheric compensation during indoor testing.",
+      "Academic engineering partnership: CAD models, integration guidelines, and direct factory technical support for research departments."
+    ],
+  },
 ];
 
 export const localizedSolutionPages = solutionPages.map((page) => {
@@ -530,6 +576,48 @@ export const localizedSolutionPages = solutionPages.map((page) => {
             "Montaje, servicio y soporte conectados al equipo de ingeniería.",
             "Conversaciones de suministro B2B estructuradas en torno a requisitos del programa."
         ]
+    },
+    "itar-free-propulsion": {
+        "slug": "propulsion-libre-itar",
+        "title": "Sistemas de Propulsión Soberanos Libres de ITAR",
+        "label": "Propulsión sin ITAR",
+        "description": "Sistemas de propulsión microturbojet (98 N - 255 N) 100% europeos y libres de ITAR/EAR. Fabricación española en Barcelona para programas de defensa y UAV tácticos.",
+        "keywords": [
+            "propulsión libre de itar",
+            "motores turbojet sin itar",
+            "fabricante europeo microturbinas",
+            "propulsión soberana uav",
+            "motores uav defensa europa",
+            "motores a reacción libres de itar"
+        ],
+        "points": [
+            "Diseño, firmware y fabricación de precisión 100% en España (Arenys de Munt, Barcelona): Cadena de suministro soberana europea.",
+            "Cero retrasos burocráticos del Departamento de Estado de EE. UU.: Plazos de entrega y exportación predecibles para programas civiles y de defensa.",
+            "Exención técnica bajo el Reglamento de Doble Uso de la UE (UE 2021/821, control 9A101) al operar bajo 1 kN de empuje y superar 0,018 kg/(N·h) de SFC.",
+            "Trazabilidad completa de materiales y certificación de origen para cumplimiento en adquisiciones OTAN y comunitarias.",
+            "Soporte directo de ingeniería: Modelos 3D CAD (.STEP), integración de telemetría CAN Bus y adaptación a envolventes mecánicas a medida."
+        ]
+    },
+    "aerospace-research-propulsion": {
+        "slug": "propulsion-investigacion-aeroespacial",
+        "title": "Propulsión para Investigación Aeroespacial y Universidades",
+        "label": "Investigación aeroespacial",
+        "description": "Microturbinas axiales de alta precisión para laboratorios aeroespaciales universitarios, túneles de viento, bancos de ensayo y experimentación con combustibles sostenibles SAF.",
+        "keywords": [
+            "turbina para túnel de viento",
+            "microturbojet para investigación universitaria",
+            "banco de ensayo de turbinas pequeñas",
+            "experimentación con combustible saf uav",
+            "propulsión aeroespacial académica",
+            "microturbina flujo axial laboratorio"
+        ],
+        "points": [
+            "Microturbinas de flujo axial optimizadas para ensayos aerodinámicos en túneles de viento y bancos dinamométricos de precisión.",
+            "Telemetría digital de alta frecuencia con volcado directo a sistemas DAQ universitarios mediante CAN Bus y bus serie RS232.",
+            "Validación exhaustiva para combustibles sostenibles de aviación (SAF), bioqueroseno y mezclas Jet A-1 con registro continuo de EGT y emisiones.",
+            "Sensores barométricos y térmicos ambientales integrados para compensación atmosférica automática en ensayos de laboratorio cerrado.",
+            "Acuerdos de colaboración académica: modelos CAD, manuales de integración avanzados y soporte técnico directo de fábrica para departamentos de I+D."
+        ]
     }
 };
 
@@ -693,6 +781,48 @@ export const localizedSolutionPages = solutionPages.map((page) => {
         "Assemblage, service et support connectes a l'equipe ingenierie.",
         "Conversations B2B basees sur exigences programme.",
       ],
+    },
+    "itar-free-propulsion": {
+      slug: "propulsion-sans-itar",
+      title: "Systèmes de Propulsion Souverains Sans ITAR",
+      label: "Propulsion sans ITAR",
+      description: "Systèmes de propulsion microturboréacteur (98 N - 255 N) 100% européens et exempts d'ITAR/EAR. Fabrication espagnole à Barcelone pour drones tactiques et programmes de défense.",
+      keywords: [
+        "propulsion sans itar",
+        "turboréacteurs uav sans itar",
+        "fabricant européen microturbines",
+        "propulsion souveraine europe",
+        "moteurs drones défense europe",
+        "microturboréacteurs libres d'itar"
+      ],
+      points: [
+        "Conception, firmware et usinage de précision 100% en Espagne (Arenys de Munt, Barcelone) : Chaîne d'approvisionnement européenne souveraine.",
+        "Zéro blocage administratif du Département d'État américain : Calendriers de déploiement et d'exportation garantis.",
+        "Exemption technique sous le Règlement Double Usage de l'UE (UE 2021/821, contrôle 9A101) : poussée sous 1 kN et SFC supérieur à 0,018 kg/(N·h).",
+        "Traçabilité rigoureuse des matériaux et certification d'origine conforme aux standards d'acquisition de l'OTAN et de l'UE.",
+        "Collaboration directe avec nos ingénieurs : fichiers 3D CAD (.STEP), intégration télémétrique bus CAN et adaptation sur mesure."
+      ]
+    },
+    "aerospace-research-propulsion": {
+      slug: "propulsion-recherche-aerospatiale",
+      title: "Propulsion pour Recherche Aérospatiale et Universités",
+      label: "Recherche aérospatiale",
+      description: "Microturbines axiales de haute précision pour laboratoires universitaires, souffleries aérodynamiques, bancs d'essai et recherche sur carburants durables SAF.",
+      keywords: [
+        "microturbine soufflerie aérodynamique",
+        "turboréacteur recherche universitaire",
+        "banc d'essai microturbine",
+        "recherche carburant saf microturboréacteur",
+        "propulsion aérospatiale académique",
+        "turbine axiale laboratoire"
+      ],
+      points: [
+        "Microturbines à flux axial de précision optimisées pour souffleries aérodynamiques et bancs de mesure thermodynamique.",
+        "Télémétrie haute fréquence exportable vers les systèmes d'acquisition (DAQ) universitaires via bus CAN et liaison série RS232.",
+        "Validation complète pour les carburants durables d'aviation (SAF), bio-kérosène et mélanges Jet A-1 avec suivi en temps réel de l'EGT.",
+        "Capteurs barométriques et de température ambiante intégrés pour compensation atmosphérique automatique en milieu clos.",
+        "Partenariats académiques dédiés : modèles CAO complets, guides d'expérimentation et assistance technique directe du fabricant."
+      ]
     },
   };
 
@@ -943,3 +1073,194 @@ export const allSeoRoutes = [
   ...localizedSolutionPages.map((page) => page.es.slug),
   ...supportPages.map((page) => page.slug),
 ];
+
+export interface TechnicalFaq {
+  question: string;
+  answer: string;
+}
+
+const faqsByBaseSlug: Record<string, Record<"es" | "en" | "fr", TechnicalFaq[]>> = {
+  "itar-free-propulsion": {
+    es: [
+      {
+        question: "¿Por qué los motores de JetsMunt están 100% libres de regulaciones ITAR?",
+        answer: "Todos nuestros motores turbojet, su electrónica de control (ECU), firmware y componentes mecánicos se diseñan y fabrican íntegramente en nuestras instalaciones de Arenys de Munt (Barcelona, España). Al no emplear componentes ni propiedad intelectual de origen estadounidense sujeta a ITAR/EAR, nuestros clientes internacionales y contratistas de defensa operan con total soberanía y sin depender de licencias de exportación del Departamento de Estado de EE. UU.",
+      },
+      {
+        question: "¿Cómo se clasifica esta propulsión según el Reglamento de Doble Uso de la Unión Europea (UE 2021/821)?",
+        answer: "Los motores turbojet compactos de JetsMunt desarrollan empujes entre 98 N y 262 N con un consumo específico de combustible (SFC) superior a 0,018 kg/(N·h) y un empuje inferior a 1 kN. Por lo tanto, quedan exentos de la categoría de control 9A101 para misiles y grandes vectores, facilitando su exportación y empleo en plataformas no tripuladas tácticas y de prueba tanto civiles como de seguridad europea.",
+      },
+      {
+        question: "¿Qué garantía de suministro y soberanía ofrece JetsMunt a los contratistas de defensa europeos?",
+        answer: "Al mantener el 100% del ciclo productivo en España dentro de la UE, aseguramos cadenas de suministro cortas, trazabilidad de aleaciones aeroespaciales, soporte de ingeniería directo de fábrica y disponibilidad continua de repuestos sin riesgos de embargo geopolítico externo.",
+      },
+      {
+        question: "¿Cómo se gestiona la documentación técnica y confidencialidad en programas gubernamentales?",
+        answer: "Trabajamos bajo acuerdos de confidencialidad estrictos (NDA), suministrando modelos CAD 3D (.STEP), curvas de rendimiento dinamométricas y protocolos de comunicación a medida para facilitar la integración en plataformas gubernamentales y programas de defensa clasificados.",
+      },
+    ],
+    en: [
+      {
+        question: "Why are JetsMunt microturbines 100% ITAR-free?",
+        answer: "All our turbojet engines, electronic control units (ECU), proprietary firmware, and precision mechanical components are designed and manufactured entirely in Arenys de Munt (Barcelona, Spain). Without any US-origin components or intellectual property subject to ITAR or EAR, our global aerospace clients and defense contractors enjoy complete sovereignty and freedom from US export licensing delays.",
+      },
+      {
+        question: "How are these engines treated under EU Dual-Use Regulation (EU 2021/821)?",
+        answer: "JetsMunt compact turbojets operate in the 98 N to 262 N thrust range with specific fuel consumption (SFC) exceeding 0.018 kg/(N·h) and thrust well below 1 kN. Consequently, they fall outside the 9A101 dual-use missile proliferation control thresholds, significantly streamlining export licensing for NATO and allied partners.",
+      },
+      {
+        question: "What supply chain security does JetsMunt provide to European defense programs?",
+        answer: "With 100% in-house manufacturing in Spain within the European Union, we guarantee short supply routes, complete aerospace material traceability, direct OEM engineering support, and ongoing spare parts availability insulated from external geopolitical restrictions.",
+      },
+      {
+        question: "What integration data is supplied for secure defense projects?",
+        answer: "We operate under stringent NDAs, providing comprehensive 3D CAD (.STEP) geometry, dynamometer performance envelopes, and serial/CAN Bus communication protocols to ensure seamless avionics integration.",
+      },
+    ],
+    fr: [
+      {
+        question: "Pourquoi les moteurs JetsMunt sont-ils 100% sans ITAR ?",
+        answer: "Tous nos turboréacteurs, unités de contrôle moteur (ECU), firmwares et pièces mécaniques de précision sont conçus et fabriqués dans nos installations d'Arenys de Munt (Barcelone, Espagne). Sans aucun composant ni propriété intellectuelle américaine soumise aux règles ITAR ou EAR, nos clients et intégrateurs de défense opèrent en toute souveraineté sans les délais de licence d'exportation américains.",
+      },
+      {
+        question: "Quel est le statut au titre du Règlement Européen sur les Biens à Double Usage (UE 2021/821) ?",
+        answer: "Avec une poussée de 98 N à 262 N et une consommation spécifique (SFC) supérieure à 0,018 kg/(N·h) pour une poussée inférieure à 1 kN, les moteurs JetsMunt ne relèvent pas du contrôle 9A101, simplifiant considérablement les procédures d'exportation vers les pays alliés et partenaires de l'OTAN.",
+      },
+      {
+        question: "Quelle sécurité d'approvisionnement offrez-vous aux programmes de souveraineté européens ?",
+        answer: "La maîtrise totale de la production en Espagne au sein de l'UE garantit des circuits courts, une traçabilité complète des alliages aéronautiques, une assistance directe du constructeur et une pérennité des pièces de rechange à l'abri des restrictions géopolitiques extérieures.",
+      },
+      {
+        question: "Quels éléments techniques sont transmis aux intégrateurs de défense ?",
+        answer: "Nous fournissons sous accord de confidentialité (NDA) des modèles 3D CAO (.STEP), des courbes de poussée au banc et les protocoles de télémétrie CAN Bus pour une intégration immédiate avec l'avionique de bord.",
+      },
+    ],
+  },
+  "aerospace-research-propulsion": {
+    es: [
+      {
+        question: "¿Son adecuados los microturbojets de JetsMunt para túneles de viento y bancos de prueba universitarios?",
+        answer: "Sí. Gracias a su arquitectura de flujo axial compacta, baja inercia de rotor y calibración de fábrica, nuestros motores proporcionan datos repetibles y fiables para estudios aerodinámicos, acústicos y termodinámicos en instalaciones universitarias y centros tecnológicos.",
+      },
+      {
+        question: "¿Cómo se exportan los datos de telemetría a los sistemas de adquisición de datos (DAQ) del laboratorio?",
+        answer: "La ECU digital de 32 bits dispone de interfaces de telemetría nativas por CAN Bus de alta velocidad y bus serie RS232. Proporciona lecturas en tiempo real de RPM de turbina, temperatura de gases de escape (EGT), consumo instantáneo de combustible, tensión de batería, estado de la bomba y presión barométrica.",
+      },
+      {
+        question: "¿Se pueden utilizar con biocombustibles y combustibles sostenibles de aviación (SAF)?",
+        answer: "Absolutamente. Los motores JetsMunt han sido ensayados con éxito con queroseno estándar Jet A-1, JP-8, diésel comercial y diversos combustibles sostenibles (SAF / bioqueroseno) mezclados con 4% de aceite sintético para turbinas, lo que los convierte en una plataforma idónea para la investigación en descarbonización de la propulsión aérea.",
+      },
+      {
+        question: "¿Dispone la ECU de compensación automática por altitud y condiciones atmosféricas?",
+        answer: "Sí. La electrónica incorpora sensores de presión atmosférica y temperatura ambiente integrados, recalculando automáticamente las curvas de inyección y límites de aceleración para garantizar arranques y aceleraciones estables bajo diferentes condiciones ambientales del laboratorio o cámara climática.",
+      },
+    ],
+    en: [
+      {
+        question: "Are JetsMunt microturbines suitable for wind tunnel and academic test bench applications?",
+        answer: "Yes. Their compact axial-flow architecture, low rotor inertia, and precision factory balancing make them ideal for repeatable aerodynamic, acoustic, and thermodynamic research in university aerospace departments and propulsion laboratories.",
+      },
+      {
+        question: "How is engine telemetry interfaced with laboratory Data Acquisition (DAQ) systems?",
+        answer: "The integrated 32-bit digital ECU provides native high-speed CAN Bus and RS232 serial telemetry streams. Real-time parameters include turbine RPM, Exhaust Gas Temperature (EGT), fuel flow rate, battery voltage, pump duty cycle, and barometric pressure.",
+      },
+      {
+        question: "Can these engines operate with Sustainable Aviation Fuels (SAF) and alternative blends?",
+        answer: "Yes. JetsMunt turbojets are validated with Jet A-1, JP-8, automotive diesel, and various Sustainable Aviation Fuels (SAF / bio-kerosene) blends with 4% turbine oil, making them an excellent test platform for academic research into low-carbon aviation.",
+      },
+      {
+        question: "Does the ECU feature automated ambient and barometric compensation?",
+        answer: "Yes. Integrated barometric pressure and ambient temperature sensors allow the digital ECU to automatically adapt fuel scheduling and acceleration ramps for indoor test cells and varying climatic chamber conditions.",
+      },
+    ],
+    fr: [
+      {
+        question: "Les microturbines JetsMunt sont-elles adaptées aux souffleries et bancs d'essai universitaires ?",
+        answer: "Oui. Leur conception axiale compacte, leur faible inertie de rotor et leur étalonnage rigoureux offrent une répétabilité et une fiabilité idéales pour la recherche en aérodynamique, acoustique et thermodynamique en milieu universitaire.",
+      },
+      {
+        question: "Comment la télémétrie moteur s'interface-t-elle avec les systèmes DAQ du laboratoire ?",
+        answer: "L'ECU numérique 32 bits dispose de sorties natives en bus CAN haute vitesse et liaison série RS232, diffusant en temps réel les régimes (RPM), la température des gaz d'échappement (EGT), le débit de carburant et la pression barométrique.",
+      },
+      {
+        question: "Peut-on tester des carburants alternatifs et carburants durables d'aviation (SAF) ?",
+        answer: "Tout à fait. Nos moteurs fonctionnent parfaitement avec le Jet A-1, le JP-8, le diesel et les carburants d'aviation durables (SAF / bio-kérosène) avec 4% d'huile de turbine de synthèse, offrant une plateforme d'expérimentation idéale pour la recherche sur la décarbonation.",
+      },
+      {
+        question: "L'ECU compense-t-elle automatiquement les variations atmosphériques ?",
+        answer: "Oui. Des capteurs intégrés de pression atmosphérique et de température permettent à l'ECU d'ajuster automatiquement les lois d'injection et de démarrage selon les conditions de la cellule d'essai ou de la chambre climatique.",
+      },
+    ],
+  },
+};
+
+const defaultFaqs: Record<"es" | "en" | "fr", TechnicalFaq[]> = {
+  es: [
+    {
+      question: "¿Qué tipo de combustibles son compatibles con los motores turbojet JetsMunt?",
+      answer: "Nuestros motores están homologados para operar con Jet A-1, JP-8, queroseno comercial y gasóleo diésel de automoción estándar, siempre mezclados con un 4% de aceite lubricante 100% sintético para turbinas o fluido Dextron III.",
+    },
+    {
+      question: "¿Cómo se realiza el arranque del motor en plataformas no tripuladas?",
+      answer: "Incorporan de serie nuestro sistema Kerostart de inyección directa de queroseno mediante bujía incandescente y motor de arranque brushless integrado, eliminando la necesidad de gas propano auxiliar y permitiendo reinicios automáticos en vuelo supervisados por la ECU.",
+    },
+    {
+      question: "¿Qué protocolo de comunicación utiliza la ECU para conectarse al autopiloto?",
+      answer: "La ECU cuenta con bus CAN estándar configurable y puerto serie RS232 bidireccional, facilitando la integración con los principales sistemas de aviónica (Pixhawk, UAV Navigation, autopilotos propietarios) para recibir consignas de empuje y emitir telemetría completa.",
+    },
+    {
+      question: "¿Qué documentación y modelos proporciona JetsMunt para la integración física?",
+      answer: "Facilitamos a los equipos de ingeniería modelos 3D CAD completos en formato .STEP, planos de cotas de instalación, envolventes térmicas recomendadas y diagramas de conexionado eléctrico y de combustible.",
+    },
+  ],
+  en: [
+    {
+      question: "What fuel types are supported by JetsMunt compact turbojets?",
+      answer: "Our engines are certified to run on Jet A-1, JP-8, commercial kerosene, and standard automotive diesel, mixed with 4% synthetic turbine oil or Dextron III.",
+    },
+    {
+      question: "How is the engine started in unmanned aircraft installations?",
+      answer: "Engines feature our integrated Kerostart system with internal kerosene pre-heating and a brushless starter motor, eliminating external propane gas bottles and supporting autonomous in-flight restart routines controlled by the ECU.",
+    },
+    {
+      question: "What communication protocols connect the engine ECU to platform avionics?",
+      answer: "The ECU features high-speed CAN Bus and bidirectional RS232 serial interfaces, seamlessly connecting to leading UAV autopilots (Pixhawk, MicroPilot, custom flight controllers) for throttle control and telemetry streaming.",
+    },
+    {
+      question: "What CAD and mechanical files are provided to engineering integrators?",
+      answer: "We deliver native 3D CAD models (.STEP format), envelope dimension drawings, center of gravity data, thermal clearance guidance, and electrical/fuel schematics.",
+    },
+  ],
+  fr: [
+    {
+      question: "Quels types de carburants peuvent être utilisés avec les réacteurs JetsMunt ?",
+      answer: "Nos réacteurs sont homologués pour fonctionner avec le Jet A-1, le JP-8, le kérosène et le carburant diesel automobile standard, mélangé à 4% d'huile de synthèse pour turbine ou fluide Dextron III.",
+    },
+    {
+      question: "Comment s'effectue la mise à feu et le démarrage sur drone ?",
+      answer: "Les moteurs intègrent le système Kerostart à injection directe de kérosène et démarreur brushless, supprimant le recours au gaz propane auxiliaire et autorisant les procédures de rallumage automatique en vol sous contrôle de l'ECU.",
+    },
+    {
+      question: "Quels protocoles de communication relient l'ECU à l'avionique de bord ?",
+      answer: "L'ECU intègre un bus CAN rapide et une liaison série bidirectionnelle RS232, permettant un interfaçage direct avec les principaux pilotes automatiques pour la commande de poussée et la télémétrie complète.",
+    },
+    {
+      question: "Quels fichiers techniques et modèles CAO sont mis à disposition des intégrateurs ?",
+      answer: "Nous fournissons des modèles 3D CAO (.STEP), les plans d'encombrement mécanique, les données de centre de gravité et les schémas de câblage et d'alimentation carburant.",
+    },
+  ],
+};
+
+export function getSolutionFaqs(slugOrBaseSlug: string, locale: "es" | "en" | "fr"): TechnicalFaq[] {
+  const found = localizedSolutionPages.find(
+    (p) =>
+      p.baseSlug === slugOrBaseSlug ||
+      p.es.slug === slugOrBaseSlug ||
+      p.en.slug === slugOrBaseSlug ||
+      p.fr.slug === slugOrBaseSlug
+  );
+  const baseSlug = found ? found.baseSlug : slugOrBaseSlug;
+  const specific = faqsByBaseSlug[baseSlug]?.[locale];
+  return specific ?? defaultFaqs[locale];
+}
+

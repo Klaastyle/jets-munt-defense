@@ -28,6 +28,7 @@ const footerGroups = [
     title: "Ingeniería",
     links: [
       ["Propulsión UAV", "/propulsion-uav"],
+      ["Libre de ITAR", "/propulsion-libre-itar"],
       ["ECU y telemetría", "/electronica-telemetria"],
       ["Ensayo y validación", "/ensayos-validacion"],
       ["Fabricación en España", "/fabricacion-espana"],
@@ -67,7 +68,7 @@ const footerByLocale = {
     groups: [
       { title: "Catalogue", links: [["Engines", "/en/engines"], ["Accessories", "/en/accessories"], ["PRO series", "/pro-series"], ["Compact turbojets", "/en/compact-turbojet-engines"]] },
       { title: "Support", links: [["Technical service", "/en/technical-service"], ["Distributors", "/en/distributors"], ["Downloads", "/support/downloads"], ["FAQ", "/support/faq"]] },
-      { title: "Engineering", links: [["UAV propulsion", "/en/uav-propulsion"], ["ECU telemetry", "/en/electronics-telemetry"], ["Testing validation", "/en/testing-validation"], ["Manufacturing Spain", "/en/manufacturing-in-spain"]] },
+      { title: "Engineering", links: [["UAV propulsion", "/en/uav-propulsion"], ["ITAR-Free", "/en/itar-free-propulsion"], ["ECU telemetry", "/en/electronics-telemetry"], ["Testing validation", "/en/testing-validation"], ["Manufacturing Spain", "/en/manufacturing-in-spain"]] },
       { title: "Company", links: [["Contact", "/en/contact"], ["Architecture", "/en/propulsion-architecture"], ["Custom development", "/en/engineering-custom-development"], ["Maintenance", "/support/maintenance"]] },
     ],
   },
@@ -79,7 +80,7 @@ const footerByLocale = {
     groups: [
       { title: "Catalogue", links: [["Moteurs", "/fr/moteurs"], ["Accessoires", "/fr/accessoires"], ["Serie PRO", "/pro-series"], ["Turbojets compacts", "/fr/moteurs-turbojet-compacts"]] },
       { title: "Support", links: [["Service technique", "/fr/service-technique"], ["Distributeurs", "/fr/distributeurs"], ["Telechargements", "/support/downloads"], ["FAQ", "/support/faq"]] },
-      { title: "Ingenierie", links: [["Propulsion UAV", "/fr/propulsion-uav"], ["ECU telemetrie", "/fr/electronique-telemetrie"], ["Tests validation", "/fr/essais-validation"], ["Fabrication Espagne", "/fr/fabrication-espagne"]] },
+      { title: "Ingenierie", links: [["Propulsion UAV", "/fr/propulsion-uav"], ["Sans ITAR", "/fr/propulsion-sans-itar"], ["ECU telemetrie", "/fr/electronique-telemetrie"], ["Tests validation", "/fr/essais-validation"], ["Fabrication Espagne", "/fr/fabrication-espagne"]] },
       { title: "Entreprise", links: [["Contact", "/fr/contact"], ["Architecture", "/fr/architecture-propulsion"], ["Developpement sur mesure", "/fr/developpement-sur-mesure"], ["Maintenance", "/support/maintenance"]] },
     ],
   },
